@@ -2,9 +2,9 @@
 Not on my shift!
 ================
 
-This is a hosts list for blocking phishing and malware sites that I have encountered through the internet. Normally I'd receive these hosts from spam mails that manage to slip through my email spam filter.
+This is a domain list for blocking phishing and malware sites that I have encountered through the internet. Normally I'd collect these domains from spam mails that manage to slip through my email spam filter.
 
-[Click here to subscribe](abp:subscribe?location=https://orca.pet/notonmyshift/hosts.txt&title=Not on my shift!) or [click here to open the host list](hosts.txt)
+[Click here to subscribe](abp:subscribe?location=https://orca.pet/notonmyshift/domains.txt&title=Not on my shift!) or [click here to open the domain list](domains.txt)
 
 Why not use Malware Domain List or Malware domains?
 ---------------------------------------------------
