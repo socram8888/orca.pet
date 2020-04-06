@@ -1,10 +1,14 @@
 # Title: Not on my shift!
 # Expires: 4h
-# Last update: 2020-04-06T00:53:02Z
+# Last update: 2020-04-06T11:39:03Z
 
 #
 # PHISHING & SCAMS
 #
+
+# 2020-03-31 Alledged email verification
+# http://shinai.jp/dansou/akismett/index.php?i=i&0=the@email.com
+shinai.jp
 
 # 2020-04-04 BBVA malware
 # https://transaccion.r1-cz.storage.forpsicloud.cz/comprobante.html
