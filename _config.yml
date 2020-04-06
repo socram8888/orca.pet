@@ -1,5 +1,14 @@
-theme: jekyll-theme-cayman
+title: orca.pet
+description: Socram's website
+url: https://orca.pet
 repository: socram8888/orca.pet
+author: Marcos Del Sol Vives
+lang: en_US
+twitter:
+    username: Socramite
+
+theme: jekyll-theme-cayman
+
 plugins:
   - jekyll-sitemap
 
