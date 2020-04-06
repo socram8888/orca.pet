@@ -1,13 +1,17 @@
 # Title: Not on my shift!
 # Expires: 4h
-# Last update: 2020-04-06 01:46:00 GMT+1
+# Last update: 2020-04-06 02:03:00 GMT+1
+
+#
+# PHISHING & SCAMS
+#
 
 # 2020-04-04 BBVA malware
 # https://transaccion.r1-cz.storage.forpsicloud.cz/comprobante.html
 transaccion.r1-cz.storage.forpsicloud.cz
 
 # 2020-04-05 OVH phising
-# absr.es/fake.tld
+# http://absr.es/fake.tld
 absr.es
 # https://pago.ovh.net.alessandrogiulianelli.com/es/?AUTH_TOKEN=906ebfb35d9f008f7e7ec04cf74018293013d059c4517e2166009c8a84eae4122fc15e94413f62bd50da2292f28b1efaff51fbbebd6d280c4d9e8070cff89e53&cur=home&page=welcome&code=098167e0a127daeac7ccafb6f53a069f079016a8d569f0940367d913ee0c74c01.
 pago.ovh.net.alessandrogiulianelli.com
@@ -17,3 +21,15 @@ pago.ovh.net.alessandrogiulianelli.com
 mem2020.ru
 # http://eversharpe.com/specialtyitems/acessos/
 eversharpe.com
+
+#
+# ADS
+#
+
+# 2020-04-06 GamoVideo
+# http://servetean.site/des
+servetean.site
+
+# 2020-04-06 steamplay
+# https://centent.steamplay.me/apu.hh?n=&direct=1&zoneid=50
+centent.steamplay.me
