@@ -2,3 +2,6 @@ theme: jekyll-theme-cayman
 repository: socram8888/orca.pet
 plugins:
   - jekyll-sitemap
+
+github:
+    is_project_page: false
