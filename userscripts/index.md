@@ -3,6 +3,18 @@ Userscripts
 
 This page contains a few userscripts I've made over the years to improve my navigation experience.
 
+General
+-------
+
+### Global AliExpress
+
+{: style="text-align: center;"}
+[⬇️ CLICK HERE TO INSTALL ⬇️](global-aliexpress.user.js)
+
+This is a simple script which prevents the "browser tainting" of visiting AliExpress from a localized version of the page (usually machine- and thus poorly translated), making any further requests appear in the said local language even if the user explicitely opted in before for the global version.
+
+This script modifies the cookies and redirects web requests to always display the global version for a given link.
+
 FurAffinity
 -----------
 
