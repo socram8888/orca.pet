@@ -17,6 +17,9 @@ github:
 
 exclude:
   - /CNAME
+  - /commit.bat
+  - /commit.sh
+  - /devserver.bat
   - /devserver.sh
   - /Gemfile
   - /Gemfile.lock
