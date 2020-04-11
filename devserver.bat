@@ -1,3 +1,4 @@
 @echo off
 cd "%~dp0"
-bash devserver.sh
+bash -c "source ~/.profile; ./devserver.sh"
+pause

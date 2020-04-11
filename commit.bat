@@ -1,4 +1,4 @@
 @echo off
 cd "%~dp0"
-bash commit.sh
+bash -c "source ~/.profile; ./commit.sh"
 pause
