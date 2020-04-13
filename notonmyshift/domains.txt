@@ -1,6 +1,6 @@
 # Title: Not on my shift!
 # Expires: 4h
-# Last update: 2020-04-06T11:39:03Z
+# Last update: 2020-04-13T11:38:35Z
 
 #
 # PHISHING & SCAMS
@@ -39,3 +39,7 @@ servetean.site
 # 2020-04-06 steamplay
 # https://centent.steamplay.me/apu.hh?n=&direct=1&zoneid=50
 centent.steamplay.me
+
+# 2020-04-13
+# Classic "you're the 100th visitor, free iPhone" ad
+hashvalue9.live
