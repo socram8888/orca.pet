@@ -4,7 +4,7 @@
 Input settings
 --------------
 
-This form is a quick script for calculating a more optimal heating script than Cura's standard procedure of heating bed, waiting, heating extruder and then waiting some more. It uses your temperature and timing settings to calculate a G-Code synchronizes the heating of both elements, so they reach the target temperatures at the same time, reducing printing time.
+This form is a quick script for calculating a more optimal heating script than Cura's standard sequential procedure of heating bed, waiting, heating extruder and then waiting some more. It uses your temperature and timing settings to calculate a G-Code that parallelizes the heating of both elements, so they reach the target temperatures at the same time, reducing printing time.
 
 ### Nozzle
 
@@ -41,4 +41,14 @@ Please note the generated G-Code will be room-temperature dependant. This should
 
 The bed in my case does follow a linear heating pattern, but the extruder seems to follow a slightly softer curve tgat seems to be caused by the heater having a reduced duty cycle when it reaches a point close to the target. I have decided not to take this into account for now, and assume a linear heating pattern for both elements. 
 
-![Heating graph](temperaturegraph.png)
+### Plots
+
+Taken from the serial log of my Anet A8 (room 24.5ºC, bed heating time of 3:00 to 60ºC, extruder heating time of 1:50 to 215ºC)
+
+#### Original Cura (sequential)
+
+![Sequential heating graph](sequential.png)
+
+#### Improved (parallel)
+
+![Parallel heating graph](parallel.png)
