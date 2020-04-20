@@ -1,6 +1,6 @@
 # Title: Not on my shift!
 # Expires: 4h
-# Last update: 2020-04-20T21:15:28Z
+# Last update: 2020-04-20T21:38:51Z
 
 #
 # PHISHING & SCAMS
@@ -50,5 +50,6 @@ bestprizesday2.life
 ho.leadsandads.com
 imgdebzone25.live
 mynightdeb14.live
+tengalaxy.poppinyourbox.com
 trk.adtrk22.com
 www.premiosfaciles.com
