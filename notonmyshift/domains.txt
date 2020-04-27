@@ -1,6 +1,6 @@
 # Title: Not on my shift!
 # Expires: 4h
-# Last update: 2020-04-20T21:38:51Z
+# Last update: 2020-04-27T11:55:27Z
 
 #
 # PHISHING & SCAMS
@@ -44,8 +44,9 @@ centent.steamplay.me
 # Classic "you're the 100th visitor, free iPhone" ad
 hashvalue9.live
 
-# 2020-04-20 Classic "you're the 100th visitor, free iPhone" ad
+# 2020-04-27 Classic "you're the 100th visitor, free iPhone" ad
 # https://bestprizesday2.life/?u=tqck80z&o=zdqr96x&t=DESKuniqANDsearch
+appsemento11.live
 bestprizesday2.life
 ho.leadsandads.com
 imgdebzone25.live
