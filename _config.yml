@@ -10,13 +10,12 @@ twitter:
 theme: jekyll-theme-cayman
 
 plugins:
+  - jekyll-default-layout
+  - jekyll-optional-front-matter
+  - jekyll-relative-links
   - jekyll-sitemap
 
-github:
-    is_project_page: false
-
 exclude:
-  - /CNAME
   - /commit.bat
   - /commit.sh
   - /devserver.bat
