@@ -13,13 +13,17 @@
 *.java text diff=java
 *.js text
 *.json text
+*.md text
 *.properties text
 *.ps1 text
 *.py text diff=python
+*.scss text
 *.sh text
 *.txt text
 *.xml text diff=html
 *.yml text
+.gitattributes text
+.gitignore text
 Dockerfile text
 
 # Images
