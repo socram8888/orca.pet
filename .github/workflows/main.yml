@@ -33,7 +33,7 @@ jobs:
                 bundle install
 
           - name: Build Jekyll
-            run: JEKYLL_ENV=production bundle exec build
+            run: JEKYLL_ENV=production bundle exec jekyll build
 
           - name: Publish
             uses: socram8888/ftp-hash-sync@master
