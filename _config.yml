@@ -9,10 +9,6 @@ twitter:
 
 theme: jekyll-theme-cayman
 
-assets:
-    caching:
-        type: 'memory'
-
 plugins:
   - jekyll-default-layout
   - jekyll-last-modified-at
