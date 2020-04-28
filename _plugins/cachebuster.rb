@@ -17,9 +17,6 @@ module Jekyll
 			)
 
 			"#{filename}?#{hash.hexdigest[0, 8]}"
-		rescue
-			# Return filename unmodified if file was not found
-			filename
 		end
 	end
 end
