@@ -12,6 +12,7 @@ theme: jekyll-theme-cayman
 plugins:
   - jekyll-assets
   - jekyll-default-layout
+  - jekyll-last-modified-at
   - jekyll-optional-front-matter
   - jekyll-relative-links
   - jekyll-sitemap
