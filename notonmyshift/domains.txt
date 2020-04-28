@@ -1,6 +1,8 @@
+---
+---
 # Title: Not on my shift!
 # Expires: 4h
-# Last update: 2020-04-27T11:55:27Z
+# Last update: {{ site.time | date: '%FT%T%z' }}
 
 #
 # PHISHING & SCAMS

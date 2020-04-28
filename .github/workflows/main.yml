@@ -23,6 +23,11 @@ jobs:
     - name: Build Jekyll
       uses: jerryjvl/jekyll-build-action@v1
 
+    # Clean up shit
+    - name: Cleanup
+      run: |
+        rm -r _site/assets/css
+
     # Publish it on my own server
     - name: Publish
       uses: socram8888/ftp-hash-sync@master
