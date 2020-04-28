@@ -24,6 +24,7 @@
 *.yml text
 .gitattributes text
 .gitignore text
+.htaccess text
 Dockerfile text
 
 # Images
