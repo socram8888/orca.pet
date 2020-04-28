@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/socram8888/jekyll-render-order
+  revision: 6fd7245c46a5482ef589102f5f1db4327ab75ffd
+  specs:
+    jekyll-render-order (0.0.1)
+      jekyll (>= 3.0, < 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -79,6 +86,7 @@ DEPENDENCIES
   jekyll-last-modified-at
   jekyll-optional-front-matter
   jekyll-relative-links
+  jekyll-render-order!
   jekyll-sitemap
   jekyll-theme-cayman
   jekyll-titles-from-headings

@@ -72,31 +72,4 @@ module Jekyll
 	end
 end
 
-# Sort so assets are rendered first
-
-RENDER_FIRST = [
-	"assets",
-]
-
-Jekyll::Hooks.register :site, :pre_render do |site, payload|
-	site.pages.sort! { |a,b|
-		a_idx = RENDER_FIRST.index { |x| a.path.start_with? x }
-		b_idx = RENDER_FIRST.index { |x| b.path.start_with? x }
-
-		if not a_idx.nil? then
-			if b_idx.nil? then
-				-1
-			elsif a_idx != b_idx then
-				a_idx - b_idx
-			else
-				a.path.casecmp(b.path)
-			end
-		elsif not b_idx.nil? then
-			+1
-		else
-			a.path.casecmp(b.path)
-		end
-	}
-end
-
 Liquid::Template.register_filter(Jekyll::CachebusterFilter)
