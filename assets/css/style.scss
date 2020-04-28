@@ -5,7 +5,7 @@
 
 .page-header {
 	background-color: #08f;
-	background-image: asset_url("bg_full.jpg");
+	background-image: url("{{ '/assets/images/bg_full.jpg' | cachebuster }}");
 	background-size: cover;
 	background-position: 37% 48%;
 	background-repeat: no-repeat;
@@ -13,17 +13,17 @@
 }
 
 .webp .page-header {
-	background-image: asset_url("bg_full.webp");
+	background-image: url("{{ '/assets/images/bg_full.webp' | cachebuster }}");
 }
 
 @media only screen and (max-width: 1920px) {
 	.webp .page-header {
-		background-image: asset_url("bg_1920.webp");
+		background-image: url("{{ '/assets/images/bg_1920.webp' | cachebuster }}");
 	}
 }
 
 @media only screen and (max-width: 767px) {
 	.webp .page-header {
-		background-image: asset_url("bg_1024.webp");
+		background-image: url("{{ '/assets/images/bg_1024.webp' | cachebuster }}");
 	}
 }
