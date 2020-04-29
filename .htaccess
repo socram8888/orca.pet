@@ -20,7 +20,7 @@ RewriteCond %{HTTP:Accept-Encoding} br
 RewriteCond %{REQUEST_FILENAME}.br -s
 RewriteRule ^(.*)$ %{REQUEST_FILENAME}.br [L]
 
-<FilesMatch "\.(js|json|svg|css|html|txt|xml)\.br$">
+<FilesMatch "\.(js|json|svg|ico|css|html|txt|xml)\.br$">
 	Header set Content-Encoding br
 </FilesMatch>
 
@@ -29,7 +29,7 @@ RewriteCond %{HTTP:Accept-Encoding} gzip
 RewriteCond %{REQUEST_FILENAME}.gz -s
 RewriteRule ^(.*)$ %{REQUEST_FILENAME}.gz [L]
 
-<FilesMatch "\.(js|json|svg|css|html|txt|xml)\.gz$">
+<FilesMatch "\.(js|json|svg|ico|css|html|txt|xml)\.gz$">
 	RemoveType .gz
 	Header set Content-Encoding gzip
 </FilesMatch>
@@ -38,6 +38,7 @@ RewriteRule ^(.*)$ %{REQUEST_FILENAME}.gz [L]
 AddType "application/javascript" .js.br .js.gz
 AddType "application/json" .json.br .json.gz
 AddType "image/svg+xml" .svg.br .svg.gz
+AddType "image/x-icon" .ico.br .ico.gz
 AddType "text/css" .css.br css.gz
 AddType "text/html" .html.br .html.gz
 AddType "text/plain" .txt.br txt.gz
