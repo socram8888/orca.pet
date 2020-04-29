@@ -22,18 +22,24 @@ jobs:
                 restore-keys: |
                     ${{ runner.os }}-gems-
 
+          - name: Set up dependencies
+            run: apt install brotli
+
           - name: Set up Ruby
             uses: ruby/setup-ruby@v1.32.1
             with:
                 ruby-version: 2.5
 
-          - name: Install dependencies
+          - name: Install Ruby dependencies
             run: |
                 bundle config path vendor/bundle
                 bundle install
 
           - name: Build Jekyll
             run: JEKYLL_ENV=production bundle exec jekyll build
+
+          - name: Compressing
+            run: find -type f \( -name "*.js" -o -name "*.txt" -o -name "*.xml" -o -name "*.html" -o -name "*.css" \) -exec brotli -Z {} \; -exec gzip -k9 {} \;
 
           - name: Publish
             uses: socram8888/ftp-hash-sync@master
