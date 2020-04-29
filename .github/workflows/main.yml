@@ -42,7 +42,7 @@ jobs:
             run: find -type f \( -name "*.css" -o -name "*.ico" -o -name "*.html" -o -name "*.js" -o -name "*.json" -o -name "*.svg" -o -name "*.txt" -o -name "*.xml" \) -exec brotli -Z {} \; -exec gzip -k9n {} \;
 
           - name: Publish
-            uses: socram8888/ftp-hash-sync@master
+            uses: socram8888/ftp-hash-sync@v1
             with:
                 host: ftp.cluster021.hosting.ovh.net
                 username: orcapetlmg
