@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/socram8888/jekyll-render-order
-  revision: 6fd7245c46a5482ef589102f5f1db4327ab75ffd
+  revision: afd1e54311a490db27531d11fffbdf5b7e6ded8c
   specs:
     jekyll-render-order (0.0.1)
       jekyll (>= 3.0, < 5.0)
