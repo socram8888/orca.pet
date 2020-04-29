@@ -23,7 +23,7 @@ jobs:
                     ${{ runner.os }}-gems-
 
           - name: Set up dependencies
-            run: sudo apt install brotli
+            run: sudo apt install -y brotli
 
           - name: Set up Ruby
             uses: ruby/setup-ruby@v1.32.1
