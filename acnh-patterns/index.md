@@ -1,3 +1,6 @@
+---
+---
+
 AC:NH patterns
 ==============
 
@@ -10,7 +13,7 @@ The mugshot of a pretty well known page.
 
 * Download code: `MO-D2WH-LPQ2-VQKW`.
 
-![ESix mugshot](esix.jpg)
+![ESix mugshot]({{ 'esix.jpg' | cachebuster }})
 
 Cercanías logo
 --------------
@@ -19,4 +22,4 @@ Cercanías logo
 
 * Download code: `MO-P9JK-1QD8-JLT2`.
 
-![Cercanías logo](cercanias.jpg)
+![Cercanías logo]({{ 'cercanias.jpg' | cachebuster }})

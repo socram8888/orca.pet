@@ -36,25 +36,25 @@ ExpiresActive on
 ExpiresByType text/html "access plus 1 minutes"
 
 # Cache cachebusted content virtually forever
-<If "%{QUERY_STRING} =~ /^[0-9a-f]{8}$/">
+<If "%{QUERY_STRING} =~ /^[0-9a-zA-F_/]{8}$/">
 	# CSS and JavaScript
-	ExpiresByType application/javascript "access plus 1 year"
-	ExpiresByType image/jpeg "access plus 1 year"
-	ExpiresByType image/webp "access plus 1 year"
-	ExpiresByType text/css "access plus 1 year"
-	ExpiresByType image/x-icon "access plus 1 year"
+	ExpiresByType application/javascript "access plus 1 month"
+	ExpiresByType image/jpeg "access plus 1 month"
+	ExpiresByType image/webp "access plus 1 month"
+	ExpiresByType text/css "access plus 1 month"
+	ExpiresByType image/x-icon "access plus 1 month"
 
 	# Default
-	ExpiresDefault "access plus 1 year"
+	ExpiresDefault "access plus 1 month"
 </If>
 <Else>
 	# CSS and JavaScript
 	ExpiresByType application/javascript "access plus 1 hour"
 	ExpiresByType image/jpeg "access plus 1 hour"
 	ExpiresByType image/webp "access plus 1 hour"
-	ExpiresByType text/css "access plus 1 day"
-	ExpiresByType image/x-icon "access plus 1 day"
+	ExpiresByType text/css "access plus 1 hour"
+	ExpiresByType image/x-icon "access plus 1 hour"
 
 	# Default
-	ExpiresDefault "access plus 1 minutes"
+	ExpiresDefault "access plus 5 minutes"
 </Else>

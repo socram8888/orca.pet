@@ -1,5 +1,6 @@
 # Based on: https://gist.github.com/yaroslav/a1acc36b49820474b4e0218c0ca8908d
 
+require 'base64'
 require 'digest'
 
 module Jekyll
@@ -44,7 +45,7 @@ module Jekyll
 				hash = hash_static(path) || hash_page(path)
 
 				unless hash.nil?
-					fp = hash[0, 8]
+					fp = Base64::urlsafe_encode64(hash.hash[0, 5], :padding => false)
 					PATH_FINGERPRINTS[path] = fp
 				end
 			end
@@ -57,7 +58,7 @@ module Jekyll
 
 			unless file.nil? then
 				Jekyll.logger.info("FPing static:", path)
-				Digest::MD5.file(file.path).hexdigest
+				Digest::MD5.file(file.path).digest()
 			end
 		end
 
@@ -66,7 +67,7 @@ module Jekyll
 
 			unless page.nil? then
 				Jekyll.logger.info("FPing page:", path)
-				Digest::MD5.hexdigest(page.output)
+				Digest::MD5.digest(page.output)
 			end
 		end
 	end

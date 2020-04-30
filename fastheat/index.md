@@ -35,7 +35,7 @@ Generated G-Code
 ----------------
 
 <textarea id="generatedcode" style="font-family: monospace; width: 100%; max-width: 100%; height: 20em;">; Oops, is JS disabled?</textarea>
-<script src="calculator.js"></script>
+<script src="{{ 'calculator.js' | cachebuster }}"></script>
 
 Foot notes
 ----------
