@@ -39,7 +39,7 @@ jobs:
             run: JEKYLL_ENV=production bundle exec jekyll build
 
           - name: Compressing
-            run: find -type f \( -name "*.css" -o -name "*.ico" -o -name "*.html" -o -name "*.js" -o -name "*.json" -o -name "*.svg" -o -name "*.txt" -o -name "*.xml" \) -exec brotli -Z {} \;
+            run: find _site -type f \( -name "*.css" -o -name "*.ico" -o -name "*.html" -o -name "*.js" -o -name "*.json" -o -name "*.svg" -o -name "*.txt" -o -name "*.xml" \) -exec brotli -Z {} \;
 
           - name: Publish
             uses: socram8888/ftp-hash-sync@v1
