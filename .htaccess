@@ -1,45 +1,60 @@
+RewriteEngine On
+
 # Security headers
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
 Header set X-Frame-Options DENY
 
 # Redirect to preferred domain with HTTPS
-RewriteEngine On
-
 RewriteCond %{HTTPS} off [or]
 RewriteCond %{HTTP_HOST} !^orca.pet
 RewriteRule (.*) https://orca.pet/$1 [R=301,L]
 
-# Disable Gzip online compression
-SetEnv no-gzip 1
-
 # Tell proxies to store differently-compressed separatedly
 Header append Vary Accept-Encoding
 
-# First try Brotli compression
+# Try Brotli compression
 RewriteCond %{HTTP:Accept-Encoding} br
 RewriteCond %{REQUEST_FILENAME}.br -s
-RewriteRule ^(.*)$ %{REQUEST_FILENAME}.br [L]
+RewriteRule . %{REQUEST_FILENAME}.br
 
 <FilesMatch "\.(js|json|svg|ico|css|html|txt|xml)\.br$">
 	Header set Content-Encoding br
-</FilesMatch>
-
-# Else try Gzip
-RewriteCond %{HTTP:Accept-Encoding} gzip
-RewriteCond %{REQUEST_FILENAME}.gz -s
-RewriteRule ^(.*)$ %{REQUEST_FILENAME}.gz [L]
-
-<FilesMatch "\.(js|json|svg|ico|css|html|txt|xml)\.gz$">
-	RemoveType .gz
-	Header set Content-Encoding gzip
+	SetEnv no-gzip 1
 </FilesMatch>
 
 # Register types
-AddType "application/javascript" .js.br .js.gz
-AddType "application/json" .json.br .json.gz
-AddType "image/svg+xml" .svg.br .svg.gz
-AddType "image/x-icon" .ico.br .ico.gz
-AddType "text/css" .css.br css.gz
-AddType "text/html" .html.br .html.gz
-AddType "text/plain" .txt.br txt.gz
-AddType "text/xml" .xml.br .xml.gz
+AddType "application/javascript" .js.br
+AddType "application/json" .json.br
+AddType "image/svg+xml" .svg.br
+AddType "image/x-icon" .ico.br
+AddType "text/css" .css.br
+AddType "text/html" .html.br
+AddType "text/plain" .txt.br
+AddType "text/xml" .xml.br
+
+ExpiresActive on
+ExpiresByType text/html "access plus 1 minutes"
+
+# Cache cachebusted content virtually forever
+<If "%{QUERY_STRING} =~ /^[0-9a-f]{8}$/">
+	# CSS and JavaScript
+	ExpiresByType application/javascript "access plus 1 year"
+	ExpiresByType image/jpeg "access plus 1 year"
+	ExpiresByType image/webp "access plus 1 year"
+	ExpiresByType text/css "access plus 1 year"
+	ExpiresByType image/x-icon "access plus 1 year"
+
+	# Default
+	ExpiresDefault "access plus 1 year"
+</If>
+<Else>
+	# CSS and JavaScript
+	ExpiresByType application/javascript "access plus 1 hour"
+	ExpiresByType image/jpeg "access plus 1 hour"
+	ExpiresByType image/webp "access plus 1 hour"
+	ExpiresByType text/css "access plus 1 day"
+	ExpiresByType image/x-icon "access plus 1 day"
+
+	# Default
+	ExpiresDefault "access plus 1 minutes"
+</Else>
