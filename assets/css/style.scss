@@ -152,10 +152,6 @@ a {
   }
 }
 
-.webp .page-header {
-  background-image: url("{{ '/assets/images/banner.webp' | cachebuster }}");
-}
-
 .project-name {
   margin-top: 0;
   margin-bottom: 0.1rem;

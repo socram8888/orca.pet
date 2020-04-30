@@ -26,6 +26,11 @@ RewriteRule . %{REQUEST_FILENAME}.br
 	SetEnv no-gzip 1
 </FilesMatch>
 
+# Serve WebP for JPEG if possible
+RewriteCond %{HTTP:Accept} image/webp
+RewriteCond %{DOCUMENT_ROOT}/$1\.webp -s
+RewriteRule (.+).jpg$ /$1.webp
+
 # Register types
 AddType "application/javascript" .js.br
 AddType "application/json" .json.br
