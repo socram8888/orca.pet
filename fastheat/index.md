@@ -50,8 +50,8 @@ Taken from the serial log of my Anet A8 (room 24.5ºC, bed heating time of 3:00 
 
 #### Original Cura (sequential)
 
-![Sequential heating graph](sequential.png)
+![Sequential heating graph]({{ 'sequential.png' | cachebuster }})
 
 #### Improved (parallel)
 
-![Parallel heating graph](parallel.png)
+![Parallel heating graph]({{ 'parallel.png' | cachebuster }})
