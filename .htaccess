@@ -1,6 +1,9 @@
 Options -Includes
 RewriteEngine On
 
+# This is not supported on OVH, so make sure it is disabled
+FileETag None
+
 # Security headers
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
 Header set X-Frame-Options DENY
@@ -34,7 +37,7 @@ AddType "text/plain" .txt.br
 AddType "text/xml" .xml.br
 
 ExpiresActive on
-ExpiresByType text/html "access plus 1 minutes"
+ExpiresByType text/html "access plus 5 minutes"
 
 # Cache cachebusted content virtually forever
 <If "%{QUERY_STRING} =~ /^[^=]{8}$/">
@@ -50,12 +53,17 @@ ExpiresByType text/html "access plus 1 minutes"
 </If>
 <Else>
 	# CSS and JavaScript
-	ExpiresByType application/javascript "access plus 1 hour"
-	ExpiresByType image/jpeg "access plus 1 hour"
-	ExpiresByType image/webp "access plus 1 hour"
-	ExpiresByType text/css "access plus 1 hour"
+	ExpiresByType application/javascript "access plus 10 minutes"
+	ExpiresByType image/jpeg "access plus 10 minutes"
+	ExpiresByType image/webp "access plus 10 minutes"
+	ExpiresByType text/css "access plus 10 minutes"
 	ExpiresByType image/x-icon "access plus 1 hour"
 
 	# Default
 	ExpiresDefault "access plus 5 minutes"
 </Else>
+
+# Disable whatever handler is fucking up the 304 responses
+<FilesMatch "\.(htm|html)(\.br)?">
+	SetHandler default-handler
+</FilesMatch>
