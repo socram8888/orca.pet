@@ -45,7 +45,7 @@ module Jekyll
 				hash = hash_static(path) || hash_page(path)
 
 				unless hash.nil?
-					fp = Base64::urlsafe_encode64(hash.hash[0, 5], :padding => false)
+					fp = Base64::urlsafe_encode64(hash[0, 5], :padding => false)
 					PATH_FINGERPRINTS[path] = fp
 				end
 			end
