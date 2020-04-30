@@ -123,15 +123,19 @@ a {
   }
 }
 
+.page-header-link:hover {
+  text-decoration: none;
+}
+
 .page-header {
   color: #fff;
   text-align: center;
   background-color: #08f;
-  background-image: url("{{ '/assets/images/bg_full.jpg' | cachebuster }}");
+  background-image: url("{{ '/assets/images/banner.jpg' | cachebuster }}");
   background-size: cover;
-  background-position: 37% 48%;
+  background-position: center;
   background-repeat: no-repeat;
-  -webkit-text-stroke: black 0.1rem;
+  text-shadow: 0px 0px 20px #000, 0px 0px 20px #000;
 
   @include large {
     padding: 5rem 6rem;
@@ -147,19 +151,7 @@ a {
 }
 
 .webp .page-header {
-  background-image: url("{{ '/assets/images/bg_full.webp' | cachebuster }}");
-}
-
-@media only screen and (max-width: 1920px) {
-  .webp .page-header {
-    background-image: url("{{ '/assets/images/bg_1920.webp' | cachebuster }}");
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .webp .page-header {
-    background-image: url("{{ '/assets/images/bg_1024.webp' | cachebuster }}");
-  }
+  background-image: url("{{ '/assets/images/banner.webp' | cachebuster }}");
 }
 
 .project-name {
