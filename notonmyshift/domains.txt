@@ -34,6 +34,10 @@ eversharpe.com
 # https://www.treelains.com/web/page.php
 www.treelains.com
 
+# 2020-05-01 Scam reported by Jim Browning: https://www.youtube.com/watch?v=xOw1vct-wHg
+garminupdatenow.online
+www.garminupdatenow.online
+
 #
 # ADS
 #
