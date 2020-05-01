@@ -29,7 +29,11 @@ RewriteRule . %{REQUEST_FILENAME}.br
 # Serve WebP for JPEG if possible
 RewriteCond %{HTTP:Accept} image/webp
 RewriteCond %{DOCUMENT_ROOT}/$1\.webp -s
-RewriteRule (.+).jpg$ /$1.webp
+RewriteRule (.+)\.jpg$ $1.webp
+
+<FilesMatch "\.jpg$">
+	Header append Vary Accept
+</FilesMatch>
 
 # Register types
 AddType "application/javascript" .js.br
