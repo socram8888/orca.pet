@@ -37,6 +37,25 @@ www.treelains.com
 # 2020-05-01 Scam reported by Jim Browning: https://www.youtube.com/watch?v=xOw1vct-wHg
 garminupdatenow.online
 www.garminupdatenow.online
+printersupports.com
+www.printersupports.com
+hpprintersupportservice.com
+www.hpprintersupportservice.com
+tomtomgopre.online
+www.tomtomgopre.online
+mapinfosolutions.com
+www.mapinfosolutions.com
+navmanupdate.online
+www.navmanupdate.online
+contactaolhelp.com
+www.contactaolhelp.com
+navman-gpsupdate.online
+www.navman-gpsupdate.online
+navmanupdates.com
+www.navmanupdates.com
+wifiextenderhelp.com
+www.wifiextenderhelp.com
+
 
 #
 # ADS
