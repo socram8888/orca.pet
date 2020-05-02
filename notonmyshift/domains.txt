@@ -39,7 +39,8 @@ leasingrepublic.com
 
 # SCAMS
 
-# 2020-05-01 Scam reported by Jim Browning: https://www.youtube.com/watch?v=xOw1vct-wHg
+# 2020-05-01 Scam reported by Jim Browning
+# https://www.youtube.com/watch?v=xOw1vct-wHg
 contactaolhelp.com
 garmincommexpress.com
 garminsmapupdate.com
@@ -67,11 +68,159 @@ www.printersupports.com
 www.tomtomgopre.online
 www.wifiextenderhelp.com
 
-# 2020-05-02 ExcelTechGuru: https://www.scammer.info/d/34695-exceltechguru-big-24-7-scam
+# 2020-05-02 ExcelTechGuru
+# https://www.scammer.info/d/34695-exceltechguru-big-24-7-scam
 exceltechguru.com
-mygeolocate.com
 www.exceltechguru.com
+mygeolocate.com
 www.mygeolocate.com
+
+# 2020-05-02 Typo domain squatting
+# https://www.scammer.info/d/34675-currently-active-websites-that-allow-you-to-get-popups
+facebaak.com
+www.facebaak.com
+facebiik.com
+www.facebiik.com
+fac3book.com
+www.fac3book.com
+faceb00k.com
+www.faceb00k.com
+afcebook.com
+www.afcebook.com
+faicebook.com
+www.faicebook.com
+fucebook.com
+www.fucebook.com
+facbeook.com
+www.facbeook.com
+faceboko.com
+www.faceboko.com
+fzcebook.com
+www.fzcebook.com
+faceblok.com
+www.faceblok.com
+facebppk.com
+www.facebppk.com
+ftacebook.com
+www.ftacebook.com
+gmaip.com
+www.gmaip.com
+gmai.com
+www.gmai.com
+gmaol.com
+www.gmaol.com
+ggmail.com
+www.ggmail.com
+gmaii.com
+www.gmaii.com
+gmsail.com
+www.gmsail.com
+ygmail.com
+www.ygmail.com
+gfmail.com
+www.gfmail.com
+gmalil.com
+www.gmalil.com
+gmaiol.com
+www.gmaiol.com
+gmaili.com
+www.gmaili.com
+gjmail.com
+www.gjmail.com
+gmailk.com
+www.gmailk.com
+gmaijl.com
+www.gmaijl.com
+gmkail.com
+www.gmkail.com
+gmaqil.com
+www.gmaqil.com
+gmqail.com
+www.gmqail.com
+gmajil.com
+www.gmajil.com
+googlo.com
+www.googlo.com
+goorle.com
+www.goorle.com
+googls.com
+www.googls.com
+ygoogle.com
+www.ygoogle.com
+gopogle.com
+www.gopogle.com
+googpe.com
+www.googpe.com
+gdoogle.com
+www.gdoogle.com
+voovle.com
+www.voovle.com
+goodgle.com
+www.goodgle.com
+googloe.com
+www.googloe.com
+googlpe.com
+www.googlpe.com
+googlre.com
+www.googlre.com
+goovgle.com
+www.goovgle.com
+yotube.com
+www.yotube.com
+youutbe.com
+www.youutbe.com
+outube.com
+www.outube.com
+yautube.com
+www.yautube.com
+youtubo.com
+www.youtubo.com
+yohtube.com
+www.yohtube.com
+youthbe.com
+www.youthbe.com
+yojutube.com
+www.yojutube.com
+twittre.com
+www.twittre.com
+twltter.com
+www.twltter.com
+twutter.com
+www.twutter.com
+fwitter.com
+www.fwitter.com
+tsitter.com
+www.tsitter.com
+twiyter.com
+www.twiyter.com
+twittee.com
+www.twittee.com
+tywitter.com
+www.tywitter.com
+twuitter.com
+www.twuitter.com
+twiutter.com
+www.twiutter.com
+twitfer.com
+www.twitfer.com
+twittet.com
+www.twittet.com
+twiktter.com
+www.twiktter.com
+wikia.cm
+www.wikia.cm
+twwitter.com
+www.twwitter.com
+
+# Fake coronavirus snakeoil
+# https://www.scammer.info/d/34676-immune-boost-scam-corona-scam
+centroidessentialoils.com
+www.centroidessentialoils.com
+
+# Fake sex booster
+# https://www.scammer.info/d/34672-bluoxyn-keto-scam
+bluoxyn.com
+www.bluoxyn.com
 
 #
 # ADS
