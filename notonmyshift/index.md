@@ -26,6 +26,11 @@ While it is true that Google Chrome, Firefox and other mainstream browsers alrea
 
 The idea of this hosts list is to serve as a temporary measure to block these addresses as soon as possible, within minutes after they're discovered, before they're accepted into the Safe Browsing list.
 
+Can I contribute?
+-----------------
+
+Yes, sure. Open an issue [at the GitHub repository](https://github.com/socram8888/not-on-my-shift) or [send me an email](/#contact).
+
 Where does the name come from?
 ------------------------------
 
