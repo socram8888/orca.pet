@@ -1,5 +1,7 @@
 ---
+hosts_url: /notonmyshift/hosts.txt
 ---
+
 # Title: Not on my shift!
 # Expires: 4h
 # Last update: {% last_modified_at %FT%T%z %}

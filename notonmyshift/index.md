@@ -6,7 +6,9 @@ Not on my shift!
 
 This is a domain list for blocking phishing and malware sites that I have encountered through the internet. Normally I'd collect these domains from spam mails that manage to slip through my email spam filter.
 
-[Click here to subscribe](abp:subscribe?location=https://orca.pet/notonmyshift/domains.txt&title=Not on my shift!) or [click here to open the domain list](domains.txt)
+* [Click here to subscribe](abp:subscribe?location=https://orca.pet/notonmyshift/domains.txt&title=Not on my shift!) if using [uBlock Origin](https://github.com/gorhill/uBlock) or [AdBlock Plus](https://adblockplus.org/)
+* [Domain list](domains.txt)
+* [Hosts list](hosts.txt)
 
 Why not use Malware Domain List or Malware domains?
 ---------------------------------------------------
