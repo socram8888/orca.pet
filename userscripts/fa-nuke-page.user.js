@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        FA nuke page
 // @namespace   https://orca.pet
-// @version     1.0.2
+// @version     1.1
 // @author      Marcos Del Sol Vives <marcos@orca.pet>
 // @description Adds a button to nuke a single page of submissions.
 // @homepage    https://github.com/socram8888/FA-Scripts
@@ -23,9 +23,8 @@ style.innerHTML = `
 `;
 document.body.appendChild(style);
 
-var submissionsSection = document.getElementById("messagecenter-submissions");
-
-for (var actions of submissionsSection.getElementsByClassName("actions")) {
+let holders = document.querySelectorAll("#messagecenter-submissions .actions, .section-options.actions");
+for (let actions of holders) {
 	var btt = document.createElement("button");
 	btt.innerHTML = "Nuke page";
 	btt.className = "button nuke-page-button";
@@ -33,7 +32,7 @@ for (var actions of submissionsSection.getElementsByClassName("actions")) {
 	btt.name = "messagecenter-action";
 	btt.value = "remove_checked";
 	btt.addEventListener("click", function(e) {
-		var subs = submissionsSection.querySelectorAll("input[name='submissions[]'][type='checkbox']");
+		var subs = document.body.querySelectorAll("input[name='submissions[]'][type='checkbox']");
 		for (var sub of subs) {
 			sub.checked = true;
 		}

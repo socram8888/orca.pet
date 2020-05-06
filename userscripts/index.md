@@ -23,9 +23,9 @@ FurAffinity
 
 All these scripts are made for [FurAffinity](https://www.furaffinity.net), a furry artwork website.
 
-Beware all these scripts are **broken as of 2020/04/05** - I haven't got around updating them after the website theme change.
-
 ### Easier navigation
+
+**Broken as of 2020/04/05** - Not yet adapted to new website layout.
 
 {: style="text-align: center;"}
 [⬇️ CLICK HERE TO INSTALL ⬇️](fa-easy-nav.user.js)
@@ -45,6 +45,8 @@ Just because I didn't want to click "Invert selection" and "Remove selected". Ye
 
 ### MD5
 
+**Broken as of 2020/04/05** - Not yet adapted to new website layout.
+
 {: style="text-align: center;"}
 [⬇️ CLICK HERE TO INSTALL ⬇️](fa-md5.user.js)
 
@@ -53,6 +55,8 @@ This script adds a button to calculate the file's MD5, and a link to a search to
 ![MD5 button](https://raw.githubusercontent.com/socram8888/FA-Scripts/master/img/md5-btt.jpg) ![Calculated MD5](https://raw.githubusercontent.com/socram8888/FA-Scripts/master/img/md5-done.jpg)
 
 ### Prefetching
+
+**Broken as of 2020/04/05** - Not yet adapted to new website layout.
 
 {: style="text-align: center;"}
 [⬇️ CLICK HERE TO INSTALL ⬇️](fa-prefetch.user.js)
