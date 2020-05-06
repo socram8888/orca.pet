@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        FA MD5
 // @namespace   https://orca.pet
-// @version     1.0.1
+// @version     1.1
 // @author      Marcos Del Sol Vives <marcos@orca.pet>
 // @description Calculates MD5 for FA images.
 // @homepage    https://github.com/socram8888/FA-Scripts
@@ -22,13 +22,10 @@ function insertAfter(newNode, referenceNode) {
 
 let CHUNK_SIZE = 8 * 1024 * 1024;
 
-let ratingsNode = document.querySelector('.stats-container div img[src*=labels]')
-if (!ratingsNode) {
-	console.log('Ratings not found');
-	return;
-}
-
-let imageUrl = document.querySelector('.actions a[href*="//d.facdn.net/"]');
+let imageUrl = document.querySelector(
+  '.actions a[href*="//d.facdn.net/"],' + // Old FA
+  '.submission-content .button[href*="//d.facdn.net/"]' // New FA
+);
 if (!imageUrl) {
 	console.log('Image not found');
 	return;
@@ -86,29 +83,70 @@ function fetchChunk() {
 	});
 }
 
-let header = document.createElement("b");
-header.innerHTML = "MD5: ";
-ratingsNode.parentNode.insertBefore(header, ratingsNode);
+function createCalcBtt(maxWidth) {
+  let calcBtt = document.createElement("a");
+  calcBtt.href = "#";
+  calcBtt.innerHTML = "Calculate";
+  calcBtt.onclick = function() {
+    hashNode = document.createElement("tt");
+    calcBtt.parentNode.insertBefore(hashNode, calcBtt);
+    hashNode.innerHTML = "...";
+    hashNode.style.maxWidth = maxWidth;
+    hashNode.style.display = "inline-flex";
+    hashNode.style.overflow = "hidden";
 
-let calcBtt = document.createElement("a");
-calcBtt.href = "#";
-calcBtt.innerHTML = "Calculate";
-calcBtt.onclick = function() {
-	hashNode = document.createElement("tt");
-	calcBtt.parentNode.insertBefore(hashNode, calcBtt);
-	hashNode.innerHTML = "...";
-	hashNode.style.maxWidth = "12em";
-	hashNode.style.display = "inline-flex";
-	hashNode.style.overflow = "hidden";
-
-	calcBtt.parentNode.removeChild(calcBtt);
-	fetchChunk();
-	return false;
+    calcBtt.parentNode.removeChild(calcBtt);
+    fetchChunk();
+    return false;
+  }
+  return calcBtt;
 }
-ratingsNode.parentNode.insertBefore(calcBtt, ratingsNode);
 
-let br = document.createElement("br");
-ratingsNode.parentNode.insertBefore(br, ratingsNode);
+function insertOldFa() {
+  let ratingsNode = document.querySelector('.stats-container div img[src*=labels]');
+  if (!ratingsNode) {
+    console.log('Old FA not detected');
+    return false;
+  }
 
-br = document.createElement("br");
-ratingsNode.parentNode.insertBefore(br, ratingsNode);
+  let header = document.createElement("b");
+  header.innerHTML = "MD5: ";
+  ratingsNode.parentNode.insertBefore(header, ratingsNode);
+
+  let calcBtt = createCalcBtt("12em");
+  ratingsNode.parentNode.insertBefore(calcBtt, ratingsNode);
+
+  let br = document.createElement("br");
+  ratingsNode.parentNode.insertBefore(br, ratingsNode);
+
+  br = document.createElement("br");
+  ratingsNode.parentNode.insertBefore(br, ratingsNode);
+
+  return true;
+}
+
+function insertNewFa() {
+  let postInfo = document.querySelector('.section-body.info');
+  if (!postInfo) {
+    console.log('New FA not detected');
+    return false;
+  }
+
+  let div = document.createElement("div");
+
+  let label = document.createElement("strong");
+  label.className = "highlight";
+  label.innerHTML = "Hash";
+  div.appendChild(label);
+
+  let buttonSpan = document.createElement("span");
+  let calcBtt = createCalcBtt(null);
+  buttonSpan.appendChild(calcBtt);
+  div.appendChild(buttonSpan);
+
+  postInfo.appendChild(div);
+
+  return true;
+}
+
+insertOldFa() || insertNewFa();

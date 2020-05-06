@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        FA MD5
 // @namespace   https://orca.pet
-// @version     1.0.1
+// @version     1.1
 // @author      Marcos Del Sol Vives <marcos@orca.pet>
 // @description Calculates MD5 for FA images.
 // @homepage    https://github.com/socram8888/FA-Scripts

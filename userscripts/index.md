@@ -45,8 +45,6 @@ Just because I didn't want to click "Invert selection" and "Remove selected". Ye
 
 ### MD5
 
-**Broken as of 2020/04/05** - Not yet adapted to new website layout.
-
 {: style="text-align: center;"}
 [⬇️ CLICK HERE TO INSTALL ⬇️](fa-md5.user.js)
 
