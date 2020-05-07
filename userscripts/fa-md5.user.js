@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        FA MD5
 // @namespace   https://orca.pet
-// @version     1.1
+// @version     1.1.1
 // @author      Marcos Del Sol Vives <marcos@orca.pet>
 // @description Calculates MD5 for FA images.
 // @homepage    https://github.com/socram8888/FA-Scripts
@@ -23,8 +23,8 @@ function insertAfter(newNode, referenceNode) {
 let CHUNK_SIZE = 8 * 1024 * 1024;
 
 let imageUrl = document.querySelector(
-  '.actions a[href*="//d.facdn.net/"],' + // Old FA
-  '.submission-content .button[href*="//d.facdn.net/"]' // New FA
+	'.actions a[href*="//d.facdn.net/"],' + // Old FA
+	'.submission-content .button[href*="//d.facdn.net/"]' // New FA
 );
 if (!imageUrl) {
 	console.log('Image not found');
@@ -34,7 +34,8 @@ imageUrl = imageUrl.href;
 
 let md5Instance = md5.create();
 let currentPos = 0;
-let hashNode;
+let calcButtons = [];
+let hashNodes = [];
 
 function handleChunk(xhr) {
 	if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 206)) {
@@ -42,27 +43,22 @@ function handleChunk(xhr) {
 		md5Instance.update(chunk);
 
 		if (chunk.byteLength < CHUNK_SIZE) {
-			let hash = md5Instance.hex();
-			hashNode.innerHTML = hash;
+			for (let hashNode of hashNodes) {
+				let hash = md5Instance.hex();
+				hashNode.innerHTML = hash;
 
-			let txt = document.createTextNode(" (");
-			insertAfter(txt, hashNode);
+				let txt = document.createTextNode(" (");
+				insertAfter(txt, hashNode);
 
-			let link = document.createElement("a");
-			link.href = "https://e621.net/post/index/1/md5:" + hash;
-			link.innerHTML = "e621";
-			link.target = "_blank";
-			insertAfter(link, txt);
+				let link = document.createElement("a");
+				link.href = "https://e621.net/post/index/1/md5:" + hash;
+				link.innerHTML = "e621";
+				link.target = "_blank";
+				insertAfter(link, txt);
 
-			txt = document.createTextNode(")");
-			insertAfter(txt, link);
-
-			let range = document.createRange();
-			range.selectNode(hashNode);
-
-			let sel = document.getSelection();
-			sel.empty();
-			sel.addRange(range);
+				txt = document.createTextNode(")");
+				insertAfter(txt, link);
+			}
 		} else {
 			currentPos += CHUNK_SIZE;
 			fetchChunk();
@@ -84,69 +80,76 @@ function fetchChunk() {
 }
 
 function createCalcBtt(maxWidth) {
-  let calcBtt = document.createElement("a");
-  calcBtt.href = "#";
-  calcBtt.innerHTML = "Calculate";
-  calcBtt.onclick = function() {
-    hashNode = document.createElement("tt");
-    calcBtt.parentNode.insertBefore(hashNode, calcBtt);
-    hashNode.innerHTML = "...";
-    hashNode.style.maxWidth = maxWidth;
-    hashNode.style.display = "inline-flex";
-    hashNode.style.overflow = "hidden";
+	let calcBtt = document.createElement("a");
+	calcBtt.href = "#";
+	calcBtt.innerHTML = "Calculate";
+	calcBtt.onclick = function() {
+		for (let calcButton of calcButtons) {
+			let hashNode = document.createElement("tt");
+			calcButton.parentNode.insertBefore(hashNode, calcButton);
+			hashNode.innerHTML = "...";
+			hashNode.style.maxWidth = maxWidth;
+			hashNode.style.display = "inline-flex";
+			hashNode.style.overflow = "hidden";
+			calcButton.parentNode.removeChild(calcButton);
 
-    calcBtt.parentNode.removeChild(calcBtt);
-    fetchChunk();
-    return false;
-  }
-  return calcBtt;
+			hashNodes.push(hashNode);
+		}
+
+		fetchChunk();
+		return false;
+	}
+	calcButtons.push(calcBtt);
+	return calcBtt;
 }
 
 function insertOldFa() {
-  let ratingsNode = document.querySelector('.stats-container div img[src*=labels]');
-  if (!ratingsNode) {
-    console.log('Old FA not detected');
-    return false;
-  }
+	let ratingsNode = document.querySelector('.stats-container div img[src*=labels]');
+	if (!ratingsNode) {
+		console.log('Old FA not detected');
+		return false;
+	}
 
-  let header = document.createElement("b");
-  header.innerHTML = "MD5: ";
-  ratingsNode.parentNode.insertBefore(header, ratingsNode);
+	let header = document.createElement("b");
+	header.innerHTML = "MD5: ";
+	ratingsNode.parentNode.insertBefore(header, ratingsNode);
 
-  let calcBtt = createCalcBtt("12em");
-  ratingsNode.parentNode.insertBefore(calcBtt, ratingsNode);
+	let calcBtt = createCalcBtt("12em");
+	ratingsNode.parentNode.insertBefore(calcBtt, ratingsNode);
 
-  let br = document.createElement("br");
-  ratingsNode.parentNode.insertBefore(br, ratingsNode);
+	let br = document.createElement("br");
+	ratingsNode.parentNode.insertBefore(br, ratingsNode);
 
-  br = document.createElement("br");
-  ratingsNode.parentNode.insertBefore(br, ratingsNode);
+	br = document.createElement("br");
+	ratingsNode.parentNode.insertBefore(br, ratingsNode);
 
-  return true;
+	return true;
 }
 
 function insertNewFa() {
-  let postInfo = document.querySelector('.section-body.info');
-  if (!postInfo) {
-    console.log('New FA not detected');
-    return false;
-  }
+	let postInfos = document.querySelectorAll('.info');
+	if (postInfos.length == 0) {
+		console.log('New FA not detected');
+		return false;
+	}
 
-  let div = document.createElement("div");
+	for (let postInfo of postInfos) {
+		let div = document.createElement("div");
 
-  let label = document.createElement("strong");
-  label.className = "highlight";
-  label.innerHTML = "Hash";
-  div.appendChild(label);
+		let label = document.createElement("strong");
+		label.className = "highlight";
+		label.innerHTML = "Hash";
+		div.appendChild(label);
 
-  let buttonSpan = document.createElement("span");
-  let calcBtt = createCalcBtt(null);
-  buttonSpan.appendChild(calcBtt);
-  div.appendChild(buttonSpan);
+		let buttonSpan = document.createElement("span");
+		let calcBtt = createCalcBtt(null);
+		buttonSpan.appendChild(calcBtt);
+		div.appendChild(buttonSpan);
 
-  postInfo.appendChild(div);
+		postInfo.appendChild(div);
+	}
 
-  return true;
+	return true;
 }
 
 insertOldFa() || insertNewFa();
