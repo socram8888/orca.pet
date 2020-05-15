@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Global Aliexpress
 // @namespace   https://orca.pet
-// @version     1.0.0
+// @version     1.0.1
 // @author      Marcos Del Sol Vives <marcos@orca.pet>
 // @description Redirects localized versions of AliExpress to the English global version
 // @homepage    https://orca.pet/userscripts/
@@ -80,6 +80,9 @@ function redirect() {
 	location.hostname = "www.aliexpress.com";
 }
 
-if ('my.aliexpress.com' && location.hostname.match("^[a-z]{2}\.aliexpress\.com$")) {
+if (
+		location.hostname != 'my.aliexpress.com' &&
+		location.hostname.match("^[a-z]{2}\.aliexpress\.com$")
+) {
 	redirect();
 }
