@@ -41,6 +41,9 @@ jobs:
           - name: Build Jekyll
             run: JEKYLL_ENV=production bundle exec jekyll build --destination gh-pages
 
+          - run: ls -laR gh-pages
+            name: List all this stuff
+            
           - name: Publish
             uses: stefanzweifel/git-auto-commit-action@v4
             with:
