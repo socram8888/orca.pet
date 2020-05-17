@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en_US">
+	<head>
+		<meta charset="UTF-8">
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>3D printer heat optimizer | orca.pet</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="3D printer heat optimizer" />
+<meta name="author" content="Marcos Del Sol Vives" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Socram’s website" />
+<meta property="og:description" content="Socram’s website" />
+<link rel="canonical" href="https://orca.pet/fastheat/" />
+<meta property="og:url" content="https://orca.pet/fastheat/" />
+<meta property="og:site_name" content="orca.pet" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="3D printer heat optimizer" />
+<meta name="twitter:site" content="@Socramite" />
+<meta name="twitter:creator" content="@Marcos Del Sol Vives" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"https://orca.pet/fastheat/","author":{"@type":"Person","name":"Marcos Del Sol Vives"},"description":"Socram’s website","headline":"3D printer heat optimizer","dateModified":"2020-04-30T17:52:24+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		<link rel="icon" href="/favicon.ico?NjvwljAx" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#157878">
+		<link rel="stylesheet" href="/assets/css/style.css?sY1m_xrX">
+	</head>
+	<body>
+		<a class="page-header-link" href="/">
+			<section class="page-header">
+				<h1 class="project-name">orca.pet</h1>
+			</section>
+		</a>
+
+		<section class="main-content">
+			<h1 id="3d-printer-heat-optimizer">3D printer heat optimizer</h1>
+
+<h2 id="input-settings">Input settings</h2>
+
+<p>This form is a quick script for calculating a more optimal heating script than Cura’s standard sequential procedure of heating bed, waiting, heating extruder and then waiting some more. It uses your temperature and timing settings to calculate a G-Code that parallelizes the heating of both elements, so they reach the target temperatures at the same time, reducing printing time.</p>
+
+<h3 id="nozzle">Nozzle</h3>
+
+<dl>
+	<dt><label for="nozzleinitial">Initial temperature</label></dt>
+	<dd><input id="nozzleinitial" type="number" value="24.5" style="width: 5em;" step="0.5" /> ºC (usually room temperature)</dd>
+	<dt><label for="nozzletarget">Target temperature</label></dt>
+	<dd><input id="nozzletarget" type="number" value="220" style="width: 5em;" step="1" /> ºC</dd>
+	<dt><label for="nozzletime">Time</label> (from initial to target)</dt>
+	<dd><input id="nozzletime" type="time" value="00:02:00" step="1" /></dd>
+</dl>
+
+<h3 id="bed">Bed</h3>
+
+<dl>
+	<dt><label for="bedinitial">Initial temperature</label></dt>
+	<dd><input id="bedinitial" type="number" value="24.5" style="width: 5em;" step="0.5" /> ºC (usually room temperature)</dd>
+	<dt><label for="bedtarget">Target temperature</label></dt>
+	<dd><input id="bedtarget" type="number" value="60" style="width: 5em;" step="1" /> ºC</dd>
+	<dt><label for="bedtime">Time</label> (from initial to target)</dt>
+	<dd><input id="bedtime" type="time" value="00:03:00" step="1" /></dd>
+</dl>
+
+<h2 id="generated-g-code">Generated G-Code</h2>
+
+<textarea id="generatedcode" style="font-family: monospace; width: 100%; max-width: 100%; height: 20em;">; Oops, is JS disabled?</textarea>
+<script src="/fastheat/calculator.js?d7rqchSL"></script>
+
+<h2 id="foot-notes">Foot notes</h2>
+
+<p>Please note the generated G-Code will be room-temperature dependant. This should not be a concern with small temperature variations, such as those in a house or an office.</p>
+
+<p>The bed in my case does follow a linear heating pattern, but the extruder seems to follow a slightly softer curve tgat seems to be caused by the heater having a reduced duty cycle when it reaches a point close to the target. I have decided not to take this into account for now, and assume a linear heating pattern for both elements.</p>
+
+<h3 id="plots">Plots</h3>
+
+<p>Taken from the serial log of my Anet A8 (room 24.5ºC, bed heating time of 3:00 to 60ºC, extruder heating time of 1:50 to 215ºC)</p>
+
+<h4 id="original-cura-sequential">Original Cura (sequential)</h4>
+
+<p><img src="/fastheat/sequential.png?jXdumYQ_" alt="Sequential heating graph" /></p>
+
+<h4 id="improved-parallel">Improved (parallel)</h4>
+
+<p><img src="/fastheat/parallel.png?lYboSQom" alt="Parallel heating graph" /></p>
+
+
+			<footer class="site-footer">
+				<span class="site-footer-owner">Website maintained by <a href="/#contact">Marcos Del Sol Vives</a>.</span>
+				<span class="site-footer-credits">Built using <a href="https://github.com/socram8888/orca.pet">GitHub</a> and <a href="https://jekyllrb.com/">Jekyll</a>. Hosted at <a href="https://www.ovh.es/">OVH</a>.</span>
+			</footer>
+		</section>
+	</body>
+</html>
