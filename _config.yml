@@ -19,6 +19,11 @@ plugins:
   - jekyll-sitemap
   - jekyll-titles-from-headings
 
+keep_files:
+  - .nojekyll
+  - notonmyshift/domains.txt
+  - notonmyshift/hosts.txt
+
 exclude:
   - /commit.bat
   - /commit.sh

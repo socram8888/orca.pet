@@ -8,11 +8,17 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-          - name: Checkout
+          - name: Checkout source
             uses: actions/checkout@v2
             with:
                 # Clone all history so timestamps are accurate
                 fetch-depth: 0
+
+          - name: Checkout built
+            uses: actions/checkout@v2
+            with:
+                path: gh-pages
+                ref: gh-pages
 
           - name: Setup cache
             uses: actions/cache@v1
@@ -21,9 +27,6 @@ jobs:
                 key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
                 restore-keys: |
                     ${{ runner.os }}-gems-
-
-          - name: Set up dependencies
-            run: sudo apt install -y brotli
 
           - name: Set up Ruby
             uses: ruby/setup-ruby@v1.32.1
@@ -36,16 +39,12 @@ jobs:
                 bundle install
 
           - name: Build Jekyll
-            run: JEKYLL_ENV=production bundle exec jekyll build
-
-          - name: Compressing
-            run: find _site -type f \( -name "*.css" -o -name "*.ico" -o -name "*.html" -o -name "*.js" -o -name "*.json" -o -name "*.svg" -o -name "*.txt" -o -name "*.xml" \) -exec brotli -Z {} \;
+            run: JEKYLL_ENV=production bundle exec jekyll build --destination gh-pages
 
           - name: Publish
-            uses: socram8888/ftp-hash-sync@v1
+            uses: EndBug/add-and-commit@v4
             with:
-                host: ftp.cluster021.hosting.ovh.net
-                username: orcapetlmg
-                password: ${{ secrets.FTP_PASSWORD }}
-                source: _site
-                destination: www
+                message: 'Automatic build (orca.pet)'
+                cwd: gh-pages
+            env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
