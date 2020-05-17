@@ -42,9 +42,8 @@ jobs:
             run: JEKYLL_ENV=production bundle exec jekyll build --destination gh-pages
 
           - name: Publish
-            uses: EndBug/add-and-commit@v4
+            uses: stefanzweifel/git-auto-commit-action@v4
             with:
-                message: 'Automatic build (orca.pet)'
-                cwd: gh-pages
-            env:
-                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                commit_message: 'Automatic build (orca.pet)'
+                branch: gh-pages
+                repository: gh-pages
