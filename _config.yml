@@ -22,6 +22,7 @@ plugins:
 keep_files:
   - .git
   - .nojekyll
+  - CNAME
   - notonmyshift/domains.txt
   - notonmyshift/hosts.txt
 
