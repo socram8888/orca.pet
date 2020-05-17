@@ -20,9 +20,6 @@ jobs:
                 path: gh-pages
                 ref: gh-pages
 
-          - run: ls -laR gh-pages
-            name: List all this stuff
-            
           - name: Setup cache
             uses: actions/cache@v1
             with:
@@ -44,9 +41,6 @@ jobs:
           - name: Build Jekyll
             run: JEKYLL_ENV=production bundle exec jekyll build --destination gh-pages
 
-          - run: ls -laR gh-pages
-            name: List all this stuff 2
-            
           - name: Publish
             uses: stefanzweifel/git-auto-commit-action@v4
             with:
