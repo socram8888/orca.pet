@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en_US">
+	<head>
+		<meta charset="UTF-8">
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Saph | orca.pet</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Saph" />
+<meta name="author" content="Marcos Del Sol Vives" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Socram’s website" />
+<meta property="og:description" content="Socram’s website" />
+<link rel="canonical" href="https://orca.pet/saph/" />
+<meta property="og:url" content="https://orca.pet/saph/" />
+<meta property="og:site_name" content="orca.pet" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Saph" />
+<meta name="twitter:site" content="@Socramite" />
+<meta name="twitter:creator" content="@Marcos Del Sol Vives" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"https://orca.pet/saph/","author":{"@type":"Person","name":"Marcos Del Sol Vives"},"description":"Socram’s website","headline":"Saph","dateModified":"2020-05-19T01:24:35+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		<link rel="icon" href="/favicon.ico?NjvwljAx" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#157878">
+		<link rel="stylesheet" href="/assets/css/style.css?sY1m_xrX">
+	</head>
+	<body>
+		<a class="page-header-link" href="/">
+			<section class="page-header">
+				<h1 class="project-name">orca.pet</h1>
+			</section>
+		</a>
+
+		<section class="main-content">
+			<h1 id="saph">Saph</h1>
+
+<p>The Stupid Algorithm for Password Hashing</p>
+
+<h2 id="why">Why?</h2>
+
+<p>At the dawn of the humanity, we all worked with passwords stored in plain in our databases. The easy and simple process of just storing the user’s five letter, all lowercase password in a column called “password”. If said user wanted to log in, you’d just do a SELECT comparing the user’s input with the stored value (of course without checking for quotes, because we told users not to put them in!) and called it a day.</p>
+
+<p>However, wise people thought, “it’s easy, but it’s not safe!”. And thus we started hashing first the passwords using the almighty MD5 hash.</p>
+
+<p>This kinda did the job, but then some people realized “this is bullshit, what if we just calculated all possible MD5s for short-length passwords”. Thus, people started putting in extra, random data in the hash, to foil attacker’s rainbow tables.</p>
+
+<p>However, with the ever-growing power of CPUs and GPUs, plain old hashes proved to be ineffective, since you could feasibly bruteforce them in a matter of hours (mostly because they never were intended to be used for this - they’re meant to be fast!).</p>
+
+<p>Thus functions dedicated for hashing passwords securely were born.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/PBKDF2">PBKDF2</a> is one of the first ones, and it’s still used to this day. This employs a standard hashing algorithm as its basis, and works from that on. It is computationally intensive, but requires little memory, making it easier still to bruteforce using an ASIC. Besides, <a href="https://mathiasbynens.be/notes/pbkdf2-hmac">there are known issues with collisions</a>.</p>
+
+<p>Then, two other algorithms came along.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Bcrypt">Bcrypt</a> fixed the issues with memory requirements, but they relied on the availability of Blowfish, a AES-contender in practice no longer in use anywhere aside from this function. This means that there’s a good chance that any implementation of Bcrypt would need its own shaded copy of Bcrypt, which increases code bloat for no good reason.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Scrypt">scrypt</a> did away with Blowfish, but increases the complexity by depending on PBKDF2, which in turns depends in SHA256; and introduces a dependency on Salsa20/8, a very interesting stream cipher but that it’s not available widely yet either.</p>
+
+<p>From 2015 onwards, the so-called <a href="https://password-hashing.net/">Password Hashing Contest</a>, or PHC for short, published a recommendation on a new algorithm called Argon2. And this is when all went downhill.</p>
+
+<p>From simply storing the password in plain in a database, we are being suddenly now recommended to use an algorithm with:</p>
+
+<ul>
+  <li>Four revisions of its own (1.0, 1.1, 1.2, 1.2.1 and 1.3)</li>
+  <li>Four different variants (2i, 2d, 2ds and 2di)</li>
+  <li>About four tweakable parameters (space and time complexity, parallelism and hash length)</li>
+</ul>
+
+<p>Each variation, of course, giving a different hash. This is just insane, and IMHO suffers a lot from the <a href="https://en.wikipedia.org/wiki/Second-system_effect">second system-effect</a>.</p>
+
+<p>I don’t need parallelism in a password hashing algorithm - 99.99% of the time the hashing will be done in a single thread, be it the server or the client.</p>
+
+<p>I don’t need to have to choose between four different variations - we just care about having one that works, it does well, and we can trust that if we update the library suddenly our hashes aren’t gonna change.</p>
+
+<p>I just need a simple algorithm that increases the complexity of hashing a password for stopping bruteforce attempts, and uses primitives available in most systems, to reduce bloat and ensure the slowdown comes from the cryptographic primitives and not from executing our own function in a scripting language. Nothing else, nothing more.</p>
+
+<p>Thus the Stupid Algorithm for Password Hashing was born.</p>
+
+<h2 id="the-algorithm">The algorithm</h2>
+
+<p>The algorithm is heavily based on <a href="https://password-hashing.net/wiki/doku.php/battcrypt">battcrypt</a>, another PHC finalist. However, the cryptographic primitive Blowfish has been changed to AES.</p>
+
+<p>The algorithm is defined as follow:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>; Calculate starting hash
+hash := sha256(sha256(part[1]) || sha256(part[2]) || ... sha256(part[n]))
+
+; Initial memory with all zeros
+mem := zeros(64 * memsize)
+
+for iteration := 1 to iterations do
+	; Encrypt memory using the current hash as key and IV
+	key := hash[0 ~ 15]
+	iv := hash[16 ~ 31]
+	mem := aes128cbc_encrypt(mem, key, iv)
+
+	; Calculate the order in which they have to be hashed
+	order := [0, 1, ... memsize - 1, memsize]
+	for a := 0 to memsize - 1 do
+		; Parse lower 32-bits as little endian
+		b :=
+				enc[c * 64 + 0] * 1 +
+				enc[c * 64 + 1] * 256 +
+				enc[c * 64 + 2] * 65536 +
+				enc[c * 64 + 3] * 16777216
+
+		; Cap to memory size
+		b := b mod memsize
+
+		; Swap indexes
+		swap(order[a], order[b])
+	end
+
+	; Build new byte array in correct order
+	reordered := []
+	for chunk in order do
+		start := chunk * 64
+		end := chunk * 64 + 63
+		reordered := reordered || enc[start ~ end]
+	end
+
+	; Calculate new hash
+	hash := sha256(reordered)
+end
+
+result := hash
+</code></pre></div></div>
+
+<h2 id="rationale">Rationale</h2>
+
+<p>I am no expert cryptographer, but I have been reading for years on the security and cryptography topic and I am pretty confident of the security of this construction.</p>
+
+<p>This algorithm is pretty opinionated, but all decisions have a rationale behind them:</p>
+
+<ul>
+  <li>
+    <p>It uses SHA-256 for hashing data. It is available in <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest#SHA-256">WebCrypto</a>, in <a href="https://docs.python.org/3/library/hashlib.html">Python’s standard library</a> and is mandatory by all <a href="https://docs.oracle.com/javase/8/docs/api/java/security/MessageDigest.html">Java 8 runtimes</a> and onwards.</p>
+  </li>
+  <li>
+    <p>It uses AES-128-CBC for generating the pseudo-random memory. This algorithm and mode is supported by <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CBC">WebCrypto</a>, by Python’s most used cryptographic libraries (<a href="https://pycryptodome.readthedocs.io/en/latest/src/cipher/aes.html">PyCryptodome</a> and <a href="https://cryptography.io/en/latest/hazmat/primitives/symmetric-encryption/">Cryptography</a>) and by <a href="https://docs.oracle.com/javase/8/docs/api/javax/crypto/Cipher.html">Java’s runtime</a>.</p>
+  </li>
+  <li>
+    <p>Both AES-128-CBC and SHA-256 as of 2019, are widely used algorithms, well-tested, and still considered safe if properly used.</p>
+  </li>
+  <li>
+    <p>CBC mode has been chosen instead of CTR, the other widely available construction, due the impossibility to parallelize encryption.</p>
+
+    <p>Unlike CTR, CBC cannot be calculated for a given offset without having calculated all the previous blocks. This ensures all the memory has to be kept for calculating the resulting hash.</p>
+  </li>
+  <li>
+    <p>The CBC mode allows for calculating the previous block ciphertext having the key and the current block’s cipher- and plaintext.</p>
+
+    <p>If one were to use the layman approach of calculating the hash by hashing memory backwards from end to start, an attacker could reduce memory cost to one by calculating twice as many AES operations, by encrypting and discarding the output until the last AES block, and then decrypting and hashing backwards.</p>
+
+    <p>The pseudo-random, ciphertext-dependant shuffling prevents this, by breaking the relation from previous hashed block to the current one.</p>
+  </li>
+  <li>
+    <p>In all other password-hashing algorithms, there is always a salt and a password.</p>
+
+    <p>If doing the encryption in front-end, one could consider using the username as salt. This means however that common usernames, such as “admin”, are more vulnerable against rainbow tables or pre-calculated hashes that could be floating on the internet.</p>
+
+    <p>The option of requesting a salt from the backend could seem a good fix, but it introduces round trip delays, and leaks information about whether the username requested corresponds to an active user or not by checking if the salt is returned and is constant between calls.</p>
+
+    <p>This algorithm introduces the possibility of having both a <a href="https://en.wikipedia.org/wiki/Pepper_(cryptography)">pepper</a>, hardcoded in the frontend, and username as salt. Any password received by the backend, will be exclusive for this username and application.</p>
+
+    <p>Recommended is, however, that another secret pepper is used in the backend, for example by HMAC-ing the output from Saph, before storing. Should an attacker have access to the hashed credentials (for instance due to a database breach), this second secret pepper would prevent them from being useable as-is as input.</p>
+  </li>
+</ul>
+
+<h2 id="implementations">Implementations</h2>
+
+<ul>
+  <li><a href="https://github.com/socram8888/saph-python">Python implementation</a>, available in <a href="https://pypi.org/project/saph/">PyPI</a>.</li>
+  <li><a href="https://github.com/socram8888/saph-browser">TS/JS implementation using WebCrypto</a>, also available in <a href="https://www.npmjs.com/package/saph-browser">npm</a>.</li>
+  <li><a href="https://github.com/socram8888/saph-java">Java implementation</a>, also available in <a href="https://mvnrepository.com/artifact/pet.orca/saph">Maven Central</a>.</li>
+</ul>
+
+<h2 id="test-vectors">Test vectors</h2>
+
+<p>To ensure my implementations were correct, I hand crafted the following test vectors, running the algorithm by hand step by step:</p>
+
+<ul>
+  <li><a href="test-vector-1.html">Test vector 1</a></li>
+</ul>
+
+
+			<footer class="site-footer">
+				<span class="site-footer-owner">Website maintained by <a href="/#contact">Marcos Del Sol Vives</a>.</span>
+				<span class="site-footer-credits">Built using <a href="https://github.com/socram8888/orca.pet">GitHub</a>, <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://porkbun.com/">Porkbun</a>.</span>
+			</footer>
+		</section>
+	</body>
+</html>
