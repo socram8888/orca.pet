@@ -3,4 +3,6 @@
 .jekyll-cache/
 .sass-cache/
 _site/
+assets/npm/
+node_modules/
 vendor/
