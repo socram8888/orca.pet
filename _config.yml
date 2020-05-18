@@ -33,5 +33,9 @@ exclude:
   - /devserver.sh
   - /Gemfile
   - /Gemfile.lock
+  - /node_modules/
+  - /package.json
+  - /package-lock.json
   - /README.md
   - /vendor/
+  - /webpack.config.js

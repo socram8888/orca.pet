@@ -20,7 +20,26 @@ jobs:
                 path: gh-pages
                 ref: gh-pages
 
-          - name: Setup cache
+          - name: Setup NPM cache
+            uses: actions/cache@v1
+            with:
+                path: ~/.npm
+                key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+                restore-keys: |
+                    ${{ runner.os }}-node-
+
+          - name: Set up Node
+            uses: actions/setup-node@v1
+            with:
+                node-version: '12'
+
+          - name: Install NPM dependencies
+            run: npm install
+
+          - name: Build packs
+            run: npx webpack
+
+          - name: Setup Jekyll cache
             uses: actions/cache@v1
             with:
                 path: vendor/bundle
