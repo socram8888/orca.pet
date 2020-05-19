@@ -18,13 +18,16 @@
 <meta name="twitter:site" content="@Socramite" />
 <meta name="twitter:creator" content="@Marcos Del Sol Vives" />
 <script type="application/ld+json">
-{"@type":"WebPage","url":"https://orca.pet/saph/","author":{"@type":"Person","name":"Marcos Del Sol Vives"},"description":"Socram’s website","headline":"Saph","dateModified":"2020-05-19T01:24:35+02:00","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"https://orca.pet/saph/","author":{"@type":"Person","name":"Marcos Del Sol Vives"},"description":"Socram’s website","headline":"Saph","dateModified":"2020-05-19T03:49:50+02:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 		<link rel="icon" href="/favicon.ico?NjvwljAx" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="theme-color" content="#157878">
 		<link rel="stylesheet" href="/assets/css/style.css?sY1m_xrX">
+
+		<link rel="stylesheet" href="/saph/playground.css?rHcBD4nm">
+
 	</head>
 	<body>
 		<a class="page-header-link" href="/">
@@ -37,6 +40,42 @@
 			<h1 id="saph">Saph</h1>
 
 <p>The Stupid Algorithm for Password Hashing</p>
+
+<h2 id="playground">Playground</h2>
+
+<h3 id="input">Input</h3>
+
+<p><strong>Parts</strong> (strings, will be encoded as UTF-8):</p>
+
+<ol id="parts">
+	<li><input value="test-app-name" /></li>
+	<li><input value="socram" /></li>
+	<li><input value="Password123" /></li>
+</ol>
+
+<p><button id="addbtt">Add part</button>
+<button id="deletebtt">Delete part</button></p>
+
+<p><strong>Memory size</strong> (amount of 64-byte chunks):</p>
+
+<p><input type="number" min="1" value="16384" id="memsize" /></p>
+
+<p><strong>Iterations</strong>:</p>
+
+<p><input type="number" min="1" value="8" id="iterations" /></p>
+
+<h3 id="output">Output</h3>
+
+<p><button id="calcbtt"><b>Calculate</b></button></p>
+
+<ul id="output">
+	<li>Hex: <tt id="hexoutput"></tt></li>
+	<li>Base64: <tt id="b64output"></tt></li>
+</ul>
+
+<script src="/assets/js/saph-v1.1.0.js?Gkd2kGA0"></script>
+
+<script src="/saph/playground.js?KCcUxcTI"></script>
 
 <h2 id="why">Why?</h2>
 
