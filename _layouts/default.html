@@ -7,6 +7,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="theme-color" content="#157878">
 		<link rel="stylesheet" href="{{ '/assets/css/style.css' | cachebuster }}">
+{% if page.extra_css %}
+		<link rel="stylesheet" href="{{ page.extra_css | cachebuster }}">
+{% endif %}
 	</head>
 	<body>
 		<a class="page-header-link" href="/">

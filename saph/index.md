@@ -1,10 +1,47 @@
 ---
+extra_css: playground.css
 ---
 
 Saph
 ====
 
 The Stupid Algorithm for Password Hashing
+
+Playground
+----------
+
+### Input
+
+**Parts** (strings, will be encoded as UTF-8):
+
+<ol id="parts">
+	<li><input value="test-app-name"></li>
+	<li><input value="socram"></li>
+	<li><input value="Password123"></li>
+</ol>
+
+<button id="addbtt">Add part</button>
+<button id="deletebtt">Delete part</button>
+
+**Memory size** (amount of 64-byte chunks):
+
+<input type="number" min="1" value="16384" id="memsize">
+
+**Iterations**:
+
+<input type="number" min="1" value="8" id="iterations">
+
+### Output
+
+<button id="calcbtt"><b>Calculate</b></button>
+
+<ul id="output">
+	<li>Hex: <tt id="hexoutput"></tt></li>
+	<li>Base64: <tt id="b64output"></tt></li>
+</ul>
+
+<script src="{{ '/assets/js/saph-v1.1.0.js' | cachebuster }}"></script>
+<script src="{{ 'playground.js' | cachebuster }}"></script>
 
 Why?
 ----
