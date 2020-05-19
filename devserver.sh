@@ -1,5 +1,4 @@
 #!/bin/bash -e
 cd "$(dirname "$0")"
-npm install
-npx webpack
+bundle
 bundle exec jekyll serve
