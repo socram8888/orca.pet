@@ -1,6 +1,6 @@
 # Title: Not on my shift!
 # Expires: 4h
-# Last update: 2020-05-16T01:44:19+02:00
+# Last update: 2020-05-20T19:19:04+02:00
 
 #
 # PHISHING
@@ -633,3 +633,7 @@
 # 2020-05-14 Danone mail beacon
 # https://push.danone.es/email/image.png
 0.0.0.0 push.danone.es
+
+# 2020-05-20 N26 mail beacon
+# https://click.email.n26.com/open.aspx
+0.0.0.0 click.email.n26.com
