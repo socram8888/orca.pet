@@ -1,6 +1,6 @@
 # Title: Not on my shift!
 # Expires: 4h
-# Last update: 2020-05-21T16:25:58+02:00
+# Last update: 2020-05-21T17:46:28+02:00
 
 #
 # PHISHING
@@ -442,3 +442,7 @@ push.danone.es
 # 2020-05-20 N26 mail beacon
 # https://click.email.n26.com/open.aspx
 click.email.n26.com
+
+# 2020-05-21 Minecraft telemetry
+minecraftprod.rtep.msgamestudios.com
+
