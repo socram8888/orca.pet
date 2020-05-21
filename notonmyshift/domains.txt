@@ -1,6 +1,6 @@
 # Title: Not on my shift!
 # Expires: 4h
-# Last update: 2020-05-21T16:12:45+02:00
+# Last update: 2020-05-21T16:25:58+02:00
 
 #
 # PHISHING
@@ -124,7 +124,12 @@ churrascariameinhaus.com.br
 # 2020-05-21 Bankia phising
 es-cuentabankialogin.com
 
+# 2020-05-21 C&C for mail scam
+update-serviceq.cf
+
+#
 # SCAMS
+#
 
 # 2020-05-01 Scam reported by Jim Browning
 # https://www.youtube.com/watch?v=xOw1vct-wHg
