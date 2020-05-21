@@ -1,0 +1,10 @@
+Package: wireless-regdb
+Version: 9999.0001
+Depends: libc
+Section: firmware
+Architecture: all
+Installed-Size: 768
+Filename: wireless-regdb_9999.0001_all.ipk
+Size: 1424
+SHA256sum: e90abc83780f27977f5653b15f6e4e6a7fc859faf60a1487f8568e448378ec65
+Description:  Wireless Regulatory Database
