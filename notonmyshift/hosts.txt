@@ -1,6 +1,6 @@
 # Title: Not on my shift!
 # Expires: 4h
-# Last update: 2020-05-21T17:46:28+02:00
+# Last update: 2020-05-24T18:08:20+02:00
 
 #
 # PHISHING
@@ -654,3 +654,6 @@
 # 2020-05-21 Minecraft telemetry
 0.0.0.0 minecraftprod.rtep.msgamestudios.com
 
+# 2020-05-24 eBay mail beacon
+# https://rover.ebay.com/roveropen/0/e11021/7
+0.0.0.0 rover.ebay.com
