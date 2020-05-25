@@ -6,9 +6,33 @@ Not on my shift!
 
 This is a domain list for blocking phishing and malware sites that I have encountered through the internet. Normally I'd collect these domains from spam mails that manage to slip through my email spam filter.
 
-* [Click here to subscribe](abp:subscribe?location=https://orca.pet/notonmyshift/domains.txt&title=Not on my shift!) if using [uBlock Origin](https://github.com/gorhill/uBlock) or [AdBlock Plus](https://adblockplus.org/)
-* [Domain list](domains.txt)
-* [Hosts list](hosts.txt)
+**TL;DR: [Click here to subscribe for uBlock Origin / AdBlock Plus](abp:subscribe?location=https://orca.pet/notonmyshift/abp.txt&title=Not on my shift!)**
+
+There are three different versions:
+
+<dl>
+	<dt>AdBlock</dt>
+	<dd><a href="https://orca.pet/notonmyshift/abp.txt"><tt>https://orca.pet/notonmyshift/abp.txt</tt></a></dd>
+	<dt>Domain list</dt>
+	<dd><a href="https://orca.pet/notonmyshift/domains.txt"><tt>https://orca.pet/notonmyshift/domains.txt</tt></a></dd>
+	<dt>Hosts</dt>
+	<dd><a href="https://orca.pet/notonmyshift/hosts.txt"><tt>https://orca.pet/notonmyshift/hosts.txt</tt></a></dd>
+</dl>
+
+Which version should I use?
+---------------------------
+
+**TL;DR: use AdBlock version for a browser, or domain list for DNS filtering**.
+
+If you are using a modern web browser capable of using extensions and [uBlock Origin](https://github.com/gorhill/uBlock) or [AdBlock Plus](https://adblockplus.org/) installed, you'd want to use the AdBlock version.
+
+It is the most flexible one and will block all website-based annoyances I've found, including blocking only certain URLs rather than entire domains which is not doable with other the other two.
+
+If you are looking at a DNS-based blocking solution and you are using something modern such as [Pi-hole](https://pi-hole.net/) or [simple-adblock](https://openwrt.org/packages/pkgdata/simple-adblock), you'd want to use the domain list version, which blocks all subdomains for a known bad domain.
+
+This is recommended to protect devices or applications which can't use the AdBlock version, such as video game consoles or cell phones. Personally, I have this running on my WiFi router to block hosts on all devices connected to it, with no manual configuration required on the devices themselves.
+
+Lastly, there is the hosts version - it the least effective list, and is only recommended as last resort. It is however the most standard and widely supported one.
 
 Why not use Malware Domain List or Malware domains?
 ---------------------------------------------------
