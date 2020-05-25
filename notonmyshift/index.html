@@ -18,7 +18,7 @@
 <meta name="twitter:site" content="@Socramite" />
 <meta name="twitter:creator" content="@Marcos Del Sol Vives" />
 <script type="application/ld+json">
-{"@type":"WebPage","url":"https://orca.pet/notonmyshift/","author":{"@type":"Person","name":"Marcos Del Sol Vives"},"description":"Socram’s website","headline":"Not on my shift!","dateModified":"2020-05-03T19:34:45+02:00","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"https://orca.pet/notonmyshift/","author":{"@type":"Person","name":"Marcos Del Sol Vives"},"description":"Socram’s website","headline":"Not on my shift!","dateModified":"2020-05-25T18:32:12+02:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 		<link rel="icon" href="/favicon.ico?NjvwljAx" />
@@ -39,11 +39,32 @@
 
 <p>This is a domain list for blocking phishing and malware sites that I have encountered through the internet. Normally I’d collect these domains from spam mails that manage to slip through my email spam filter.</p>
 
-<ul>
-  <li><a href="abp:subscribe?location=https://orca.pet/notonmyshift/domains.txt&amp;title=Not on my shift!">Click here to subscribe</a> if using <a href="https://github.com/gorhill/uBlock">uBlock Origin</a> or <a href="https://adblockplus.org/">AdBlock Plus</a></li>
-  <li><a href="domains.txt">Domain list</a></li>
-  <li><a href="hosts.txt">Hosts list</a></li>
-</ul>
+<p><strong>TL;DR: <a href="abp:subscribe?location=https://orca.pet/notonmyshift/abp.txt&amp;title=Not on my shift!">Click here to subscribe for uBlock Origin / AdBlock Plus</a></strong></p>
+
+<p>There are three different versions:</p>
+
+<dl>
+	<dt>AdBlock</dt>
+	<dd><a href="https://orca.pet/notonmyshift/abp.txt"><tt>https://orca.pet/notonmyshift/abp.txt</tt></a></dd>
+	<dt>Domain list</dt>
+	<dd><a href="https://orca.pet/notonmyshift/domains.txt"><tt>https://orca.pet/notonmyshift/domains.txt</tt></a></dd>
+	<dt>Hosts</dt>
+	<dd><a href="https://orca.pet/notonmyshift/hosts.txt"><tt>https://orca.pet/notonmyshift/hosts.txt</tt></a></dd>
+</dl>
+
+<h2 id="which-version-should-i-use">Which version should I use?</h2>
+
+<p><strong>TL;DR: use AdBlock version for a browser, or domain list for DNS filtering</strong>.</p>
+
+<p>If you are using a modern web browser capable of using extensions and <a href="https://github.com/gorhill/uBlock">uBlock Origin</a> or <a href="https://adblockplus.org/">AdBlock Plus</a> installed, you’d want to use the AdBlock version.</p>
+
+<p>It is the most flexible one and will block all website-based annoyances I’ve found, including blocking only certain URLs rather than entire domains which is not doable with other the other two.</p>
+
+<p>If you are looking at a DNS-based blocking solution and you are using something modern such as <a href="https://pi-hole.net/">Pi-hole</a> or <a href="https://openwrt.org/packages/pkgdata/simple-adblock">simple-adblock</a>, you’d want to use the domain list version, which blocks all subdomains for a known bad domain.</p>
+
+<p>This is recommended to protect devices or applications which can’t use the AdBlock version, such as video game consoles or cell phones. Personally, I have this running on my WiFi router to block hosts on all devices connected to it, with no manual configuration required on the devices themselves.</p>
+
+<p>Lastly, there is the hosts version - it the least effective list, and is only recommended as last resort. It is however the most standard and widely supported one.</p>
 
 <h2 id="why-not-use-malware-domain-list-or-malware-domains">Why not use Malware Domain List or Malware domains?</h2>
 
