@@ -1,157 +1,22 @@
-# Title: Not on my shift!
-# Expires: 4h
-# Last update: 2020-05-24T18:08:20+02:00
-
-#
-# PHISHING
-#
-
-# 2020-03-31 Alledged email verification
-# http://shinai.jp/dansou/akismett/index.php?i=i&0=the@email.com
-0.0.0.0 shinai.jp
-0.0.0.0 www.shinai.jp
-
-# 2020-04-05 OVH phising
-# http://absr.es/fake.tld
-0.0.0.0 absr.es
-0.0.0.0 www.absr.es
-# https://pago.ovh.net.alessandrogiulianelli.com/es/?AUTH_TOKEN=906ebfb35d9f008f7e7ec04cf74018293013d059c4517e2166009c8a84eae4122fc15e94413f62bd50da2292f28b1efaff51fbbebd6d280c4d9e8070cff89e53&cur=home&page=welcome&code=098167e0a127daeac7ccafb6f53a069f079016a8d569f0940367d913ee0c74c01.
-0.0.0.0 pago.ovh.net.alessandrogiulianelli.com
-# https://www.alessandrogiulianelli.com/user/snd1.php
-0.0.0.0 alessandrogiulianelli.com
-0.0.0.0 www.alessandrogiulianelli.com
-
-# 2020-04-05 Bankia phishing
-# http://mem2020.ru/wp-content/uploads/2020/04/acesso.php?65we4f564f98f7wqe5f64wq1gh
-0.0.0.0 mem2020.ru
-0.0.0.0 www.mem2020.ru
-# http://eversharpe.com/specialtyitems/acessos/
-0.0.0.0 eversharpe.com
-0.0.0.0 www.eversharpe.com
-
-# 2020-04-28 Scam received by mail asking for OneDrive credentials
-# https://www.treelains.com/web/page.php
-0.0.0.0 treelains.com
-0.0.0.0 www.treelains.com
-
-# 2020-05-01 Scam received by mail asking for Yahoo credentials
-0.0.0.0 leasingrepublic.com
-0.0.0.0 www.leasingrepublic.com
-
-# 2020-05-02 Fake Microsoft website
-# https://www.scammer.info/d/34715-sky-broadband-shield-blocked-this-website-categorising-it-as-phishing
-0.0.0.0 khuysadgvashgjcvjsgvch.xyz
-0.0.0.0 www.khuysadgvashgjcvjsgvch.xyz
-
-# 2020-05-13 Fake Netflix page
-# https://lavalite.org/htacess
-0.0.0.0 lavalite.org
-0.0.0.0 www.lavalite.org
-# https://calacamotores.com.br/wp-content/uploads/revslider/templates/assets/nfx/
-0.0.0.0 calacamotores.com.br
-
-# 2020-05-13 DHL email scam
-# Got an email with an attached HTML, and the C&C server is below
-# http://print88.com.hk/wp-admin/user/reportdh1.php
-0.0.0.0 print88.com.hk
-
-# 2020-05-13 Orange phising website
-0.0.0.0 identifiez-vous-avec-votre-compte.yolasite.com
-0.0.0.0 notificationvocalmms.webnode.ro
-
-# 2020-05-13 Phising for Microsoft, Google and GoDaddy credentials
-# https://profreelancefitness.com/login/index.html?email=fake@email.com
-0.0.0.0 profreelancefitness.com
-0.0.0.0 www.profreelancefitness.com
-
-# 2020-05-13 DKB phising
-# https://n3plvwcpnl349341.prod.ams3.secureserver.net/~cloudkonto/ID/DBK/qMOZxjAXonrjjZKW4/binary_content.php
-0.0.0.0 n3plvwcpnl349341.prod.ams3.secureserver.net
+# === PHISING ===
+# These filters block pages that are not yet blocked by Google Safe Search
 
 # 2020-05-13 Microsoft phising
-# https://objectstorage.us-phoenix-1.oraclecloud.com/n/axznyrdbyddh/b/bucket-20200505-1938gfddk/o/117-Crl.html#fake@email.com
-# The domain blocked is the C&C domain
-# https://gid.do/ztee/Azure2020/realm/send.php?user=fake@email.com&pass=datpassword
+#  - https://gid.do/ztee/Azure2020/realm/send.php?user=fake@email.com&pass=datpassword
 0.0.0.0 gid.do
 0.0.0.0 www.gid.do
 
-# 2020-05-14 OurTime.com phising
-# https://elccircuit.com/wp-content/themes/twentynineteen/fonts/verify/ourtime/ourtime123/ourtime.php
-0.0.0.0 elccircuit.com
-0.0.0.0 www.elccircuit.com
-
-# 2020-05-14 Netflix phising
-# https://ferienmietedosagui.com/booking/img/firstdata/pes/moga/
-0.0.0.0 ferienmietedosagui.com
-0.0.0.0 www.ferienmietedosagui.com
-# https://igmailcadastrandonline.joomla.com/cadastro/login/
-0.0.0.0 igmailcadastrandonline.joomla.com
-
-# 2020-05-14 FB phising
-# https://m.fb-account-page.realdumpspdf.com/login.php
+# 2020-05-13 Facebook phising
+#  - https://m.fb-account-page.realdumpspdf.com/login.php
 0.0.0.0 m.fb-account-page.realdumpspdf.com
 0.0.0.0 fb-account-page.realdumpspdf.com
 0.0.0.0 realdumpspdf.com
 0.0.0.0 www.realdumpspdf.com
-0.0.0.0 setting-pengaturan-fb.webnode.com
 
-# 2020-05-14 Microsoft phising
-# https://microsoftcloud365.yolasite.com/
-0.0.0.0 microsoftcloud365.yolasite.com
-# https://web0aruportal0config.theworkpc.com/admsf_webpostalsrvce9038390/office-3D8/owa/?utm_medium=marketing&amp;_branch_match_id=788937047078474392
-0.0.0.0 web0aruportal0config.theworkpc.com
-# http://ubfamilypractice.com/.well-known/pki-validation/office/
-0.0.0.0 ubfamilypractice.com
-0.0.0.0 www.ubfamilypractice.com
-
-# 2020-05-14 Orange phising
-0.0.0.0 mms-sms0766645356.webnode.sk
-0.0.0.0 mms-sms0873432486.webnode.sk
-0.0.0.0 mms-swr07676566553.webnode.at
-0.0.0.0 pyhvt.weblium.site
-0.0.0.0 serviceassistanceclientmessagerieconnect.webnode.sk
-
-# 2020-05-14 Bank phising
-0.0.0.0 sucursalesvirutualbacolombia.com
-0.0.0.0 www.sucursalesvirutualbacolombia.com
-# http://u725933url.ha004.t.justns.ru/ca2/authentification/securi=433/
-0.0.0.0 u725933url.ha004.t.justns.ru
-
-# 2020-05-14 Email phising
-0.0.0.0 update-835840.uc.r.appspot.com
-# http://weblube.com.my/wp-admin/css/colors/blue/kor/Exitkorea/upload/en.php
-0.0.0.0 weblube.com.my
-0.0.0.0 web-maintain.moonfruit.com
-
-# 2020-05-14 Chase phising
-# https://www.helpcube.net/wp-content/themes/danfe/ch-log/chase/xwantedCHASE/onreviwer/dashboard
-0.0.0.0 helpcube.net
-0.0.0.0 www.helpcube.net
-
-# 2020-05-14 LinkedIn phising
-# https://www.popplanet.com.au/pdf/checkpoint/index.php?email=
-0.0.0.0 popplanet.com.au
-
-# 2020-05-14 Apple phising
-# http://www.autorizador5.com.br/wp-content/plugins/akismet/compte/verifier/Apple.fr/
-0.0.0.0 autorizador5.com.br
-# http://www.churrascariameinhaus.com.br/novosite/respondi/compte/verifier/Apple.fr/
-0.0.0.0 churrascariameinhaus.com.br
-
-# 2020-05-21 Bankia phising
-0.0.0.0 es-cuentabankialogin.com
-0.0.0.0 www.es-cuentabankialogin.com
-
-# 2020-05-21 C&C for mail scam
-0.0.0.0 update-serviceq.cf
-0.0.0.0 www.update-serviceq.cf
-
-#
-# SCAMS
-#
+# === SCAMS ===
+# These filters block pages which are known to scam people for money or gift cards
 
 # 2020-05-01 Scam reported by Jim Browning
-# https://www.youtube.com/watch?v=xOw1vct-wHg
 0.0.0.0 contactaolhelp.com
 0.0.0.0 www.contactaolhelp.com
 0.0.0.0 garmincommexpress.com
@@ -180,14 +45,12 @@
 0.0.0.0 www.wifiextenderhelp.com
 
 # 2020-05-02 ExcelTechGuru
-# https://www.scammer.info/d/34695-exceltechguru-big-24-7-scam
 0.0.0.0 exceltechguru.com
 0.0.0.0 www.exceltechguru.com
 0.0.0.0 mygeolocate.com
 0.0.0.0 www.mygeolocate.com
 
 # 2020-05-02 Typo domain squatting
-# https://www.scammer.info/d/34675-currently-active-websites-that-allow-you-to-get-popups
 0.0.0.0 facebaak.com
 0.0.0.0 www.facebaak.com
 0.0.0.0 facebiik.com
@@ -323,18 +186,15 @@
 0.0.0.0 twwitter.com
 0.0.0.0 www.twwitter.com
 
-# Fake coronavirus snakeoil
-# https://www.scammer.info/d/34676-immune-boost-scam-corona-scam
+# 2020-05-02 Coronavirus snakeoil
 0.0.0.0 centroidessentialoils.com
 0.0.0.0 www.centroidessentialoils.com
 
-# Fake sex booster
-# https://www.scammer.info/d/34672-bluoxyn-keto-scam
+# 2020-05-02 Fake sex booster
 0.0.0.0 bluoxyn.com
 0.0.0.0 www.bluoxyn.com
 
-# Printer scammer active
-# https://www.scammer.info/d/34710-big-scam-on-printer-live
+# 2020-05-02 Printer scammer active
 0.0.0.0 printererrorsupport.com
 0.0.0.0 www.printererrorsupport.com
 0.0.0.0 epsonprintersupport247.com
@@ -342,72 +202,63 @@
 0.0.0.0 canonprintersupport247.com
 0.0.0.0 www.canonprintersupport247.com
 
-# Fake blood booster
-# https://www.scammer.info/d/34723-blood-boost-pill-scam
+# 2020-05-02 Fake blood booster
 0.0.0.0 bloodboostformula.com
 0.0.0.0 www.bloodboostformula.com
 
-# 2020-05-16 Fake Microsoft ad
-# From scammer.info
-0.0.0.0 bookmark504.ml
-0.0.0.0 www.bookmark504.ml
-0.0.0.0 securedomain42098288.club
-0.0.0.0 www.securedomain42098288.club
-# http://pseudosocialistic.site/ch/
-0.0.0.0 pseudosocialistic.site
-0.0.0.0 www.pseudosocialistic.site
-# http://spectrophotometry.site/ch/
-0.0.0.0 spectrophotometry.site
-0.0.0.0 www.spectrophotometry.site
+# 2020-05-04 Just the average easy money scam
+0.0.0.0 formulavitali.com
+0.0.0.0 www.formulavitali.com
+0.0.0.0 opportunemoney.com
+0.0.0.0 www.opportunemoney.com
+0.0.0.0 megamoneymarket.com
+0.0.0.0 www.megamoneymarket.com
+0.0.0.0 trendinassets.com
+0.0.0.0 www.trendinassets.com
 
-#
-# ADS
-#
+# === ADVERTISEMENTS ===
+# These entries block good old advertisements, which are annoying but pose no threat
 
 # 2020-04-06 GamoVideo
-# http://servetean.site/des
+#  - https://servetean.site/des
 0.0.0.0 servetean.site
 0.0.0.0 www.servetean.site
 
 # 2020-04-06 steamplay
-# https://centent.steamplay.me/apu.hh?n=&direct=1&zoneid=50
+#  - https://centent.steamplay.me/apu.hh?n=&direct=1&zoneid=50
 0.0.0.0 centent.steamplay.me
 
-# 2020-04-27 Classic "you're the 100th visitor, free iPhone" ad
-#
+# 2020-04-27
 # These are the extremely annoying ads that pop up out of nowhere when clicking sometimes the
 # first result on Google, and then the second time the page just works fine. I am not sure if it's
 # because the pages are hacked or what, but I really want these gone.
-#
+
 # The page seems to be "whatever-prize.life/?u=tqck80z&o=zdqr96x&t=DESKuniqANDsearch", and this
 # one redirects to one whose domain that changes every few hours, but (so far) always matches
 # ^[a-z-]{16,25}[0-9]+\.life$.
-#
+
 # I tried listing the redirected pages but seems useless as blocking the entry points seems to be
-# enough
-0.0.0.0 bestprizesday2.life
-0.0.0.0 www.bestprizesday2.life
-# The following lists currently active entry points and is generated using
-# ./util/current-prizes-list.py
-#
-# IP 5.188.178.19
-0.0.0.0 here-is-your-prize3.life
-0.0.0.0 www.here-is-your-prize3.life
-# IP 5.188.178.180
-0.0.0.0 your-best-prize-boxes.life
-0.0.0.0 www.your-best-prize-boxes.life
-0.0.0.0 your-prizes1.life
-0.0.0.0 www.your-prizes1.life
-0.0.0.0 your-realgrand-prize2.life
-0.0.0.0 www.your-realgrand-prize2.life
-# IP 5.188.178.120
-0.0.0.0 bestprizesinside1.life
-0.0.0.0 www.bestprizesinside1.life
-# IP 62.138.18.107
+# enough.
+
+#  - https://bestprizesday2.life/?u=tqck80z&o=zdqr96x&t=DESKuniqANDsearch
 0.0.0.0 adultdating-plan1.com
 0.0.0.0 www.adultdating-plan1.com
+0.0.0.0 amorebig.space
+0.0.0.0 www.amorebig.space
+0.0.0.0 amournow.space
+0.0.0.0 www.amournow.space
+0.0.0.0 best-dating-girls3.com
+0.0.0.0 www.best-dating-girls3.com
+0.0.0.0 best-dating-there2.com
+0.0.0.0 www.best-dating-there2.com
+0.0.0.0 best-dating-you1.com
+0.0.0.0 www.best-dating-you1.com
 0.0.0.0 best-datings-here.com
 0.0.0.0 www.best-datings-here.com
+0.0.0.0 best-datings-here1.com
+0.0.0.0 www.best-datings-here1.com
+0.0.0.0 best-profitmethods.com
+0.0.0.0 www.best-profitmethods.com
 0.0.0.0 bestbigprizes1.life
 0.0.0.0 www.bestbigprizes1.life
 0.0.0.0 besthot-ladyhere.com
@@ -416,14 +267,42 @@
 0.0.0.0 www.bestprize-places-here.life
 0.0.0.0 bestprizes4u1.life
 0.0.0.0 www.bestprizes4u1.life
+0.0.0.0 bestprizesday2.life
+0.0.0.0 www.bestprizesday2.life
+0.0.0.0 bestprizesinside1.life
+0.0.0.0 www.bestprizesinside1.life
 0.0.0.0 big-prizes-place7.life
 0.0.0.0 www.big-prizes-place7.life
 0.0.0.0 bigprize-4you1.life
 0.0.0.0 www.bigprize-4you1.life
 0.0.0.0 claim-your-prizes-here.life
 0.0.0.0 www.claim-your-prizes-here.life
+0.0.0.0 date-contacts-store.com
+0.0.0.0 www.date-contacts-store.com
+0.0.0.0 dating-clubs19.com
+0.0.0.0 www.dating-clubs19.com
+0.0.0.0 dating-future19.com
+0.0.0.0 www.dating-future19.com
+0.0.0.0 dating-hearts-today1.com
+0.0.0.0 www.dating-hearts-today1.com
+0.0.0.0 dating-scan1.com
+0.0.0.0 www.dating-scan1.com
+0.0.0.0 dating-superlabs.com
+0.0.0.0 www.dating-superlabs.com
+0.0.0.0 dating-tables-clubs1.com
+0.0.0.0 www.dating-tables-clubs1.com
+0.0.0.0 dating-tables-today1.com
+0.0.0.0 www.dating-tables-today1.com
+0.0.0.0 dating4-hearts-now1.com
+0.0.0.0 www.dating4-hearts-now1.com
+0.0.0.0 datingchoice4.com
+0.0.0.0 www.datingchoice4.com
+0.0.0.0 datings-for4you1.com
+0.0.0.0 www.datings-for4you1.com
 0.0.0.0 dirty-fantasy-here3.com
 0.0.0.0 www.dirty-fantasy-here3.com
+0.0.0.0 first-vip-flirt-book1.com
+0.0.0.0 www.first-vip-flirt-book1.com
 0.0.0.0 flirt-dating-girls1.com
 0.0.0.0 www.flirt-dating-girls1.com
 0.0.0.0 flirt-ladyhere.com
@@ -432,6 +311,8 @@
 0.0.0.0 www.flirtgirlsexx3.com
 0.0.0.0 free-sex-tonight2.com
 0.0.0.0 www.free-sex-tonight2.com
+0.0.0.0 get-best-women1.com
+0.0.0.0 www.get-best-women1.com
 0.0.0.0 get-great-prizesnow7.life
 0.0.0.0 www.get-great-prizesnow7.life
 0.0.0.0 get-prizes-online1.life
@@ -442,20 +323,44 @@
 0.0.0.0 www.getdatinglives1.com
 0.0.0.0 goodzone-forprize.life
 0.0.0.0 www.goodzone-forprize.life
+0.0.0.0 great-hookuponline2.com
+0.0.0.0 www.great-hookuponline2.com
 0.0.0.0 great-prize-area1.life
 0.0.0.0 www.great-prize-area1.life
+0.0.0.0 here-is-your-prize3.life
+0.0.0.0 www.here-is-your-prize3.life
 0.0.0.0 hook2up8.com
 0.0.0.0 www.hook2up8.com
 0.0.0.0 hookups11.com
 0.0.0.0 www.hookups11.com
+0.0.0.0 hookupsearch3.com
+0.0.0.0 www.hookupsearch3.com
+0.0.0.0 hot-datinghere3.com
+0.0.0.0 www.hot-datinghere3.com
+0.0.0.0 hot-viplady-here.com
+0.0.0.0 www.hot-viplady-here.com
+0.0.0.0 hotdatings-foryou.com
+0.0.0.0 www.hotdatings-foryou.com
 0.0.0.0 localchicks-here.com
 0.0.0.0 www.localchicks-here.com
+0.0.0.0 loveplus.space
+0.0.0.0 www.loveplus.space
 0.0.0.0 meet-me-nowhere2.com
 0.0.0.0 www.meet-me-nowhere2.com
 0.0.0.0 megabonus-point5.life
 0.0.0.0 www.megabonus-point5.life
 0.0.0.0 menandpowerpills3.com
 0.0.0.0 www.menandpowerpills3.com
+0.0.0.0 morelovemessenger.space
+0.0.0.0 www.morelovemessenger.space
+0.0.0.0 myprofitmethods32.com
+0.0.0.0 www.myprofitmethods32.com
+0.0.0.0 new-dating-today1.com
+0.0.0.0 www.new-dating-today1.com
+0.0.0.0 new-datings-realy1.com
+0.0.0.0 www.new-datings-realy1.com
+0.0.0.0 new-male-power1.com
+0.0.0.0 www.new-male-power1.com
 0.0.0.0 powers4-men1.com
 0.0.0.0 www.powers4-men1.com
 0.0.0.0 prize-foryou2.life
@@ -470,190 +375,89 @@
 0.0.0.0 www.take-yourprize-here.life
 0.0.0.0 takeprizes-now.life
 0.0.0.0 www.takeprizes-now.life
+0.0.0.0 the-best-profimethods.com
+0.0.0.0 www.the-best-profimethods.com
 0.0.0.0 thebest-dating-here.com
 0.0.0.0 www.thebest-dating-here.com
 0.0.0.0 winprizes-now.life
 0.0.0.0 www.winprizes-now.life
+0.0.0.0 winyour-bonus2.com
+0.0.0.0 www.winyour-bonus2.com
 0.0.0.0 you-now-winners1.life
 0.0.0.0 www.you-now-winners1.life
 0.0.0.0 youget-prizes-here.life
 0.0.0.0 www.youget-prizes-here.life
+0.0.0.0 your-best-prize-boxes.life
+0.0.0.0 www.your-best-prize-boxes.life
 0.0.0.0 your-dating-space2.com
 0.0.0.0 www.your-dating-space2.com
 0.0.0.0 your-dream-girls2.com
 0.0.0.0 www.your-dream-girls2.com
 0.0.0.0 your-prize-now1.life
 0.0.0.0 www.your-prize-now1.life
+0.0.0.0 your-prizes1.life
+0.0.0.0 www.your-prizes1.life
+0.0.0.0 your-realgrand-prize2.life
+0.0.0.0 www.your-realgrand-prize2.life
 0.0.0.0 your-sex-thirst2.com
 0.0.0.0 www.your-sex-thirst2.com
-0.0.0.0 yoursexual-desire5.com
-0.0.0.0 www.yoursexual-desire5.com
-# IP 85.25.210.155
-0.0.0.0 amorebig.space
-0.0.0.0 www.amorebig.space
-0.0.0.0 amournow.space
-0.0.0.0 www.amournow.space
-0.0.0.0 best-profitmethods.com
-0.0.0.0 www.best-profitmethods.com
-0.0.0.0 date-contacts-store.com
-0.0.0.0 www.date-contacts-store.com
-0.0.0.0 dating-scan1.com
-0.0.0.0 www.dating-scan1.com
-0.0.0.0 dating-superlabs.com
-0.0.0.0 www.dating-superlabs.com
-0.0.0.0 datingchoice4.com
-0.0.0.0 www.datingchoice4.com
-0.0.0.0 first-vip-flirt-book1.com
-0.0.0.0 www.first-vip-flirt-book1.com
-0.0.0.0 get-best-women1.com
-0.0.0.0 www.get-best-women1.com
-0.0.0.0 great-hookuponline2.com
-0.0.0.0 www.great-hookuponline2.com
-0.0.0.0 hookupsearch3.com
-0.0.0.0 www.hookupsearch3.com
-0.0.0.0 hot-viplady-here.com
-0.0.0.0 www.hot-viplady-here.com
-0.0.0.0 hotdatings-foryou.com
-0.0.0.0 www.hotdatings-foryou.com
-0.0.0.0 loveplus.space
-0.0.0.0 www.loveplus.space
-0.0.0.0 morelovemessenger.space
-0.0.0.0 www.morelovemessenger.space
-0.0.0.0 myprofitmethods32.com
-0.0.0.0 www.myprofitmethods32.com
-0.0.0.0 new-male-power1.com
-0.0.0.0 www.new-male-power1.com
-0.0.0.0 the-best-profimethods.com
-0.0.0.0 www.the-best-profimethods.com
-0.0.0.0 winyour-bonus2.com
-0.0.0.0 www.winyour-bonus2.com
 0.0.0.0 your-sexualpattern1.com
 0.0.0.0 www.your-sexualpattern1.com
 0.0.0.0 yourbig-prizenow2.life
 0.0.0.0 www.yourbig-prizenow2.life
-0.0.0.0 yourmainstream-zone1.life
-0.0.0.0 www.yourmainstream-zone1.life
-# Recently registered domains matching
-0.0.0.0 best-dating-girls3.com
-0.0.0.0 www.best-dating-girls3.com
-0.0.0.0 best-dating-there2.com
-0.0.0.0 www.best-dating-there2.com
-0.0.0.0 best-dating-you1.com
-0.0.0.0 www.best-dating-you1.com
-0.0.0.0 best-datings-here1.com
-0.0.0.0 www.best-datings-here1.com
-0.0.0.0 dating-clubs19.com
-0.0.0.0 www.dating-clubs19.com
-0.0.0.0 dating-future19.com
-0.0.0.0 www.dating-future19.com
-0.0.0.0 dating-hearts-today1.com
-0.0.0.0 www.dating-hearts-today1.com
-0.0.0.0 dating-tables-clubs1.com
-0.0.0.0 www.dating-tables-clubs1.com
-0.0.0.0 dating-tables-today1.com
-0.0.0.0 www.dating-tables-today1.com
-0.0.0.0 dating4-hearts-now1.com
-0.0.0.0 www.dating4-hearts-now1.com
-0.0.0.0 datings-for4you1.com
-0.0.0.0 www.datings-for4you1.com
-0.0.0.0 hot-datinghere3.com
-0.0.0.0 www.hot-datinghere3.com
-0.0.0.0 new-dating-today1.com
-0.0.0.0 www.new-dating-today1.com
-0.0.0.0 new-datings-realy1.com
-0.0.0.0 www.new-datings-realy1.com
 0.0.0.0 yourhot-casualdating1.com
 0.0.0.0 www.yourhot-casualdating1.com
+0.0.0.0 yourmainstream-zone1.life
+0.0.0.0 www.yourmainstream-zone1.life
+0.0.0.0 yoursexual-desire5.com
+0.0.0.0 www.yoursexual-desire5.com
 
-# 2020-05-01 Found at https://freedownload14online17.blogspot.com/2013/09/wii-wii-fit-plus-pal-rfpp01.html
-0.0.0.0 freeebook45online.info
-0.0.0.0 www.freeebook45online.info
-
-# 2020-05-04 More ads
-# http://z3dmbpl6309s.com/kcj93ej3j?key=0f22c1fd609f13cb7947c8cabfe1a90d&submetric=8025
-0.0.0.0 z3dmbpl6309s.com
-0.0.0.0 www.z3dmbpl6309s.com
-# https://free-movies.3xp4e3kno6.top/premiumstream/cinema/amazon/es/custom-survey/index.html
+# 2020-05-04
+#  - https://free-movies.3xp4e3kno6.top/premiumstream/cinema/amazon/es/custom-survey/index.html
+0.0.0.0 free-movies.3xp4e3kno6.top
 0.0.0.0 3xp4e3kno6.top
 0.0.0.0 www.3xp4e3kno6.top
-0.0.0.0 free-movies.3xp4e3kno6.top
-# Just the average easy money scam
-0.0.0.0 formulavitali.com
-0.0.0.0 www.formulavitali.com
-0.0.0.0 opportunemoney.com
-0.0.0.0 www.opportunemoney.com
-0.0.0.0 megamoneymarket.com
-0.0.0.0 www.megamoneymarket.com
-0.0.0.0 trendinassets.com
-0.0.0.0 www.trendinassets.com
-# http://mta.vkrpep12.com/s/r?ridb=22&p=21b91oTbMTUbXnx8zMoKFjP1rZibofqpnfHphhnI9MKapSLfwSrYsOYSFkb2PatPodrUR2dRc7if3M9wL2GAZr938XWaZhfYQnl1gNrua2BnZQP5rZ
-0.0.0.0 mta.vkrpep12.com
-# https://track4.surfthewave.xyz/l.php?trf=m&p=c:dvtupna21wp_uynl6&d=5ea02f085f5f901c972876ae
+
+# 2020-05-04
+#  - https://track4.surfthewave.xyz/l.php?trf=m&p=c:dvtupna21wp_uynl6&d=5ea02f085f5f901c972876ae
 0.0.0.0 track1.surfthewave.xyz
 0.0.0.0 track2.surfthewave.xyz
 0.0.0.0 track3.surfthewave.xyz
 0.0.0.0 track4.surfthewave.xyz
-# https://investing-review.wordingpressure.club/es/1/?domain=track4.surfthewave.xyz&c=5eb010b55f5f9004146e8f8d&sid=5eb010b55f5f9004146e8f8d&name=BitcoinPro
-0.0.0.0 wordingpressure.club
-0.0.0.0 www.wordingpressure.club
-0.0.0.0 investing-review.wordingpressure.club
-# https://thebestgame2020.com/common/tr/cw/land_cw_160719_en/index.html
-0.0.0.0 thebestgame2020.com
-0.0.0.0 www.thebestgame2020.com
-# https://go.exrtbsrv.com/r.php?i=70354323&p=p16090245&s=s3&c=S3V3aU9kSnZETTZvQ2xHR2h0eG0rQT09
+
+# 2020-05-04
+#  - http://mta.vkrpep12.com/s/r?ridb=22&p=21b91oTbMTUbXnx8zMoKFjP1rZibofqpnfHphhnI9MKapSLfwSrYsOYSFkb2PatPodrUR2dRc7if3M9wL2GAZr938XWaZhfYQnl1gNrua2BnZQP5rZ
+#  - https://go.exrtbsrv.com/r.php?i=70354323&p=p16090245&s=s3&c=S3V3aU9kSnZETTZvQ2xHR2h0eG0rQT09
+#  - https://click.hooligapps.com/?pid=3&offer_id=2&land=156&sub1=pu_remnant
+#  - http://click.expmediadirect.com/click?i=U3I9LFLMLk8_0
+#  - http://r.mylot.com/go.ashx?w=cD1leHBsb3JhZHN3bCZrPXd3dy5ieW1lc3RldGljYS5jb20mYj0wLjAwMDUmcz0yMjEyOTM1
+#  - https://doubleadserve.com/Redirect.eng
+#  - http://xml.fastdln.com/click?i=MPH0UvFyL6Q_0
+#  - https://z3dmbpl6309s.com/kcj93ej3j?key=0f22c1fd609f13cb7947c8cabfe1a90d&submetric=8025
+0.0.0.0 mta.vkrpep12.com
 0.0.0.0 go.exrtbsrv.com
-# https://click.hooligapps.com/?pid=3&offer_id=2&land=156&sub1=pu_remnant
 0.0.0.0 click.hooligapps.com
-# http://click.expmediadirect.com/click?i=U3I9LFLMLk8_0
 0.0.0.0 click.expmediadirect.com
-# http://r.mylot.com/go.ashx?w=cD1leHBsb3JhZHN3bCZrPXd3dy5ieW1lc3RldGljYS5jb20mYj0wLjAwMDUmcz0yMjEyOTM1
 0.0.0.0 r.mylot.com
-# https://doubleadserve.com/Redirect.eng
 0.0.0.0 doubleadserve.com
 0.0.0.0 www.doubleadserve.com
-0.0.0.0 powhyptene.pro
-0.0.0.0 www.powhyptene.pro
-# http://xml.fastdln.com/click?i=MPH0UvFyL6Q_0
 0.0.0.0 xml.fastdln.com
+0.0.0.0 z3dmbpl6309s.com
+0.0.0.0 www.z3dmbpl6309s.com
 
-# 2020-05-13 Fake Amazon ad
-# https://ppc.kopiherba.com/rk?xy=ZH9wlG9ma2Kcla92k2ppaHZxYKCDomZkaWKjY31y/fake@email.com
-0.0.0.0 ppc.kopiherba.com
-
-# 2020-05-14 Fake Amazon ad
-# https://shabx.focuspointdesign.com/o1d?pq=ZIFwlG9ma2Kcla92k2ppaHZxYKCDomZjbmKjY31y/support@rusty.com.au
-0.0.0.0 shabx.focuspointdesign.com
-
-# 2020-05-20 Yandex Ads
+# 2020-05-04 Ads on Yandex Mail for Android
 0.0.0.0 adsdk.yandex.ru
 
-#
-# TRACKING
-#
+# === MAIL BEACONS ===
+# These entries block beacons on mail which companies use to check if bulk email/spam is read for obvious privacy reasons
 
 # 2020-05-14 Xiaomi mail beacon
-# http://url8807.global.passport.xiaomi.com/wf/open
+#  - http://url8807.global.passport.xiaomi.com/wf/open
 0.0.0.0 url8807.global.passport.xiaomi.com
 
-# 2020-05-14 Farnell mail beacon
-# http://email.farnell.com/trk
-0.0.0.0 email.farnell.com
-
-# 2020-05-14 Just-Eat Spain mail beacon
-# http://ablink.emails.just-eat.es/wf/open
-0.0.0.0 ablink.emails.just-eat.es
-
-# 2020-05-14 Danone mail beacon
-# https://push.danone.es/email/image.png
-0.0.0.0 push.danone.es
-
-# 2020-05-20 N26 mail beacon
-# https://click.email.n26.com/open.aspx
-0.0.0.0 click.email.n26.com
+# === TRACKING AND PRIVACY ===
+# These entries block web tracking and telemetry
 
 # 2020-05-21 Minecraft telemetry
 0.0.0.0 minecraftprod.rtep.msgamestudios.com
 
-# 2020-05-24 eBay mail beacon
-# https://rover.ebay.com/roveropen/0/e11021/7
-0.0.0.0 rover.ebay.com
