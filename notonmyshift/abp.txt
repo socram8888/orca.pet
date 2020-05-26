@@ -3,7 +3,7 @@
 ! Homepage: https://orca.pet/notonmyshift/
 ! Licence: https://orca.pet/#license
 ! Expires: 4h
-! Last update: 2020-05-26T18:18:22Z
+! Last update: 2020-05-26T19:02:02Z
 
 ! === PHISING ===
 ! These filters block pages that are not yet blocked by Google Safe Search
@@ -275,28 +275,48 @@
 ! 2020-05-14 Xiaomi mail beacon
 !  - http://url8807.global.passport.xiaomi.com/wf/open
 ||url8807.global.passport.xiaomi.com^
+||resize.yandex.net/mailservice?url=http%3A%2F%2Furl8807.global.passport.xiaomi.com%2F
+||resize.yandex.net/mailservice?url=https%3A%2F%2Furl8807.global.passport.xiaomi.com%2F
 
 ! 2020-05-14 Farnell mail beacon
 ||email.farnell.com/trk
+||resize.yandex.net/mailservice?url=http%3A%2F%2Femail.farnell.com%2Ftrk
+||resize.yandex.net/mailservice?url=https%3A%2F%2Femail.farnell.com%2Ftrk
 
 ! 2020-05-14 Just-Eat Spain mail beacon
 ||ablink.emails.just-eat.es/wf/open
+||resize.yandex.net/mailservice?url=http%3A%2F%2Fablink.emails.just-eat.es%2Fwf%2Fopen
+||resize.yandex.net/mailservice?url=https%3A%2F%2Fablink.emails.just-eat.es%2Fwf%2Fopen
 
 ! 2020-05-14 Danone mail beacon
 ||push.danone.es/email/image.png
+||resize.yandex.net/mailservice?url=http%3A%2F%2Fpush.danone.es%2Femail%2Fimage.png
+||resize.yandex.net/mailservice?url=https%3A%2F%2Fpush.danone.es%2Femail%2Fimage.png
 
 ! 2020-05-20 N26 mail beacon
 ||click.email.n26.com/open.aspx
+||resize.yandex.net/mailservice?url=http%3A%2F%2Fclick.email.n26.com%2Fopen.aspx
+||resize.yandex.net/mailservice?url=https%3A%2F%2Fclick.email.n26.com%2Fopen.aspx
 
 ! 2020-05-20 eBay mail beacon
 ||rover.ebay.com/roveropen/
+||resize.yandex.net/mailservice?url=http%3A%2F%2Frover.ebay.com%2Froveropen%2F
+||resize.yandex.net/mailservice?url=https%3A%2F%2Frover.ebay.com%2Froveropen%2F
 
-! 2020-05-20 Game.es mail beacon
+! 2020-05-26 Game.es mail beacon
 ||media.game.es:8011/control.bmp
+||resize.yandex.net/mailservice?url=http%3A%2F%2Fmedia.game.es%3A8011%2Fcontrol.bmp
+||resize.yandex.net/mailservice?url=https%3A%2F%2Fmedia.game.es%3A8011%2Fcontrol.bmp
+
+! 2020-05-26 Mediamarkt.es mail beacon
+||link.mediamarkt.es/mo/
+||resize.yandex.net/mailservice?url=http%3A%2F%2Flink.mediamarkt.es%2Fmo%2F
+||resize.yandex.net/mailservice?url=https%3A%2F%2Flink.mediamarkt.es%2Fmo%2F
 
 ! === TRACKING AND PRIVACY ===
 ! These entries block web tracking and telemetry
 
 ! 2020-05-25 Yandex Mail telemetry
 ||mail.yandex.ru/monitoring_liza.txt
+||mail.yandex.com/monitoring_liza.txt
 
