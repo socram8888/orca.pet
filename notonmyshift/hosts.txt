@@ -3,7 +3,7 @@
 # Homepage: https://orca.pet/notonmyshift/
 # Licence: https://orca.pet/#license
 # Expires: 4h
-# Last update: 2020-05-26T19:02:02Z
+# Last update: 2020-05-27T16:37:09Z
 
 # === PHISING ===
 # These filters block pages that are not yet blocked by Google Safe Search
@@ -461,6 +461,10 @@
 # 2020-05-14 Xiaomi mail beacon
 #  - http://url8807.global.passport.xiaomi.com/wf/open
 0.0.0.0 url8807.global.passport.xiaomi.com
+
+# 2020-05-27 PayPal mail beacon
+#  - https://t.paypal.com/ts?v=1&ppid=PPX001066
+0.0.0.0 t.paypal.com
 
 # === TRACKING AND PRIVACY ===
 # These entries block web tracking and telemetry

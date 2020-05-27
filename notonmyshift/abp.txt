@@ -3,7 +3,7 @@
 ! Homepage: https://orca.pet/notonmyshift/
 ! Licence: https://orca.pet/#license
 ! Expires: 4h
-! Last update: 2020-05-26T19:02:02Z
+! Last update: 2020-05-27T16:37:09Z
 
 ! === PHISING ===
 ! These filters block pages that are not yet blocked by Google Safe Search
@@ -312,6 +312,24 @@
 ||link.mediamarkt.es/mo/
 ||resize.yandex.net/mailservice?url=http%3A%2F%2Flink.mediamarkt.es%2Fmo%2F
 ||resize.yandex.net/mailservice?url=https%3A%2F%2Flink.mediamarkt.es%2Fmo%2F
+
+! 2020-05-27 Wallapop beacon
+!  - https://mandrillapp.com/track/open.php?u=30067168&id=bfafb8f014174220ae753d54c47ab9b3
+||mandrillapp.com/track/
+||resize.yandex.net/mailservice?url=http%3A%2F%2Fmandrillapp.com%2Ftrack%2F
+||resize.yandex.net/mailservice?url=https%3A%2F%2Fmandrillapp.com%2Ftrack%2F
+
+! 2020-05-27 Miles and more beacon
+!  - https://t.mailing.milesandmore.com/r/?id=hf5bb671,3a605dcd,1
+||t.mailing.milesandmore.com/r/$image
+||resize.yandex.net/mailservice?url=http%3A%2F%2Ft.mailing.milesandmore.com%2Fr%2F$image
+||resize.yandex.net/mailservice?url=https%3A%2F%2Ft.mailing.milesandmore.com%2Fr%2F$image
+
+! 2020-05-27 PayPal mail beacon
+!  - https://t.paypal.com/ts?v=1&ppid=PPX001066
+||t.paypal.com^
+||resize.yandex.net/mailservice?url=http%3A%2F%2Ft.paypal.com%2F
+||resize.yandex.net/mailservice?url=https%3A%2F%2Ft.paypal.com%2F
 
 ! === TRACKING AND PRIVACY ===
 ! These entries block web tracking and telemetry
