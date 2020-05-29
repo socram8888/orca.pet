@@ -103,7 +103,7 @@ for iteration := 1 to iterations do
 	mem := aes128cbc_encrypt(mem, key, iv)
 
 	; Calculate the order in which they have to be hashed
-	order := [0, 1, ... memsize - 1, memsize]
+	order := [0, 1, ... memsize - 2, memsize - 1]
 	for a := 0 to memsize - 1 do
 		; Parse lower 32-bits as little endian
 		b :=
