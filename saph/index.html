@@ -18,7 +18,7 @@
 <meta name="twitter:site" content="@Socramite" />
 <meta name="twitter:creator" content="@Marcos Del Sol Vives" />
 <script type="application/ld+json">
-{"@type":"WebPage","url":"https://orca.pet/saph/","author":{"@type":"Person","name":"Marcos Del Sol Vives"},"description":"Socram’s website","headline":"Saph","dateModified":"2020-05-19T03:49:50+02:00","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"https://orca.pet/saph/","author":{"@type":"Person","name":"Marcos Del Sol Vives"},"description":"Socram’s website","headline":"Saph","dateModified":"2020-05-29T22:27:37+02:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 		<link rel="icon" href="/favicon.ico?NjvwljAx" />
@@ -136,7 +136,7 @@ for iteration := 1 to iterations do
 	mem := aes128cbc_encrypt(mem, key, iv)
 
 	; Calculate the order in which they have to be hashed
-	order := [0, 1, ... memsize - 1, memsize]
+	order := [0, 1, ... memsize - 2, memsize - 1]
 	for a := 0 to memsize - 1 do
 		; Parse lower 32-bits as little endian
 		b :=
