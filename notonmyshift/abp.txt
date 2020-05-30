@@ -3,7 +3,7 @@
 ! Homepage: https://orca.pet/notonmyshift/
 ! Licence: https://orca.pet/#license
 ! Expires: 4h
-! Last update: 2020-05-30T00:50:11Z
+! Last update: 2020-05-30T08:26:31Z
 
 ! === PHISING ===
 ! These filters block pages that are not yet blocked by Google Safe Search
@@ -334,6 +334,11 @@
 ! 2020-05-30 El Corte Inglés mail beacon
 ||tracker.elcorteingles.es^
 ||resize.yandex.net/mailservice?url=*tracker.elcorteingles.es%2F
+
+! 2020-05-30 Sendgrid mail beacon
+!  - https://u12224516.ct.sendgrid.net/wf/open
+||ct.sendgrid.net^
+||resize.yandex.net/mailservice?url=*ct.sendgrid.net%2F
 
 ! === TRACKING AND PRIVACY ===
 ! These entries block web tracking and telemetry
