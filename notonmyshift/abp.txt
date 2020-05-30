@@ -3,7 +3,7 @@
 ! Homepage: https://orca.pet/notonmyshift/
 ! Licence: https://orca.pet/#license
 ! Expires: 4h
-! Last update: 2020-05-30T00:09:14Z
+! Last update: 2020-05-30T00:50:11Z
 
 ! === PHISING ===
 ! These filters block pages that are not yet blocked by Google Safe Search
@@ -330,6 +330,10 @@
 !  - http://logc187.xiti.com/hit.xiti
 ||xiti.com^
 ||resize.yandex.net/mailservice?url=*xiti.com%2F
+
+! 2020-05-30 El Corte Inglés mail beacon
+||tracker.elcorteingles.es^
+||resize.yandex.net/mailservice?url=*tracker.elcorteingles.es%2F
 
 ! === TRACKING AND PRIVACY ===
 ! These entries block web tracking and telemetry
