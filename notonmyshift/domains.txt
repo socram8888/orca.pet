@@ -3,7 +3,7 @@
 # Homepage: https://orca.pet/notonmyshift/
 # Licence: https://orca.pet/#license
 # Expires: 4h
-# Last update: 2020-05-30T08:26:31Z
+# Last update: 2020-05-30T08:33:46Z
 
 # === PHISING ===
 # These filters block pages that are not yet blocked by Google Safe Search
@@ -142,13 +142,6 @@ centent.steamplay.me
 # These are the extremely annoying ads that pop up out of nowhere when clicking sometimes the
 # first result on Google, and then the second time the page just works fine. I am not sure if it's
 # because the pages are hacked or what, but I really want these gone.
-
-# The page seems to be "whatever-prize.life/?u=tqck80z&o=zdqr96x&t=DESKuniqANDsearch", and this
-# one redirects to one whose domain that changes every few hours, but (so far) always matches
-# ^[a-z-]{16,25}[0-9]+\.life$.
-
-# I tried listing the redirected pages but seems useless as blocking the entry points seems to be
-# enough.
 
 #  - https://bestprizesday2.life/?u=tqck80z&o=zdqr96x&t=DESKuniqANDsearch
 adultdating-plan1.com
