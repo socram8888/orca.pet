@@ -11,6 +11,7 @@ These are a few of the projects I've worked on:
 
 * [Not on my shift!](notonmyshift/): phishing/malware hosts block list.
 * [Saph](saph/): a custom password hashing algorithm suitable for human usage.
+* [ATECC USB dongle](ateccusb/): a simple and inexpensive DIY cryptographic dongle.
 * [UserScripts](userscripts/): a collection of user scripts I use every day for improving my browsing experience.
 
 Random stuff
