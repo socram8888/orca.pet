@@ -3,7 +3,7 @@
 ! Homepage: https://orca.pet/notonmyshift/
 ! Licence: https://orca.pet/#license
 ! Expires: 4h
-! Last update: 2020-06-02T15:11:50Z
+! Last update: 2020-06-02T15:20:10Z
 
 ! === PHISING ===
 ! These filters block pages that are not yet blocked by Google Safe Search
@@ -276,83 +276,101 @@
 !  - http://url8807.global.passport.xiaomi.com/wf/open
 ||url8807.global.passport.xiaomi.com^
 ||resize.yandex.net/mailservice?url=*url8807.global.passport.xiaomi.com%2F
+||ecp.yusercontent.com/mail?url=*url8807.global.passport.xiaomi.com%2F
 
 ! 2020-05-14 Farnell mail beacon
 ||email.farnell.com/trk
 ||resize.yandex.net/mailservice?url=*email.farnell.com%2Ftrk
+||ecp.yusercontent.com/mail?url=*email.farnell.com%2Ftrk
 
 ! 2020-05-14 Just-Eat Spain mail beacon
 ||ablink.emails.just-eat.es/wf/open
 ||resize.yandex.net/mailservice?url=*ablink.emails.just-eat.es%2Fwf%2Fopen
+||ecp.yusercontent.com/mail?url=*ablink.emails.just-eat.es%2Fwf%2Fopen
 
 ! 2020-05-14 Danone mail beacon
 ||push.danone.es/email/image.png
 ||resize.yandex.net/mailservice?url=*push.danone.es%2Femail%2Fimage.png
+||ecp.yusercontent.com/mail?url=*push.danone.es%2Femail%2Fimage.png
 
 ! 2020-05-20 N26 mail beacon
 ||click.email.n26.com/open.aspx
 ||resize.yandex.net/mailservice?url=*click.email.n26.com%2Fopen.aspx
+||ecp.yusercontent.com/mail?url=*click.email.n26.com%2Fopen.aspx
 
 ! 2020-05-20 eBay mail beacon
 ||rover.ebay.com/roveropen/
 ||resize.yandex.net/mailservice?url=*rover.ebay.com%2Froveropen%2F
+||ecp.yusercontent.com/mail?url=*rover.ebay.com%2Froveropen%2F
 
 ! 2020-05-26 Game.es mail beacon
 ||media.game.es:8011/control.bmp
 ||resize.yandex.net/mailservice?url=*media.game.es%3A8011%2Fcontrol.bmp
+||ecp.yusercontent.com/mail?url=*media.game.es%3A8011%2Fcontrol.bmp
 
 ! 2020-05-26 Mediamarkt.es mail beacon
 ||link.mediamarkt.es/mo/
 ||resize.yandex.net/mailservice?url=*link.mediamarkt.es%2Fmo%2F
+||ecp.yusercontent.com/mail?url=*link.mediamarkt.es%2Fmo%2F
 
 ! 2020-05-27 Wallapop beacon
 !  - https://mandrillapp.com/track/open.php?u=30067168&id=bfafb8f014174220ae753d54c47ab9b3
 ||mandrillapp.com/track/
 ||resize.yandex.net/mailservice?url=*mandrillapp.com%2Ftrack%2F
+||ecp.yusercontent.com/mail?url=*mandrillapp.com%2Ftrack%2F
 
 ! 2020-05-27 Miles and more beacon
 !  - https://t.mailing.milesandmore.com/r/?id=hf5bb671,3a605dcd,1
 ||t.mailing.milesandmore.com/r/$image
 ||resize.yandex.net/mailservice?url=*t.mailing.milesandmore.com%2Fr%2F$image
+||ecp.yusercontent.com/mail?url=*t.mailing.milesandmore.com%2Fr%2F$image
 
 ! 2020-05-27 PayPal mail beacon
 !  - https://t.paypal.com/ts?v=1&ppid=PPX001066
 ||t.paypal.com^
 ||resize.yandex.net/mailservice?url=*t.paypal.com%2F
+||ecp.yusercontent.com/mail?url=*t.paypal.com%2F
 
 ! 2020-05-30 Kickstarter mail beacon
 !  - https://emails.kickstarter.com/mpss/o/JAE/6TYCAA/t.326/0pe5DH3wQ8yZq43wGiVsTQ/ho.gif
 ||emails.kickstarter.com^
 ||resize.yandex.net/mailservice?url=*emails.kickstarter.com%2F
+||ecp.yusercontent.com/mail?url=*emails.kickstarter.com%2F
 
 ! 2020-05-30 Xiti beacons
 !  - http://logc187.xiti.com/hit.xiti
 ||xiti.com^
 ||resize.yandex.net/mailservice?url=*xiti.com%2F
+||ecp.yusercontent.com/mail?url=*xiti.com%2F
 
 ! 2020-05-30 El Corte Inglés mail beacon
 ||tracker.elcorteingles.es^
 ||resize.yandex.net/mailservice?url=*tracker.elcorteingles.es%2F
+||ecp.yusercontent.com/mail?url=*tracker.elcorteingles.es%2F
 
 ! 2020-05-30 Sendgrid mail beacon
 !  - https://u12224516.ct.sendgrid.net/wf/open
 ||ct.sendgrid.net^
 ||resize.yandex.net/mailservice?url=*ct.sendgrid.net%2F
+||ecp.yusercontent.com/mail?url=*ct.sendgrid.net%2F
 
 ! 2020-06-01 Uber mail beacon
 !  - https://email.uber.com/wf/open
 ||email.uber.com^
 ||resize.yandex.net/mailservice?url=*email.uber.com%2F
+||ecp.yusercontent.com/mail?url=*email.uber.com%2F
 
 ! 2020-06-02 Infineon beacon
 !  - https://s1968580696.t.en25.com/e/FooterImages/FooterImage1
 ||t.en25.com^
 ||resize.yandex.net/mailservice?url=*t.en25.com%2F
+||ecp.yusercontent.com/mail?url=*t.en25.com%2F
 
 ! 2020-06-02 Simyo beacon
 !  - https://simyo.zippingcare.com/beacon/5ed52b2ae21b840001fd9d35.gif
 ||simyo.zippingcare.com^
 ||resize.yandex.net/mailservice?url=*simyo.zippingcare.com%2F
+||ecp.yusercontent.com/mail?url=*simyo.zippingcare.com%2F
 
 ! === TRACKING AND PRIVACY ===
 ! These entries block web tracking and telemetry
