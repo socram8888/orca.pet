@@ -3,7 +3,7 @@
 ! Homepage: https://orca.pet/notonmyshift/
 ! Licence: https://orca.pet/#license
 ! Expires: 4h
-! Last update: 2020-06-02T15:04:49Z
+! Last update: 2020-06-02T15:11:50Z
 
 ! === PHISING ===
 ! These filters block pages that are not yet blocked by Google Safe Search
@@ -348,6 +348,11 @@
 !  - https://s1968580696.t.en25.com/e/FooterImages/FooterImage1
 ||t.en25.com^
 ||resize.yandex.net/mailservice?url=*t.en25.com%2F
+
+! 2020-06-02 Simyo beacon
+!  - https://simyo.zippingcare.com/beacon/5ed52b2ae21b840001fd9d35.gif
+||simyo.zippingcare.com^
+||resize.yandex.net/mailservice?url=*simyo.zippingcare.com%2F
 
 ! === TRACKING AND PRIVACY ===
 ! These entries block web tracking and telemetry

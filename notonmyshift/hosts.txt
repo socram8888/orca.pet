@@ -3,7 +3,7 @@
 # Homepage: https://orca.pet/notonmyshift/
 # Licence: https://orca.pet/#license
 # Expires: 4h
-# Last update: 2020-06-02T15:04:49Z
+# Last update: 2020-06-02T15:11:50Z
 
 # === PHISING ===
 # These filters block pages that are not yet blocked by Google Safe Search
@@ -474,6 +474,10 @@
 # 2020-06-01 Uber mail beacon
 #  - https://email.uber.com/wf/open
 0.0.0.0 email.uber.com
+
+# 2020-06-02 Simyo beacon
+#  - https://simyo.zippingcare.com/beacon/5ed52b2ae21b840001fd9d35.gif
+0.0.0.0 simyo.zippingcare.com
 
 # === TRACKING AND PRIVACY ===
 # These entries block web tracking and telemetry
