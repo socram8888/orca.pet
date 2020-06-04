@@ -6,7 +6,7 @@ group :jekyll_plugins do
 	gem 'jekyll-last-modified-at'
 	gem 'jekyll-optional-front-matter'
 	gem 'jekyll-relative-links'
-	gem 'jekyll-render-order', :git => 'https://github.com/socram8888/jekyll-render-order'
+	gem 'jekyll-render-order'
 	gem 'jekyll-sitemap'
 	gem 'jekyll-theme-cayman'
 	gem 'jekyll-titles-from-headings'
