@@ -20,9 +20,6 @@ plugins:
   - jekyll-titles-from-headings
 
 keep_files:
-  - .git
-  - .nojekyll
-  - CNAME
   - notonmyshift/domains.txt
   - notonmyshift/hosts.txt
 
