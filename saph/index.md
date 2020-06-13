@@ -23,11 +23,11 @@ Playground
 <button id="addbtt">Add part</button>
 <button id="deletebtt">Delete part</button>
 
-**Memory size** (amount of 64-byte chunks):
+**Memory size** (amount of 64-byte chunks, default: 16384):
 
 <input type="number" min="1" value="16384" id="memsize">
 
-**Iterations**:
+**Iterations** (default: 8):
 
 <input type="number" min="1" value="8" id="iterations">
 
