@@ -1,10 +1,10 @@
 ---
 ---
 
-Userscripts
+UserScripts
 ===========
 
-This page contains a few userscripts I've made over the years to improve my navigation experience.
+This page contains a few user scripts I've made over the years to improve my navigation experience.
 
 General
 -------

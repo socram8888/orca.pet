@@ -35,39 +35,39 @@ Schematic
 Circuit explanation
 -------------------
 
-The dongle is extremely simple, and has the bare minimum to work. It is designed around the CH340G USB-UART interface made by WCH (`U1`). Having a built-in voltage regulator, all it needs is a single 12MHz crystal (`X1`).
+The dongle is extremely simple, and has the bare minimum to work. It is designed around the CH340G USB-UART interface made by WCH (U1). Having a built-in voltage regulator, all it needs is a single 12MHz crystal (X1).
 
-While the USB-UART IC has a full-duplex interface with separate `TXD` and `RXD` pins, the Crypto Authentication devices expect communication to happen over a single I/O pin called `SWI`.
+While the USB-UART IC has a full-duplex interface with separate TXD and RXD pins, the Crypto Authentication devices expect communication to happen over a single I/O pin called SWI.
 
-The task of converting the full-duplex interface to the half-duplex interface is accomplished by the non-inverting buffer IC (`U3`) and a pull-up resistor (`R1`).
+The task of converting the full-duplex interface to the half-duplex interface is accomplished by the non-inverting buffer IC (U3) and a pull-up resistor (R1).
 
-The board also provides an LED controllable by the secure element's GPIO pin (`LED2`). If the GPIO pin wants to be used as a sense pin and the LED interferes, it can be disabled without desoldering anything just by cutting the `LY` (**L**ED **Y**es) and bridging `LN` (**L**ED **N**o).
+The board also provides an LED controllable by the secure element's GPIO pin (LED2). If the GPIO pin wants to be used as a sense pin and the LED interferes, it can be disabled without desoldering anything just by cutting the LY (**L**ED **Y**es) and bridging LN (**L**ED **N**o).
 
-Finally, the `H1` header is a debug header which exposes the 5V, SWI, GPIO and ground signals.
+Finally, the H1 header is a debug header which exposes the 5V, SWI, GPIO and ground signals.
 
 Parts
 -----
 
 Most of the parts come from [LCSC](https://www.lcsc.com), except for the Crypto Authentication IC which is not available from them, and comes from [MicrochipDirect](https://www.microchipdirect.com/) instead.
 
-| Des.  | Part               | Description          | Footprint | Supplier         | Supplier P/N      |
-|-------|--------------------|----------------------|---------- |------------------|-------------------|
-| U1    | CH340G             | USB-UART IC          | SOIC-16   | LCSC             | C14267            |
-| U2    | ATECC608A          | Crypto  IC           | SOIC-8    | Microchip Direct | ATECC608A-SSHCZ-B |
-| U3    | MC74VHC1G07DTT1G   | Non-inverting buffer | SOT-23-6  | LCSC             | C242266           |
-| X1    | X49SD12MSD2SC      | 12MHz crystal        | ---       | LCSC             | C16369            |
-| Q1    | S8050H             | NPN transistor       | SOT-23    | LCSC             | C111272           |
-| C1,C2 | CL21C200JBANNNC    | 20pF MLC cap         | 0805      | LCSC             | C1798             |
-| C3,C4 | CL21B104KBFWPNE    | 100nF MLC cap        | 0805      | LCSC             | C307360           |
-| C5    | CL31A226KOHNNNE    | 22uF MLC cap         | 1206      | LCSC             | C90146            |
-| R1,R4 | RMC08054.7K1%N     | 4.7K resistor        | 0805      | LCSC             | C269746           |
-| R2,R3 | RMC08051501%N      | 150ohm resistor      | 0805      | LCSC             | C325766           |
-| LED1  | NCD1206R1          | Red LED              | 1206      | LCSC             | C84270            |
-| LED2  | NCD1206G1          | Green LED            | 1206      | LCSC             | C99881            |
-| USB1  | SOFNG USB-05       | USB-A 2.0 male       | ---       | LCSC             | C112454           |
-| H1    | MTB125-1104R1      | 4x1 male pin header  | ---       | LCSC             | C376122           |
+| Des.  | Description                                     |
+|-------|-------------------------------------------------|
+| U1    | USB-UART IC                                     |
+| U2    | ATECC608A CryptoAuthentication  IC              |
+| U3    | MC74VHC1G07 Non-inverting open-collector buffer |
+| X1    | 12MHz crystal                                   |
+| Q1    | Generic NPN transistor                          |
+| C1,C2 | 20pF ceramic capacitor                          |
+| C3,C4 | 100nF MLC capacitor                             |
+| C5    | 22uF MLC capacitor                              |
+| R1,R4 | 4.7KΩ resistor                                  |
+| R2,R3 | 150Ω resistor                                   |
+| LED1  | Red LED                                         |
+| LED2  | Green LED                                       |
+| USB1  | USB-A 2.0 male                                  |
+| H1    | 4x1 male pin header                             |
 
-The **total cost is about 3€ per dongle** in small quantities, including the cost of making the PCBs.
+The **total cost is about 3€ per dongle** in small quantities, including the cost of making the PCBs. The complete part list with LCSC and MicrochipDirect part numbers can be downloaded from the EasyEDA project below.
 
 Downloads
 ---------
@@ -77,4 +77,4 @@ This project is [available at **EasyEDA**](https://easyeda.com/socram8888/atecc-
 Software
 --------
 
-For now, I have not yet had time to adapt the Microchip library to this dongle, which means there's zero software for it yet.
+For now, I have not yet had time to adapt the Microchip library to this dongle, which means there's zero software for it. Sorry.
