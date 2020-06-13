@@ -18,6 +18,13 @@ This is a simple script which prevents the "browser tainting" of visiting AliExp
 
 This script modifies the cookies and redirects web requests to always display the global version for a given link.
 
+### Untranslate eBay.es
+
+{: style="text-align: center;"}
+[⬇️ CLICK HERE TO INSTALL ⬇️](untranslate-ebay-es.user.js)
+
+This script undoes the garbage automatic translation that eBay.es uses on their search results, and replaces back with the original title the seller put.
+
 FurAffinity
 -----------
 
