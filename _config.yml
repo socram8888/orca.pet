@@ -8,7 +8,7 @@ twitter:
 
 theme: jekyll-theme-cayman
 timezone: Europe/Madrid
-lang: en_US
+lang: en-US
 
 plugins:
   - jekyll-default-layout
