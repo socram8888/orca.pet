@@ -36,7 +36,7 @@ Playground
 
 <button id="calcbtt"><b>Calculate</b></button>
 
-<ul id="output">
+<ul>
 	<li>Hex: <tt id="hexoutput"></tt></li>
 	<li>Base64: <tt id="b64output"></tt></li>
 </ul>
