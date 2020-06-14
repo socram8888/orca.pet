@@ -10,6 +10,9 @@
 {% if page.extra_css %}
 		<link rel="stylesheet" href="{{ page.extra_css | cachebuster }}">
 {% endif %}
+{% if page.requires_saph %}
+		<script src="{{ '/assets/js/saph-v1.1.0.js' | cachebuster }}"></script>
+{% endif %}
 	</head>
 	<body>
 		<a class="page-header-link" href="/">
@@ -26,5 +29,11 @@
 				<span class="site-footer-credits">Built using <a href="https://github.com/socram8888/orca.pet">GitHub</a>, <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://porkbun.com/">Porkbun</a>.</span>
 			</footer>
 		</section>
+
+{% if page.requires_saph %}
+{% else %}
+		<script src="{{ '/assets/js/saph-v1.1.0.js' | cachebuster }}"></script>
+{% endif %}
+		<script src="{{ '/assets/js/easter-egg.js' | cachebuster }}"></script>
 	</body>
 </html>
