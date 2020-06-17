@@ -2,15 +2,23 @@
 <html lang="{{ site.lang | default: "en-US" }}">
 	<head>
 		<meta charset="UTF-8">
-{% seo %}
-		<link rel="icon" href="{{ '/favicon.ico' | cachebuster }}" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		{% seo %}
+
+		<!-- Page thumbnails -->
+		<meta property="og:image" content="{{ '/assets/images/orca_512.png' | cachebuster }}">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ '/assets/images/orca_144.png' | cachebuster }}">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ '/assets/images/orca_72.png' | cachebuster }}">
+		<link rel="apple-touch-icon-precomposed" href="{{ '/assets/images/orca_57.png' | cachebuster }}">
+		<link rel="shortcut icon" href="{{ '/assets/images/orca_32.png' | cachebuster }}">
 		<meta name="theme-color" content="#157878">
+
+		<!-- Page styling -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="{{ '/assets/css/style.css' | cachebuster }}">
 {% if page.extra_css %}
 		<link rel="stylesheet" href="{{ page.extra_css | cachebuster }}">
-{% endif %}
-{% if page.requires_saph %}
+{% endif %}{% if page.requires_saph %}
 		<script src="{{ '/assets/js/saph-v1.1.0.js' | cachebuster }}"></script>
 {% endif %}
 	</head>
