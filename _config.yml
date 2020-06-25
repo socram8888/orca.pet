@@ -23,6 +23,7 @@ keep_files:
   - notonmyshift/adb.txt
   - notonmyshift/domains.txt
   - notonmyshift/hosts.txt
+  - shared/
 
 exclude:
   - /commit.bat
