@@ -38,7 +38,7 @@ opkg-key add unregulatory.pub
 echo "src/gz unregulatory http://orca.pet/unregulatory/openwrt" >>/etc/opkg/customfeeds.conf
 	```
 
-	This configures fetching the package over plain old HTTP, which is totally fine as the entire repository contents is digitally signed.
+	This configures fetching the package over plain old HTTP, which is totally fine as the entire repository contents are digitally signed. If you have HTTPS support, you can change the line to fetch it over HTTPS, too.
 
 If you have Luci installed, the following actions may be done much more easily on the web interface.
 
