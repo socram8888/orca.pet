@@ -20,7 +20,7 @@ plugins:
   - jekyll-titles-from-headings
 
 keep_files:
-  - notonmyshift/adb.txt
+  - notonmyshift/abp.txt
   - notonmyshift/domains.txt
   - notonmyshift/hosts.txt
   - shared/
