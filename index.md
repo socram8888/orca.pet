@@ -13,7 +13,7 @@ These are a few of the projects I've worked on:
 * [Saph](saph/): a custom password hashing algorithm suitable for human usage.
 * [ATECC USB dongle](ateccusb/): a simple and inexpensive DIY cryptographic dongle.
 * [UserScripts](userscripts/): a collection of user scripts I use every day for improving my browsing experience.
-* [Unregulatory](unregulatory/): a OpenWRT package for disabling software band and power limits.
+* [Unregulatory](unregulatory/): a OpenWRT package for disabling band and power soft limits.
 
 Random stuff
 ------------
