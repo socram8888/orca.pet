@@ -1,0 +1,2 @@
+# Disable HTTP to HTTPS rewriting
+RewriteEngine off
