@@ -1,3 +1,6 @@
+---
+---
+
 Unregulatory
 ============
 
@@ -68,7 +71,7 @@ How this was built
 
 This is mostly a personal reminder so I know how I did it last time - _you don't need to read or understand this part_.
 
-1. Get the `wireless-regdb.git` repository from its official repository: [https://git.kernel.org/pub/scm/linux/kernel/git/sforshee/wireless-regdb.git]().
+1. Get the `wireless-regdb.git` repository from [its official repository](https://git.kernel.org/pub/scm/linux/kernel/git/sforshee/wireless-regdb.git).
 
 2. Replace all country contents with a table allowing for transmitting at:
 	* 1W for the 2.4GHz band

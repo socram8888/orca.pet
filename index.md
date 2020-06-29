@@ -4,6 +4,11 @@
 Index
 =====
 
+Welcome to my personal website. It can be accessed:
+
+ - Over internet at [https://orca.pet](https://orca.pet).
+ - Over Tor at [http://orca4pet7uu5puvs.onion/](http://orca4pet7uu5puvs.onion/).
+
 Projects
 --------
 
