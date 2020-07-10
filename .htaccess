@@ -9,15 +9,14 @@ RewriteRule ^(.*) http://orca4pet7uu5puvs.onion$1 [L,R=301]
 RewriteCond %{HTTP_HOST} !^orca4pet7uu5puvs\.onion$
 RewriteCond %{SERVER_PORT} 80
 
-# Add Onion-Location for HTML files
-<If "%{REQUEST_FILENAME} =~ /\.html$/">
-	Header set Onion-Location "http://orca4pet7uu5puvs.onion%{REQUEST_URI}" env=HTTPS
-</If>
-
 # Security headers
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
 Header set X-Frame-Options DENY
-Header set Onion-Location "http://orca4pet7uu5puvs.onion%{REQUEST_URI}"  env=HTTPS
+
+# Add Onion-Location for HTML files
+<If "%{REQUEST_FILENAME} =~ /\.html$/">
+	Header set Onion-Location "expr=http://orca4pet7uu5puvs.onion%{REQUEST_URI}" env=HTTPS
+</If>
 
 # Serve WebP for JPEG if possible
 RewriteCond %{HTTP:Accept} image/webp
