@@ -3,17 +3,21 @@ RewriteEngine On
 
 # Rewrite to root Tor
 RewriteCond %{HTTP_HOST} \.orca4pet7uu5puvs\.onion$
-RewriteRule ^(.*) http://orca4pet7uu5puvs.onion%{REQUEST_URI} [L,R=301]
+RewriteRule ^(.*) http://orca4pet7uu5puvs.onion$1 [L,R=301]
 
 # Rewrite HTTP to HTTPS
 RewriteCond %{HTTP_HOST} !^orca4pet7uu5puvs\.onion$
 RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Add Onion-Location for HTML files
+<If "%{REQUEST_FILENAME} =~ /\.html$/">
+	Header set Onion-Location "http://orca4pet7uu5puvs.onion%{REQUEST_URI}" env=HTTPS
+</If>
 
 # Security headers
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
 Header set X-Frame-Options DENY
-Header set Onion-Location http://orca4pet7uu5puvs.onion%{REQUEST_URI}
+Header set Onion-Location "http://orca4pet7uu5puvs.onion%{REQUEST_URI}"  env=HTTPS
 
 # Serve WebP for JPEG if possible
 RewriteCond %{HTTP:Accept} image/webp
