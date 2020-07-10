@@ -13,6 +13,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # Security headers
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
 Header set X-Frame-Options DENY
+Header set Onion-Location http://orca4pet7uu5puvs.onion%{REQUEST_URI}
 
 # Serve WebP for JPEG if possible
 RewriteCond %{HTTP:Accept} image/webp
