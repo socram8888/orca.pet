@@ -23,6 +23,14 @@ Subsections
 -----------
 
  - [Technical information](tech.html)
+ - [Porting games](porting.html)
+
+Changelog
+---------
+
+### 2020/07/25
+
+First draft of the documentation
 
 [gtrom]: https://wiki.nesdev.com/w/index.php/GTROM
 [mmc1]: https://wiki.nesdev.com/w/index.php/MMC1

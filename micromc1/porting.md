@@ -11,7 +11,7 @@ This section documents some tips for porting from common mappers to the μMC1.
 MMC1
 ----
 
-MMC1 is the closest official mapper, and thus it is an obvious source for porting games from.
+The [MMC1][mmc1] is the closest official mapper, and thus it is an obvious target for porting games from.
 
 ### Differences with a MMC1
 
@@ -21,7 +21,7 @@ While the μMC1 is based on the MMC1, some features had to be dropped to fit a u
 
 | MMC1                                                                              | μMC1                                                                                   |
 |-----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| Supports [multiple banking modes][mmc1modes]                                      | Supports only UxROM-like mode                                                          |
+| Supports [multiple banking modes][mmc1modes]                                      | Supports only the UxROM-like mode (mode 3)                                             |
 | 4-bit PRG-ROM bank register (up to 256 KiB addressable)                           | 5-bit PRG-ROM bank register (up to 512 KiB addressable)                                |
 | Supports CHR-ROM banking                                                          | No CHR-ROM banking supported                                                           |
 | Built-in support for PRG-RAM                                                      | PRG-RAM is not supported without external logic                                        |
@@ -34,6 +34,8 @@ Therefore, a game that you want to port has to:
  - Have no PRG-RAM.
  - Use banking mode of the game needs to be 3 (which all games I have tested do).
 
-These limitations yield that only 78 entries of commercial games [bootgod's database][nesdb] are suitable.
+These limitations means only 78 entries of commercial games on [bootgod's database][nesdb] are suitable for porting.
 
 [nesdb]: http://bootgod.dyndns.org:7777/
+[mmc1]: https://wiki.nesdev.com/w/index.php/MMC1
+[mmc1modes]: https://wiki.nesdev.com/w/index.php/MMC1#Control_.28internal.2C_.248000-.249FFF.29

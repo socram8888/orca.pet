@@ -13,8 +13,8 @@ Components
 
 The cartridge is composed of three basic components:
 
- - A SST39SF040 512 KiB PLCC NOR FLASH IC, acting as PRG-ROM.
- - A IS61C256 32 KiB SRAM IC, acting as CHR-RAM for the PPU.
+ - A [SST39SF040][flash] 512 KiB PLCC NOR FLASH IC, acting as PRG-ROM.
+ - A [IS61C256][sram] 32 KiB SRAM IC, acting as CHR-RAM for the PPU.
  - A [SLG46824 Dialog GreenPAK][gpak], acting as a mapper IC.
 
 Although the SRAM for CHR-RAM has 32 KiB space, **only 8 KiB of the SRAM are exposed**. The reason why 4-screen was not implemented was because this mode is not commonly supported in Famiclones, and was never commercially used in MMC1 or UNROM games.
@@ -117,7 +117,9 @@ setbank:
 	RTS
 ```
 
+[flash]: https://www.microchip.com/wwwproducts/en/SST39SF040
 [gpak]: https://www.dialog-semiconductor.com/products/slg46824
 [mmc1]: https://wiki.nesdev.com/w/index.php/MMC1
 [mmc1modes]: https://wiki.nesdev.com/w/index.php/MMC1#Control_.28internal.2C_.248000-.249FFF.29
+[sram]: http://www.issi.com/WW/pdf/61C256AL.pdf
 [uxrom]: https://wiki.nesdev.com/w/index.php/UxROM
