@@ -15,7 +15,7 @@ The project
  - **Self-flashability**, allowing games to save progress to the Flash IC.
  - No bus collisions when writing to control registers.
 
-The μMC1 is based heavily on both the popular official [MMC1][mmc1]. As such, it is extremely to develop games for it with basic MMC1 knowledgement, and easy to port games from a MMC1 or a [UxROM][uxrom].
+The μMC1 is based heavily on both the popular official [MMC1][mmc1]. As such, it is extremely easy to develop games for it with basic MMC1 knowledgement, and easy to port games from a MMC1 or a [UxROM][uxrom].
 
 This cartridge has been based around a modern but cheap Dialog GreenPAK, which acts as a mapper. This allows for more advanced features than most contemporary cartridges based on discrete logic such as the [UNROM 512][unrom512] or [GTROM][gtrom], while still keeping the budget low.
 

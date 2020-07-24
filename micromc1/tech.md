@@ -17,7 +17,7 @@ The cartridge is composed of three basic components:
  - A [IS61C256][sram] 32 KiB SRAM IC, acting as CHR-RAM for the PPU.
  - A [SLG46824 Dialog GreenPAK][gpak], acting as a mapper IC.
 
-Although the SRAM for CHR-RAM has 32 KiB space, **only 8 KiB of the SRAM are exposed**. The reason why 4-screen was not implemented was because this mode is not commonly supported in Famiclones, and was never commercially used in MMC1 or UNROM games.
+Although the SRAM for CHR-RAM has 32 KiB space, **only 8 KiB of the SRAM are exposed**. The reason why 4-screen was not implemented is because this mode is not commonly supported in Famiclones, and was never commercially used in MMC1 or UNROM games.
 
 The PRG-ROM supports a socket, but it only makes sense for development cartridges. As such, the FLASH can be optionally soldered straight to the PCB.
 
@@ -43,6 +43,10 @@ Just like the MMC1, and unlike all other mappers, **the registers are written bi
  - CPU `$E000`-`$FFFF`: 5-bit PRG bank selection
 
 ### Mirroring (`$C000`-`$DFFF`)
+
+The mirroring is controlled by a 2-bit shift register, which shifts the D0 bit of the CPU on any write from `$C000` to `$DFFF`:
+
+![Mirroring control](mirr-ctl.svg)
 
 The 2-bit mirroring control value to mode mapping is:
 
@@ -95,6 +99,8 @@ Any other 2-bit combination would've required to feed two bits for swapping sing
 ### PRG bank (`$E000`-`$FFFF`)
 
 The PRG bank register is implemented by a 5-bit register, and as such it allows addressing up to 512 KiB of FLASH memory.
+
+![PRG bank register](prg-bank.svg)
 
 #### Sample code
 
