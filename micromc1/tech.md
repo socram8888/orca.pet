@@ -98,7 +98,7 @@ Any other 2-bit combination would've required to feed two bits for swapping sing
 
 ### PRG bank (`$E000`-`$FFFF`)
 
-The PRG bank register is implemented by a 5-bit register, and as such it allows addressing up to 512 KiB of FLASH memory.
+The PRG bank register is implemented by a 5-bit register, which is fed by the D0 during any writes to any address between `$E000` and `$FFFF`. It allows addressing up to 512 KiB of FLASH memory.
 
 ![PRG bank register](prg-bank.svg)
 
