@@ -18,6 +18,13 @@ Header set X-Frame-Options DENY
 	Header set Onion-Location "expr=http://orca4pet7uu5puvs.onion%{REQUEST_URI}" env=HTTPS
 </If>
 
+# Fix minor spelling mistakes
+# Yes, module is "mod_speling", not "mod_spelling"
+<IfModule mod_speling.c>
+	CheckCaseOnly On
+	CheckSpelling On
+</IfModule>
+
 # Serve WebP for JPEG if possible
 RewriteCond %{HTTP:Accept} image/webp
 RewriteCond %{DOCUMENT_ROOT}/$1\.webp -s
