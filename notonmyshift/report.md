@@ -4,6 +4,8 @@
 Reporting domains
 =================
 
+[← Back to main project page](index.html)
+
 This is a quick document explaining what I do, and what you can do if you find in the wild an unblocked domain:
 
 1. First, **make sure the page is actually a phishing domain**. This is more of an art rather than a exact science, but usual telltale indicators are:
@@ -58,3 +60,5 @@ This is a quick document explaining what I do, and what you can do if you find i
    3. Finally, lookup in your favorite search engine `[company name] abuse`, and you should get a form or email where to report this case.
 
       ![Google abuse lookup](googleabuse.png)
+
+[← Back to main project page](index.html)

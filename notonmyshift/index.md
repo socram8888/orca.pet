@@ -59,3 +59,8 @@ Where does the name come from?
 ------------------------------
 
 The name, if you're curious, comes from [a certain scene of The Simpsons](https://www.youtube.com/watch?v=SQMeYdrt5LQ).
+
+Resources
+---------
+
+* [Reporting domains](report.html): a quick how-to on how to report these domains and have them blocked
