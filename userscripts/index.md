@@ -25,6 +25,13 @@ This script modifies the cookies and redirects web requests to always display th
 
 This script undoes the garbage automatic translation that eBay.es uses on their search results, and replaces back with the original title the seller put.
 
+### Idealista Discard button
+
+{: style="text-align: center;"}
+[⬇️ CLICK HERE TO INSTALL ⬇️](discard-idealista.user.js)
+
+This script re-adds the discard button on Idealista searches, so you don't have to open the ad to discard it.
+
 FurAffinity
 -----------
 
