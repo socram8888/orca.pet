@@ -11,3 +11,4 @@ group :jekyll_plugins do
 	gem 'jekyll-theme-cayman'
 	gem 'jekyll-titles-from-headings'
 end
+gem 'kramdown-parser-gfm'
