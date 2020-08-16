@@ -53,7 +53,7 @@ Modifies the submission page so the next and previous images in current gallery 
 
 This script adds a small "Nuke page" button to delete all images from a page in submissions.
 
-![Nuke page button](nuke-page.jpg)
+![Nuke page button]({{ 'nuke-page.jpg' | cachebuster }})
 
 Just because I didn't want to click "Invert selection" and "Remove selected". Yes I'm that lazy. Yes it actually took me more effort to write this script than would've taken me to click those two buttons.
 
@@ -64,7 +64,8 @@ Just because I didn't want to click "Invert selection" and "Remove selected". Ye
 
 This script adds a button to calculate the file's MD5, and a link to a search to e621 for said hash.
 
-![MD5 button](https://raw.githubusercontent.com/socram8888/FA-Scripts/master/img/md5-btt.jpg) ![Calculated MD5](https://raw.githubusercontent.com/socram8888/FA-Scripts/master/img/md5-done.jpg)
+![MD5 button]({{ 'md5-btt.jpg' | cachebuster }})
+![Calculated MD5]({{ 'md5-done.jpg' | cachebuster }})
 
 ### Prefetching
 
