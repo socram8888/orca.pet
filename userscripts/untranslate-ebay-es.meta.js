@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Untranslate eBay.es
 // @namespace   https://orca.pet
-// @version     1.0
+// @version     1.0.1
 // @author      Marcos Del Sol Vives <marcos@orca.pet>
 // @description Removes the shitty autotranslation from eBay.es ad titles
 // @homepage    https://orca.pet/userscripts/

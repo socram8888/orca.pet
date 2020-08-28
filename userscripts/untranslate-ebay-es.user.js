@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Untranslate eBay.es
 // @namespace   https://orca.pet
-// @version     1.0
+// @version     1.0.1
 // @author      Marcos Del Sol Vives <marcos@orca.pet>
 // @description Removes the shitty autotranslation from eBay.es ad titles
 // @homepage    https://orca.pet/userscripts/
@@ -14,16 +14,12 @@
 // @grant       none
 // ==/UserScript==
 
-if (window.location.pathname.startsWith("/sch/")) {
+if (window.location.pathname.startsWith("/sch/") || window.location.pathname.startsWith("/b/")) {
 	for (let item of document.body.querySelectorAll(".s-item")) {
 		let title = item.querySelector('.s-item__title');
-		let followLink = item.querySelector('.s-item__watch > a');
-		if (title && followLink) {
-			let original = followLink.attributes.getNamedItem('aria-label');
-			title = title.childNodes[title.childNodes.length - 1];
-			if (title && original && original.textContent.startsWith('seguir ')) {
-				title.textContent = original.textContent.substr('seguir '.length);
-			}
+		let image = item.querySelector('.s-item__image-img');
+		if (title && image && image.alt) {
+			title.textContent = image.alt;
 		}
 	}
 } else if (window.location.pathname.startsWith("/itm/")) {
