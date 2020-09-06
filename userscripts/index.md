@@ -32,6 +32,13 @@ This script undoes the garbage automatic translation that eBay.es uses on their 
 
 This script re-adds the discard button on Idealista searches, so you don't have to open the ad to discard it.
 
+### Wallapop Taller Search
+
+{: style="text-align: center;"}
+[⬇️ CLICK HERE TO INSTALL ⬇️](wallapop-taller.user.js)
+
+This script moves the sorting field to the main filter bar to make search view box taller.
+
 FurAffinity
 -----------
 
