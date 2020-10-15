@@ -4,7 +4,7 @@ RewriteEngine On
 # Rewrite to HTTPS if using plain internet or host is not correct
 RewriteCond %{HTTPS} off [or]
 RewriteCond %{HTTP_HOST} !^orca\.pet$
-RewriteRule ^(.*) https://orca.pet$1 [L,R=301]
+RewriteRule ^(.*) https://orca.pet/$1 [L,R=301]
 
 # Security headers
 Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
