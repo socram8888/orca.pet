@@ -1,25 +1,27 @@
 Options -Includes
 RewriteEngine On
 
-# Rewrite to main page
+# Rewrite to HTTPS if using plain internet or host is not correct
+RewriteCond %{HTTPS} off [or]
 RewriteCond %{HTTP_HOST} !^orca\.pet$
-RewriteRule ^(.*) https://orca.pet$1 [L,R=301]
-
-# Rewrite to HTTPS if using plain internet
-RewriteCond %{HTTP_HOST} ^orca\.pet$
-RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*) https://orca.pet$1 [L,R=301]
 
 # Security headers
 Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
 Header set X-Frame-Options DENY
 
-# Fix minor spelling mistakes
-# Yes, module is "mod_speling", not "mod_spelling"
-<IfModule mod_speling.c>
-	CheckCaseOnly On
-	CheckSpelling On
-</IfModule>
+# Tell proxies to store differently-compressed separatedly
+Header append Vary Accept-Encoding
+
+# Try Brotli compression
+RewriteCond %{HTTP:Accept-Encoding} br
+RewriteCond %{REQUEST_FILENAME}.br -s
+RewriteRule . %{REQUEST_FILENAME}.br
+
+<FilesMatch "\.(js|json|svg|ico|css|html|txt|xml)\.br$">
+	Header set Content-Encoding br
+	SetEnv no-gzip 1
+</FilesMatch>
 
 # Serve WebP for JPEG if possible
 RewriteCond %{HTTP:Accept} image/webp
