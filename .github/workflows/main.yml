@@ -1,0 +1,50 @@
+name: Website CI
+
+on:
+    push:
+        branches: [ master ]
+
+jobs:
+    build:
+        runs-on: ubuntu-18.04
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v2
+            with:
+                # Clone all history so timestamps are accurate
+                fetch-depth: 0
+
+          - name: Setup cache
+            uses: actions/cache@v2
+            with:
+                path: vendor/bundle
+                key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+                restore-keys: |
+                    ${{ runner.os }}-gems-
+
+          - name: Set up Ruby
+            uses: ruby/setup-ruby@v1.47.0
+            with:
+                ruby-version: 2.5
+
+          - name: Install Ruby dependencies
+            run: |
+                bundle config path vendor/bundle
+                bundle install
+
+          - name: Build Jekyll
+            run: JEKYLL_ENV=production bundle exec jekyll build
+
+          - name: Compressing
+            run: find _site -type f \( -name "*.css" -o -name "*.ico" -o -name "*.html" -o -name "*.js" -o -name "*.json" -o -name "*.svg" -o -name "*.txt" -o -name "*.xml" \) -exec brotli -Z {} \;
+
+          - name: Publish
+            uses: socram8888/ftp-hash-sync@master
+            with:
+                protocol: sftp 
+                host: ftp.cluster030.hosting.ovh.net
+                username: bmnjpbf
+                source: _site
+                destination: orcapet
+                clientkey: "${{ secrets.SSH_KEY }}"
+                hostkey: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK+v6Lr/30gISPJk8ViZ/esm/PYi97Bqxhr5Fn9Yt1kI"
