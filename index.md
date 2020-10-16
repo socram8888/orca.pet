@@ -21,6 +21,7 @@ These are a few of the projects I've worked on:
 Random stuff
 ------------
 
+* [Noodles](noodles/): list of instant noodles I've tried.
 * [AC:NH patterns](acnh-patterns/): patterns for Animal Crossing: New Horizons.
 * [3D printer heat optimizer](fastheat/): a quick script for improving heating calculation on 3D printers.
 
