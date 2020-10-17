@@ -86,3 +86,32 @@
     sha1: 836a6a8240e834a24b19ac79e77e47e652dfc71c
     sha256: 61151df2c0489bdda6dd70297c3fed0aa7de222fa3cf6c3faeaf90e01081ca78
     contents: ???
+
+2020-10-18:
+  - file: "git_program170525momiji.zip"
+    size: 752870668
+    md5: 5ef8be02c2c80d58bcb97a1a4734c03a
+    sha1: e6bba57133c8f90c019429d3f88ef68087aa74f5
+    sha256: 3392ea00a4f93284a134a0a12857770ff611cab132df7a620cde2c425bf8190c
+    contents: ???
+
+  - file: "ios-releases.tar.7z.001"
+    size: 4294967296
+    md5: a7e52a1faed1ad6de6aaef9721bb1109
+    sha1: fe9a48420e9a720df59a7cd9ce4b19dd532519b9
+    sha256: c517e4eff3af24e7a6329b3103934520b93c83052331e2fbfeeabe26b5bbc1d3
+    contents: ???
+
+  - file: "ios-releases.tar.7z.002"
+    size: 4294967296
+    md5: f3591b08627ae6dfbfdae2c1e54cea90
+    sha1: b612b4c9e717ada42d4b93281df287a3462ddd07
+    sha256: 37b01f0487abccdf6639808d9a3f3655ca3d38a6f3dc71eed14453ce167d0159
+    contents: ???
+
+  - file: "ios-releases.tar.7z.003"
+    size: 3436014938
+    md5: fe6985004aa42365741144aa1c5c628c
+    sha1: 678845f8ac3eeeeee3a3b2b201045565769a66bf
+    sha256: 0d56569d6df26bad36be0daf41c804670c66bf2f47e76226d8be58ff99c5e6ce
+    contents: ???
