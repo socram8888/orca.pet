@@ -1,0 +1,88 @@
+2020-05-02:
+  - file: "64DD Startup.zip"
+    size: 7669624
+    md5: 5041c43a5a2bc0fe58e9ce74c1944053
+    sha1: 5492cd1e2e1e95014070202c5f34d45bd19c84ae
+    sha256: d7265a3717710b9f5569e7f4034435552e17c4b89b46f847fdad11d8dfc718cf
+    contents: ???
+
+  - file: "n64demos-compiled.zip"
+    size: 19936191
+    md5: b4319c1bc715e905ab22321183ca2552
+    sha1: 1797eedf1eee28bbc13141371489dab380d1847e
+    sha256: e95fa2d7b5e0ad87445e3762505bba3f44e1dbe5a8ae706f9d25f4fba55c19d3
+    contents: ???
+
+  - file: "PKCIA.zip"
+    size: 14920960543
+    md5: 1d2199da0fddba87074866fd4c33232c
+    sha1: 144044ce6e2b5287d535e73557fc4cb59b0f391a
+    sha256: 1e8de532c140773d364d0219a419a5d98546ff5d076b6d539a947dc4c7d7b3f3
+    contents: ???
+
+  - file: "unsorted-nocvs.zip"
+    size: 1097614977
+    md5: 053745276342a813602ff64cabcd3cad
+    sha1: 283daf4882c67b46eba26796c63b7df8f583aefd
+    sha256: 46fe7d65e277e12314411983b625339ce4a2b119630760a6607b861c66f83eee
+    contents: ???
+
+2020-07-24:
+  - file: "netcard.7z"
+    size: 1112839263
+    md5: 083314db457e558c8ab86bf522e54a1b
+    sha1: 723e154ae2b249b542169dab7e192daab3e5be36
+    sha256: 0b042752602678eccd8a617dd1818b01eba860e03226c6eb97ed31ce6c195e13
+    contents: CVS repository for a cancelled GBA peripheral.
+
+  - file: "other.7z"
+    size: 373230997
+    md5: 6f54b3c5d19c91081ee6aa11eca86414
+    sha1: 995c7ff718998225071aca8752db027b538709d4
+    sha256: e49a80c79265caa31224223bf2d852c8fa69ef144939993c23070e833ae07e46
+    contents: ???
+
+  - file: "pokemon-checkout.7z"
+    size: 219674267
+    md5: 96e9348f8a3cd236722d182d736b4da9
+    sha1: 95368b0b06bd445cd72847a7b72b65c8b84cd43a
+    sha256: 64532414b93175a6b6f2275a00df128daceeaf7a0e448377ffb33434276dca3e
+    contents: Pokémon prototypes and debug builds.
+
+2020-07-25:
+  - file: "bbgames.7z"
+    size: 3616516360
+    md5: 274f4a8f99788438fbfcdc216b10b303
+    sha1: 42b9c3f547e90d395e980d1240a9dd7ca2e26dbd
+    sha256: 632f1ccf78600ac8d1f8690caf24be6cf7ec9fd9ae0dc74e892fa5d8921115f0
+    contents: ???
+
+2020-09-09:
+  - file: "from_Nintendo.rar"
+    size: 1846367382
+    md5: b542d8d43b638cecac29aad91ad5fe57
+    sha1: 2fcb3543efc46cdae7a60cc6a3c73606e1fa6327
+    sha256: b2a71d44ad8ab6c02496e95d5c338e56a5be8babeb434c3e91180cf6db00b5aa
+    contents: ???
+
+  - file: "generic.7z"
+    size: 1816498498
+    md5: 9273dd836082f9b9248d5d0a18bccfce
+    sha1: b24d3044b8a6290304e2300e4a61044d47458078
+    sha256: 59443a1d9e527c1d55bf553558d6c7bdcdee4b10920ef84e138a864a87978752
+    contents: ???
+
+  - file: "platinum.7z"
+    size: 2930979508
+    md5: 8a92021dd78c4a865708ede01f6f3ee0
+    sha1: ce1a6c2a1ec7ed2d9947abc55742f53af8421843
+    sha256: 9625fb3bc18f669c4325f8a22d630eb49ae71d5614add60ef51ede0b1a8da829
+    contents: ???
+
+2020-09-30:
+  - file: "paladin.7z"
+    size: 2438738380
+    md5: 19a5f3b64176fd0358d2c7b1c28565ea
+    sha1: 836a6a8240e834a24b19ac79e77e47e652dfc71c
+    sha256: 61151df2c0489bdda6dd70297c3fed0aa7de222fa3cf6c3faeaf90e01081ca78
+    contents: ???

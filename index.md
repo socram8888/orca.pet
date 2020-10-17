@@ -22,6 +22,7 @@ Random stuff
 ------------
 
 * [Noodles](noodles/): list of instant noodles I've tried.
+* [Nintendo Gigaleaks](gigaleaks/): database of files leaked from Nintendo.
 * [AC:NH patterns](acnh-patterns/): patterns for Animal Crossing: New Horizons.
 * [3D printer heat optimizer](fastheat/): a quick script for improving heating calculation on 3D printers.
 
