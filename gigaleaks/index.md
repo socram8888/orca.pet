@@ -13,15 +13,14 @@ Checksum files
 * [SHA1 hash file](checksums.sha1)
 * [SHA256 hash file](checksums.sha256)
 
-{% for day in site.data.gigaleaks %}
-
 List of leaks
 -------------
 
+{% for day in site.data.gigaleaks %}
 ### {{ day[0] }}
-
 {% for file in day[1] %}
 #### {{ file.file }}
+
 * Size: {{ file.size }} bytes
 * MD5: `{{ file.md5 }}`
 * SHA1: `{{ file.sha1 }}`
