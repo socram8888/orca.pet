@@ -1,0 +1,4 @@
+---
+---
+{% for d in site.data.gigaleaks %}{% for f in d[1] %}{{ f.sha256 }} *{{ f.file }}
+{% endfor %}{% endfor %}
