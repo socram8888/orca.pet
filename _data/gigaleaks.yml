@@ -182,3 +182,10 @@
     sha1: 678845f8ac3eeeeee3a3b2b201045565769a66bf
     sha256: 0d56569d6df26bad36be0daf41c804670c66bf2f47e76226d8be58ff99c5e6ce
     contents: Wii IOS sources and binaries (3/3)
+
+  - file: "wiidump.7z"
+    size: 2853553005
+    md5: 32753fefb39439e6b1dcea41033f3bef
+    sha1: e62fbb932209c753ac04729b5c1e41a718b54fb0
+    sha256: 24477d3d19a9eaabfd72fb3cda213745bf1ce2055a93520017f693102f92fa6b
+    contents: Wii stuff, including the pre-repair check disc, Broadway datasheet, and SDBoot image
