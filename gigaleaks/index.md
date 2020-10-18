@@ -21,12 +21,16 @@ List of leaks
 {% for file in day[1] %}
 #### {{ file.file }}
 
+{% if file.contents %}
 * Size: {{ file.size }} bytes
 * MD5: `{{ file.md5 }}`
 * SHA1: `{{ file.sha1 }}`
 * SHA256: `{{ file.sha256 }}`
 * Contents: {{ file.contents }}
 * [Search online](https://www.google.com/search?q="{{ file.file | url_encode }}")
+{% else %}
+**Missing**
+{% endif %}
 
 {% endfor %}
 {% endfor %}

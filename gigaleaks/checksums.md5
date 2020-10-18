@@ -1,4 +1,4 @@
 ---
 ---
-{% for d in site.data.gigaleaks %}{% for f in d[1] %}{{ f.md5 }} *{{ f.file }}
-{% endfor %}{% endfor %}
+{% for d in site.data.gigaleaks %}{% for f in d[1] %}{% if f.md5 %}{{ f.md5 }} *{{ f.file }}
+{% endif %}{% endfor %}{% endfor %}
