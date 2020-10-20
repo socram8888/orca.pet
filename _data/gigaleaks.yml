@@ -23,6 +23,11 @@
 
 2020-04-24:
   - file: "Gen2.7z"
+    size: 822281000
+    md5: 7552cb166d1134018311b1b74ad59b0c
+    sha1: c029ca413c039b474969fa654613a42156cbad5d
+    sha256: e001baa436b29670f34b75d958f080f203bac8bf60d08c0e702d575627751481
+    contents: Pokémon G/S/C development stuff
 
 2020-05-01:
   - file: "unsorted.7z"
