@@ -194,3 +194,18 @@
     sha1: e62fbb932209c753ac04729b5c1e41a718b54fb0
     sha256: 24477d3d19a9eaabfd72fb3cda213745bf1ce2055a93520017f693102f92fa6b
     contents: Wii stuff, including the pre-repair check disc, Broadway datasheet, and SDBoot image
+
+2020-10-21:
+  - file: "develop_Develop_30_20171222164419.zip"
+    size: 4106379559
+    md5: 0c7ec43a39d2300ac39dfa7aae1c748b
+    sha1: cdc04aa860e5102be6ec6a33e8c358b39d04fb40
+    sha256: 26e95fb8f30ed681f1cf2d05161a683690eb1d98c0ceb2132f52adea565265ca
+    contents: Very early Pokémon SwSh debug version. Password is "ejfid934".
+
+  - file: "develop_Develop_264_20180326134219_Sword.zip"
+    size: 3157719053
+    md5: ed12173877ef1651c625128a778fb321
+    sha1: 9f4dbcb29d60e2822e8435e16d236fbb510d7500
+    sha256: bca3ce9365fc3858ee44791ce28920a9bbfc1c710326fac58c03e6862d4109f7
+    contents: Later Pokémon SwSh debug version. Password is "JF9034jf".
