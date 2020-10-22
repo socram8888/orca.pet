@@ -201,14 +201,28 @@
     md5: 0c7ec43a39d2300ac39dfa7aae1c748b
     sha1: cdc04aa860e5102be6ec6a33e8c358b39d04fb40
     sha256: 26e95fb8f30ed681f1cf2d05161a683690eb1d98c0ceb2132f52adea565265ca
-    contents: Very early Pokémon SwSh debug version. Password is "ejfid934".
+    contents: December 2017 Pokémon SwSh debug version. Password is "ejfid934".
 
   - file: "develop_Develop_264_20180326134219_Sword.zip"
     size: 3157719053
     md5: ed12173877ef1651c625128a778fb321
     sha1: 9f4dbcb29d60e2822e8435e16d236fbb510d7500
     sha256: bca3ce9365fc3858ee44791ce28920a9bbfc1c710326fac58c03e6862d4109f7
-    contents: Later Pokémon SwSh debug version. Password is "JF9034jf".
+    contents: March 2018 Pokémon SwSh debug version. Password is "JF9034jf".
+
+  - file: "develop_Develop_562_20180525204848_Sword.zip.001"
+    size: 4294967296
+    md5: 2bf6b0c1be2b7b389ae676a808bdfd45
+    sha1: f10e3617ab28777520b415f62c2b1ea6eb46b9a2
+    sha256: 208fd62b1ca0156f01bc4c88b6d60ab5ccc7bc1b39a794529c8a8eec8e55e0b7
+    contents: May 2018 Pokémon SwSh debug version, part 1. Password is "f9fdja9".
+
+  - file: "develop_Develop_562_20180525204848_Sword.zip.002"
+    size: 1803361276
+    md5: 3c44ad1b47cc0ddc534a70a1f3f5a15e
+    sha1: a6af237718af074774d4429ad330e5fd9b4027c0
+    sha256: bcf2415cdf106b819a9d98b5d3f462c3d97db0793884905fef7fd4d35e3ad165
+    contents: May 2018 Pokémon SwSh debug version, part 2. Password is "f9fdja9".
 
   - file: "pack.zip"
     size: 1007317
