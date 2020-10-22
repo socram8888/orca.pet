@@ -209,3 +209,10 @@
     sha1: 9f4dbcb29d60e2822e8435e16d236fbb510d7500
     sha256: bca3ce9365fc3858ee44791ce28920a9bbfc1c710326fac58c03e6862d4109f7
     contents: Later Pokémon SwSh debug version. Password is "JF9034jf".
+
+  - file: "pack.zip"
+    size: 1007317
+    md5: fd5c4a603d28e056baa1ded7e1aa5179
+    sha1: 04d5f41f876b9ed1f366a4a6bf09707565a6d805
+    sha256: 42ac88cd2736731ac26910db89dd27bd626ca65a722cc42231bd2aff6b4aff54
+    contents: Pokémon Blue, Yellow and Crystal debug builds. Password is "0209130762315017".
