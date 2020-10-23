@@ -1,10 +1,16 @@
+# Version: 2020.10.15.02
+
 # Force all text files to be LF
-* text=lf
+* text=auto eol=lf
 
 # Project source files
-*.bat text=crlf
+*.bat text eol=crlf
 *.c text diff=cpp
 *.conf text
+*.config text
+*.cmd text eol=crlf
+*.cs text diff=csharp
+*.csproj text diff=html
 *.css text
 *.diff text
 *.h text diff=cpp
@@ -18,7 +24,9 @@
 *.ps1 text
 *.py text diff=python
 *.scss text
-*.sh text
+*.sql text
+*.sln text
+*.sh text eol=lf
 *.txt text
 *.xml text diff=html
 *.yml text
