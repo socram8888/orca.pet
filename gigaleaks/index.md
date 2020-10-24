@@ -1,8 +1,8 @@
 ---
 ---
 
-Nintendo gigaleaks DB
-=====================
+Nintendo Gigaleak DB
+====================
 
 This is a database of all the leaks I've seen, along with hashes for validation. For legal reasons, I will not be linking them here, but you should be able to find them by the file names.
 
