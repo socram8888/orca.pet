@@ -53,7 +53,9 @@ The idea of this hosts list is to serve as a temporary measure to block these ad
 Can I contribute?
 -----------------
 
-Yes, sure. Open an issue [at the GitHub repository](https://github.com/socram8888/not-on-my-shift) or [send me an email](/#contact).
+Yes, sure. You can contribute by:
+ - Opening an issue [at the GitHub repository](https://github.com/socram8888/not-on-my-shift)
+ - Forwarding me any e-mail containing suspicious attachments or links to the email [marcos+spam@orca.pet](mailto:marcos+spam@orca.pet). You don't even need to write or explain anything, just forward them there.
 
 Where does the name come from?
 ------------------------------
