@@ -56,3 +56,13 @@ As usual with Nissin, the noodles are fine. They're thinner however than normal 
 After pouring the flavour sachet however, the overall taste doesn't change significantly. I'm not sure if whoever designed this crap forgot some ingredients or what, but the sachet gives _zero_ flavour to the noodles. It only adds a slightly darker color, and spicyness.
 
 I didn't finish them either, and ended up in the trash. After these I gave up for trying new stuff and ended up just eating some random pre-made food I had lying in the fridge.
+
+### ★☆☆☆☆ Nongshim Shin Ramyun
+
+![Packaging](nongshim_shin_ramyun.jpg)
+
+Holy shit this one. When I thought stuff couldn't get any worse, I decide to byt this steaming piece of toxic radioactive material.
+
+The look was _fine_, but _that was it_. Not only I couldn't finish them, as the taste was totally missing and the noodles were floating in a sea of half a liter of water - this junk was **waaay too spicy**. I've eaten plenty of spicy stuff, even by Indian standards, but holy fuck, this literally made my stomach ache and throw up.
+
+Fuck this, won't be buying _anything_ from this brand ever again.
