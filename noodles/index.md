@@ -61,7 +61,7 @@ I didn't finish them either, and ended up in the trash. After these I gave up fo
 
 ![Packaging](nongshim_shin_ramyun.jpg)
 
-Holy shit this one. When I thought stuff couldn't get any worse, I decide to byt this steaming piece of toxic radioactive material.
+Holy shit this one. When I thought stuff couldn't get any worse, I decide to buy this foaming piece of toxic radioactive material.
 
 The look was _fine_, but _that was it_. Not only I couldn't finish them, as the taste was totally missing and the noodles were floating in a sea of half a liter of water - this junk was **waaay too spicy**. I've eaten plenty of spicy stuff, even by Indian standards, but holy fuck, this literally made my stomach ache and throw up.
 
