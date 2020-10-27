@@ -66,3 +66,4 @@ Resources
 ---------
 
 * [Reporting domains](report.html): a quick how-to on how to report these domains and have them blocked
+* [Blocklist Search Tool](https://blocklist-tools.developerdan.com/entries/search): a tool to search if a domain is currently blocked by any major block list
