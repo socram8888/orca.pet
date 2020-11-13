@@ -1,28 +1,78 @@
 Tren-Tierra
 ===========
 
-Tren-Tierra (literally, "train-ground" in Spanish) is a radio communication system employed by several passenger and freight train companies through Spain. Its purpose is to contact the control center (CTC) in case of an incidence, such as delays, train malfunction or an accident.
+Tren-Tierra (literally, "train-ground" in Spanish) is an implementation of the UIC 751-3 radio communication system employed by several passenger and freight train companies through Spain. Its purpose is to serve as a means of contacting the CTC (centralized traffic control) in case of an incidence, such as delays, train malfunction or an accident.
 
 Companies using it include:
 
- - [Adif](http://www.adif.es/), through most of the state-owned Iberian gauge network, with trains run mainly (but not exclusively) by [Renfe](https://renfe.com/).
+  - [Adif](http://www.adif.es/), through most of the state-owned Iberian and mixed gauge network, with trains run mainly (but not exclusively) by [Renfe](https://renfe.com/).  Standard gauge lines use GSM-R generally.
 
- - The suburban (metro) services of [Ferrocarrils de la Generalitat Valenciana](https://www.fgv.es/) (also known as FGV), in the province of Valencia with the commercial name of Metrovalencia. Trams, on the other hand, use standard GSM.
-
-The 
+  - The suburban (metro) services of [Ferrocarrils de la Generalitat Valenciana](https://www.fgv.es/) (also known as FGV), in the province of Valencia with the commercial name of Metrovalencia. Trams, on the other hand, use standard GSM.
 
 The radio layer
 ---------------
 
-Technically speaking, the system consists of a radio network on the UHF band with several full duplex radio channels, transmitted with highly directional antennas (usually Yagis) running next to the tracks.
+Before getting into technical details, it'll be useful to clarify briefly how the trains are run.
 
-The disposition of the channels are similar to that of a coloration map - there are only a handful of them, but they're distributed so that two close or contiguous different track sections never share the same channel.
+As the track networks are vast and need constant attention, they are split into multiple segments which are managed by generally a single person on the CTC.
 
-Each track segment is controlled by a single person at the CTC. Thus, to better manage the network, the coverage of each channel is scaled depending on the frequency of the trains, as well as the topology and length of the track section. Shorter segments are used in zones with high usage to have a smaller granularity and reduce the stress of the operators.
+The size of said segments depends on the frequency of the trains as well as the topology of the track section: shorter segments are used in zones with high usage (so there are less trains in a single segment to be managed at any given time), as well as single track segments (as they're harder to manage with the constant switching of directions).
 
-Furthermore, each channel is divided into four frequencies: three for ground to train communications (herein refered to them as A, B and C), and one for train to ground (refered to as T).
+Each segment gets assigned one of the X available radio channels (7 for Renfe, 2 for FGV), in a manner akin to a coloration map - they're arranged so that two close or contiguous different track sections never share the same channel.
 
-The A, B and C channels are transmitting constantly during night and day, even when there is no activity, so that train drivers may get a warning when they are out of coverage.
+The boundaries of each segment are indicated at the edges to the train drivers using trackside signs with the channel number in white over a black background. Once seen, the driver must manually type it in on the radio unit on the cab along with their train number.
 
-These three channels are used in a repeating A-B-C-A-B-C... pattern through the track segment, to avoid destructive wave interference from adjacent transmitters that would cause blind spots of coverage.
+Each channel represents a group of four different frequencies on the [UHF band](https://en.wikipedia.org/wiki/Ultra_high_frequency) (between 440MHz and 450MHz), which are used for wideband (25KHz) analog FM voice:
+
+  - Three frequencies are used for ground to train communications.
+  
+    They all contain exactly the same audio (relayed via a private optical fiber network) and are broadcasting 24:7 (so that when a trains is out of coverage the driver can get an indication, and to discourage anyone from illegally using the frequency).
+  
+    They are used in a repeating A-B-C-A-B-C... pattern through the track segment, to avoid destructive wave interference from adjacent transmitters that would cause blind spots on the coverage.
+
+  - The remaining one is used for train to ground, which is only occupied when a certain train needs to transmit.
+
+The audio
+---------
+
+Although the system uses analog FM, the system is far from being a mere glorified walkie talkie-based system.
+
+Originally, it used plain FM voice with a signaling system of superimposed sine waves (much like [CTCSS](https://en.wikipedia.org/wiki/Continuous_Tone-Coded_Squelch_System), except on the audible range), and it was later extended using a fully digital [AFSK](https://en.wikipedia.org/wiki/Frequency-shift_keying#Audio_frequency-shift_keying)-based packet system.
+
+The system has support for two kind of calls:
+
+  - **Standard** which are between a single train and the control center, for minor issues such as train breakage, delays, routing...
+
+	Since they are not urgent, they have to be accepted by the personnel at the control center before the call can take place.
+
+  - **Emergency** for situations where the circulation or life could be at risk (such as derailments).
+  
+    When such a call takes place, the handsfree loudspeakers of both the CTC and in the cab of _every train on the segment_ is automatically switched on and begins reproducing the voice of whoever initiated the call.
+
+### The analog signaling system
+
+The standard UIC 751-3 defines four frequencies, of which only three are used by tren-tierra.
+
+  - 2280Hz: the channel free signal.
+  - 2800Hz: the pilot signal.
+  - 1520Hz: the warning signal.
+
+At any given time, at most only one may be present, and are used as follows:
+
+#### Ground to train
+
+| Condition      | Signal                |
+|----------------|-----------------------|
+| Idle           | 2280Hz (channel free) |
+| Standard call  | None                  |
+| Emergency call | 1520Hz (warning)      |
+| Digital packet | None                  |
+
+#### Train to ground
+
+| Condition      | Signal                |
+|----------------|-----------------------|
+| Standard call  | 2800Hz (pilot)        |
+| Emergency call | 1520Hz (warning)      |
+| Digital packet | None                  |
 
