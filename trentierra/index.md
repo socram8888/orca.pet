@@ -1,13 +1,10 @@
+---
+---
+
 Tren-Tierra
 ===========
 
 Tren-Tierra (literally, "train-ground" in Spanish) is an implementation of the UIC 751-3 radio communication system employed by several passenger and freight train companies through Spain. Its purpose is to serve as a means of contacting the CTC (centralized traffic control) in case of an incidence, such as delays, train malfunction or an accident.
-
-Companies using it include:
-
-  - [Adif](http://www.adif.es/), through most of the state-owned Iberian and mixed gauge network, with trains run mainly (but not exclusively) by [Renfe](https://renfe.com/).  Standard gauge lines use GSM-R generally.
-
-  - The suburban (metro) services of [Ferrocarrils de la Generalitat Valenciana](https://www.fgv.es/) (also known as FGV), in the province of Valencia with the commercial name of Metrovalencia. Trams, on the other hand, use standard GSM.
 
 The radio layer
 ---------------
@@ -24,13 +21,13 @@ The boundaries of each segment are indicated at the edges to the train drivers u
 
 Each channel represents a group of four different frequencies on the [UHF band](https://en.wikipedia.org/wiki/Ultra_high_frequency) (between 440MHz and 450MHz), which are used for wideband (25KHz) analog FM voice:
 
-  - Three frequencies are used for ground to train communications.
+  - Three frequencies (here referrer to as A, B and C) are used for ground to train communications.
   
     They all contain exactly the same audio (relayed via a private optical fiber network) and are broadcasting 24:7 (so that when a trains is out of coverage the driver can get an indication, and to discourage anyone from illegally using the frequency).
   
     They are used in a repeating A-B-C-A-B-C... pattern through the track segment, to avoid destructive wave interference from adjacent transmitters that would cause blind spots on the coverage.
 
-  - The remaining one is used for train to ground, which is only occupied when a certain train needs to transmit.
+  - The remaining one (in this document, referred to as T) is used for train to ground, which is only occupied when a certain train needs to transmit.
 
 The audio
 ---------
@@ -76,3 +73,15 @@ At any given time, at most only one may be present, and are used as follows:
 | Emergency call | 1520Hz (warning)      |
 | Digital packet | None                  |
 
+### The digital signaling system
+
+**TODO**
+
+Companies
+---------
+
+To my knowledge, it is being used only by two Spanish companies - click on them for more information about their channel planning:
+
+  - [Adif](adif.html)
+
+  - [Ferrocarrils de la Generalitat Valenciana](fgv.html)
