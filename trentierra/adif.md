@@ -41,12 +41,12 @@ Aside from a number, Adif also assigns a color to each channel, which is used to
   - Color: <span class="ralcolor" style="background-color: #cb555d; color: white;">red RAL 3017</span>
   - Frequencies:
 
-	| Subchannel | Frequency  |
-	|------------|------------|
-	| A          | ???        |
-	| B          | ???        |
-	| C          | ???        |
-	| T          | ???        |
+	| Subchannel | Frequency   |
+	|------------|-------------|
+	| A          | 447.650 MHz |
+	| B          | 447.700 MHz |
+	| C          | 447.750 MHz |
+	| T          | 457.700 MHz |
 
 ### Channel 64
 
@@ -67,10 +67,10 @@ Aside from a number, Adif also assigns a color to each channel, which is used to
 
 	| Subchannel | Frequency   |
 	|------------|-------------|
-	| A          | 448,275 MHz |
-	| B          | 448,325 MHz |
-	| C          | 448,375 MHz |
-	| T          | 458,325 MHz |
+	| A          | 448.275 MHz |
+	| B          | 448.325 MHz |
+	| C          | 448.375 MHz |
+	| T          | 458.325 MHz |
 
 ### Channel 66
 

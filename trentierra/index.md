@@ -54,24 +54,24 @@ The standard UIC 751-3 defines four frequencies, of which only three are used by
   - 2800Hz: the pilot signal.
   - 1520Hz: the warning signal.
 
-At any given time, at most only one may be present, and are used as follows:
+At any given time, **at most** only one may be present, and are used as follows:
 
 #### Ground to train
 
-| Condition      | Signal                |
-|----------------|-----------------------|
-| Idle           | 2280Hz (channel free) |
-| Standard call  | None                  |
-| Emergency call | 1520Hz (warning)      |
-| Digital packet | None                  |
+| Condition      | Signal                      |
+|----------------|-----------------------------|
+| Idle           | channel free (2280Hz) alone |
+| Standard call  | voice alone                 |
+| Emergency call | voice + warning (1520Hz)    |
+| Digital packet | data alone                  |
 
 #### Train to ground
 
-| Condition      | Signal                |
-|----------------|-----------------------|
-| Standard call  | 2800Hz (pilot)        |
-| Emergency call | 1520Hz (warning)      |
-| Digital packet | None                  |
+| Condition      | Signal                   |
+|----------------|--------------------------|
+| Standard call  | voice + pilot (2800Hz)   |
+| Emergency call | voice + warning (1520Hz) |
+| Digital packet | data alone               |
 
 ### The digital signaling system
 

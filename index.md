@@ -18,6 +18,11 @@ These are a few of the projects I've worked on:
 * [UserScripts](userscripts/): a collection of user scripts I use every day for improving my browsing experience.
 * [Unregulatory](unregulatory/): a OpenWRT package for disabling band and power soft limits.
 
+Trains
+------
+
+* [Tren tierra](trentierra/): documentation about the comms protocol used by train companies in Spain.
+
 Random stuff
 ------------
 
