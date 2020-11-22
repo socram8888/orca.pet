@@ -22,91 +22,41 @@ Aside from a number, Adif also assigns a color to each channel, which is used to
 	padding: 0.25em;
 	border: black 1px solid;
 }
+
+.freqtbl tr th:nth-child(1) {
+	width: 26%;
+}
+
+.freqtbl tr th:nth-child(2), .freqtbl tr th:nth-child(3) {
+	width: 37%;
+}
+
+.freqtbl .shared {
+	background-color: rgba(255, 255, 0, 0.25);
+}
 </style>
 
-### Channel 61
+{% for channel in site.data.trentierra.adif.channels %}
+### Channel {{ channel.number }}
 
-  - Color: <span class="ralcolor" style="background-color: #e26e0e; color: white;">orange RAL 2011</span>
+  - Color: <span class="ralcolor" style="background-color: #{{ channel.color.hex }}; color: {{ channel.color.hex | textcolor }};">{{ channel.color.name }}</span>
   - Frequencies:
 
-	| Subchannel | Frequency  |
-	|------------|------------|
-	| A          | ???        |
-	| B          | ???        |
-	| C          | ???        |
-	| T          | ???        |
-
-### Channel 62
-
-  - Color: <span class="ralcolor" style="background-color: #cb555d; color: white;">red RAL 3017</span>
-  - Frequencies:
-
-	| Subchannel | Frequency   |
-	|------------|-------------|
-	| A          | 447.650 MHz |
-	| B          | 447.700 MHz |
-	| C          | 447.750 MHz |
-	| T          | 457.700 MHz |
-
-### Channel 64
-
-  - Color: <span class="ralcolor" style="background-color: #007cb0; color: white;">blue RAL 5015</span>
-  - Frequencies:
-
-	| Subchannel | Frequency  |
-	|------------|------------|
-	| A          | ???        |
-	| B          | ???        |
-	| C          | ???        |
-	| T          | ???        |
-
-### Channel 65
-
-  - Color: <span class="ralcolor" style="background-color: #61993b; color: white;">green RAL 6018</span>
-  - Frequencies:
-
-	| Subchannel | Frequency   |
-	|------------|-------------|
-	| A          | 448.275 MHz |
-	| B          | 448.325 MHz |
-	| C          | 448.375 MHz |
-	| T          | 458.325 MHz |
-
-### Channel 66
-
-  - Color: <span class="ralcolor" style="background-color: #f1f0ea; color: black;">white RAL 9016</span>
-  - Frequencies:
-
-	| Subchannel | Frequency  |
-	|------------|------------|
-	| A          | ???        |
-	| B          | ???        |
-	| C          | ???        |
-	| T          | ???        |
-
-### Channel 69
-
-  - Color: <span class="ralcolor" style="background-color: #0e0e10; color: white;">black RAL 9005</span>
-  - Frequencies:
-
-	| Subchannel | Frequency  |
-	|------------|------------|
-	| A          | ???        |
-	| B          | ???        |
-	| C          | ???        |
-	| T          | ???        |
-
-### Channel 99
-
-  - Color: <span class="ralcolor" style="background-color: #faca30; color: black;">yellow RAL 1018</span>
-  - Frequencies:
-
-	| Subchannel | Frequency   |
-	|------------|-------------|
-	| A          | 448.550 MHz |
-	| B          | 448.600 MHz |
-	| C          | 448.650 MHz |
-	| T          | 458.600 MHz |
+	<table class="freqtbl">
+		<tr>
+			<th>Subchannel</th>
+			<th>Frequency</th>
+			<th>Shared with</th>
+		</tr>
+		{% for freq in channel.subchannels %}
+			<tr{% if freq[1].shared.size > 0 %} class="shared"{% endif %}>
+				<td>{{ freq[0] | upcase }}</td>
+				<td>{{ freq[1].frequency | precision: 3 }} MHz</td>
+				<td>{{ freq[1].shared | join ', ' }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+{% endfor %}
 
 Footnotes
 ---------

@@ -11,7 +11,7 @@ The radio layer
 
 Before getting into technical details, it'll be useful to clarify briefly how the trains are run.
 
-As the track networks are vast and need constant attention, they are split into multiple segments which are managed by generally a single person on the CTC.
+As the track networks are vast and need constant attention, they are split into multiple segments ("bandas de regulación") which are managed by generally a single person on the CTC.
 
 The size of said segments depends on the frequency of the trains as well as the topology of the track section: shorter segments are used in zones with high usage (so there are less trains in a single segment to be managed at any given time), as well as single track segments (as they're harder to manage with the constant switching of directions).
 

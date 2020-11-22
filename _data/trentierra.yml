@@ -1,0 +1,71 @@
+adif:
+    channels:
+      - number: 61
+        subchannels:
+            a: 447.550
+            b: 447.600
+            c: 447.650
+            t: 457.600
+        color:
+            name: orange RAL 2011
+            hex: e26e0e
+
+      - number: 62
+        subchannels:
+            a: 447.650
+            b: 447.700
+            c: 447.750
+            t: 457.700
+        color:
+            name: red RAL 3017
+            hex: cb555d
+
+      - number: 64
+        subchannels:
+            a: 447.850
+            b: 447.900
+            c: 447.950
+            t: 457.900
+        color:
+            name: blue RAL 5015
+            hex: 007cb0
+
+      - number: 65
+        subchannels:
+            a: 448.275
+            b: 448.325
+            c: 448.375
+            t: 458.325
+        color:
+            name: green RAL 6018
+            hex: 61993b
+
+      - number: 66
+        subchannels:
+            a: 448.325
+            b: 448.375
+            c: 448.425
+            t: 458.375
+        color:
+            name: white RAL 9016
+            hex: f1f0ea
+
+      - number: 69
+        subchannels:
+            a: 448.450
+            b: 448.500
+            c: 448.550
+            t: 458.500
+        color:
+            name: black RAL 9005
+            hex: 0e0e10
+
+      - number: 99
+        subchannels:
+            a: 448.550
+            b: 448.600
+            c: 448.650
+            t: 458.600
+        color:
+            name: yellow RAL 1018
+            hex: faca30
