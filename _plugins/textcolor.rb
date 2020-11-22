@@ -1,7 +1,5 @@
 module Jekyll
 	module TextColorFilter
-		PATH_FINGERPRINTS = {}
-
 		# Usage example:
 		#
 		# {{ "#004455" | textcolor }}
