@@ -1,4 +1,5 @@
 ---
+extra_css: trentierra.css
 ---
 
 [← Back to companies](index.html#companies)
@@ -16,25 +17,6 @@ Channels
 This list has been compiled by collating several information sources, such as the CNAF [^cnaf], 
 
 Aside from a number, Adif also assigns a color to each channel, which is used to paint the roof of the repeater stations of each channel [^adifcolor].
-
-<style>
-.ralcolor {
-	padding: 0.25em;
-	border: black 1px solid;
-}
-
-.freqtbl tr th:nth-child(1) {
-	width: 26%;
-}
-
-.freqtbl tr th:nth-child(2), .freqtbl tr th:nth-child(3) {
-	width: 37%;
-}
-
-.freqtbl .shared {
-	background-color: rgba(255, 255, 0, 0.25);
-}
-</style>
 
 {% for channel in site.data.trentierra.adif.channels %}
 ### Channel {{ channel.number }}

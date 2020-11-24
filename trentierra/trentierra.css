@@ -1,0 +1,16 @@
+.ralcolor {
+	padding: 0.25em;
+	border: black 1px solid;
+}
+
+.freqtbl tr th:nth-child(1) {
+	width: 26%;
+}
+
+.freqtbl tr th:nth-child(2), .freqtbl tr th:nth-child(3) {
+	width: 37%;
+}
+
+.freqtbl .shared {
+	background-color: rgba(255, 255, 0, 0.25);
+}
