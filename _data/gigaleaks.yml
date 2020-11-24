@@ -157,7 +157,7 @@
     md5: 19a5f3b64176fd0358d2c7b1c28565ea
     sha1: 836a6a8240e834a24b19ac79e77e47e652dfc71c
     sha256: 61151df2c0489bdda6dd70297c3fed0aa7de222fa3cf6c3faeaf90e01081ca78
-    contents: ???
+    contents: GBA, 3DS Pokémon debug roms; 3DS and DSi dev tools; SDK files for IRIS (GBA successor)
 
 2020-10-17:
   - file: "git_program170525momiji.zip"
@@ -230,3 +230,32 @@
     sha1: 04d5f41f876b9ed1f366a4a6bf09707565a6d805
     sha256: 42ac88cd2736731ac26910db89dd27bd626ca65a722cc42231bd2aff6b4aff54
     contents: Pokémon Blue, Yellow and Crystal debug builds. Password is "0209130762315017".
+
+2020-11-17:
+  - file: "poke1.rar"
+    size: 365258961
+    md5: 1b182a9ba45e2ee902dd85515aa4db53
+    sha1: 7046cc039a3760494dd5a3d143a2053d871cc1fc
+    sha256: addff630c484060cc1c06d6df23210bf180ca26782e3a72e10c3fab6339c5830
+    contents: Pokémon Rumble World prototypes
+
+  - file: "poke2.rar"
+    size: 363040934
+    md5: 3fc49b363413366e89b95ce867284e3c
+    sha1: 7cb4da0679d450e21d57a44b8668208acc2f25ac
+    sha256: 9dc0f4c8bb83d82ea9e656a5f4452cfef94bebf229005f2785e88271782f1442
+    contents: Pokémon Rumble World prototypes
+
+  - file: "poke3.rar"
+    size: 226234314
+    md5: a7c3f278126a64fe9a660dcebc018aab
+    sha1: 680abed50249dcbeed64d774ba64ab6371a572c9
+    sha256: 4226d471f2ac94c83132336d5eab96b603f95f6cdcd1557999363395f430b11c
+    contents: Pokémon Rumble World prototypes
+
+  - file: "poke4.rar"
+    size: 226241607
+    md5: c8912b1fe50ac1b9a06570dd5f316a04
+    sha1: 3fb96e9aa15bf842175b3d2e94e7ee17fc720fd9
+    sha256: 15b64ae24d6eee583fec4c759a74376422d718936aee713ff4908d3d68cf321e
+    contents: Pokémon Rumble World prototypes

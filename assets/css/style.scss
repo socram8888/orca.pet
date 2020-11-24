@@ -337,6 +337,7 @@ a {
   table {
     width: 100%;
     overflow: auto;
+    display: inline-block; // For scroll bars to work
     word-break: normal;
     word-break: keep-all; // For Firefox to horizontally scroll wider tables.
     -webkit-overflow-scrolling: touch;

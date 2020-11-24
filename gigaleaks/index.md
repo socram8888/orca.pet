@@ -36,3 +36,8 @@ List of leaks
 {% endfor %}
 
 If you have any file it's missing, please don't hesitate to [contact me](/#contact).
+
+Useful resources
+----------------
+
+  * (Nintendo Leaks timeline)[https://protocrystal.neocities.org/timeline.html]

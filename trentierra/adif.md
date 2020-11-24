@@ -44,7 +44,7 @@ Aside from a number, Adif also assigns a color to each channel, which is used to
 
 	<table class="freqtbl">
 		<tr>
-			<th>Subchannel</th>
+			<th>Sub<wbr>channel</th>
 			<th>Frequency</th>
 			<th>Shared with</th>
 		</tr>
