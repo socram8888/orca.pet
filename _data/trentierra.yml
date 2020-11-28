@@ -1,6 +1,13 @@
 adif:
+    prefix: R
     channels:
+      - number: 3
+        mode: c
+        subchannels:
+            s: 457.825
+
       - number: 61
+        mode: a
         subchannels:
             a: 447.550
             b: 447.600
@@ -11,6 +18,7 @@ adif:
             hex: e26e0e
 
       - number: 62
+        mode: a
         subchannels:
             a: 447.650
             b: 447.700
@@ -21,6 +29,7 @@ adif:
             hex: cb555d
 
       - number: 64
+        mode: a
         subchannels:
             a: 447.850
             b: 447.900
@@ -31,6 +40,7 @@ adif:
             hex: 007cb0
 
       - number: 65
+        mode: a
         subchannels:
             a: 448.275
             b: 448.325
@@ -41,6 +51,7 @@ adif:
             hex: 61993b
 
       - number: 66
+        mode: a
         subchannels:
             a: 448.325
             b: 448.375
@@ -51,6 +62,7 @@ adif:
             hex: f1f0ea
 
       - number: 69
+        mode: a
         subchannels:
             a: 448.450
             b: 448.500
@@ -61,6 +73,7 @@ adif:
             hex: 0e0e10
 
       - number: 99
+        mode: a
         subchannels:
             a: 448.550
             b: 448.600

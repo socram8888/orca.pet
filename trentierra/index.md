@@ -4,7 +4,9 @@
 Tren-Tierra
 ===========
 
-Tren-Tierra (literally, "train-ground" in Spanish) is an implementation of the UIC 751-3 radio communication system employed by several passenger and freight train companies through Spain. Its purpose is to serve as a means of contacting the CTC (centralized traffic control) in case of an incidence, such as delays, train malfunction or an accident.
+Tren-Tierra (literally, "train-ground" in Spanish) is an implementation of the UIC 751-3 radio communication system[^uic-751-3] employed by several passenger and freight train companies through Spain. Its purpose is to serve as a means of contacting railroad personnel in case of an incidence, such as delays, train malfunction or an accident.
+
+The system has two different operating modes: A and C. This document will explain thoroughly the mode A, which is used for contacting the CTC (centralized traffic control).
 
 The radio layer
 ---------------
@@ -77,11 +79,30 @@ At any given time, **at most** only one may be present, and are used as follows:
 
 **TODO**
 
+Mode C
+------
+
+The mode C is essentially using the on-board station as a normal walkie talkie:
+ - It uses a single frequency, as it is half duplex, transmitting by means of a push-to-talk button.
+ - It does not support any kind of analog signaling. The squelch opens by carrier detection.
+ - No digital packets are supported.
+
+This mode is used to talk to staff in stations or on board trains, as well as railside workers. They use standard, off-the-shelf UHF walkies - in fact, even though they're not legal for commercial usage, I've seen Renfe staff carrying the classic [Baofeng UV-5R](https://www.google.com/search?q=baofeng+uv-5r) in Valencia!
+
 Companies
 ---------
 
 To my knowledge, it is being used only by two Spanish companies - click on them for more information about their channel planning:
 
   - [Adif](adif.html)
-
   - [Ferrocarrils de la Generalitat Valenciana](fgv.html)
+
+Downloads
+---------
+
+  - [CHIRP](https://chirp.danplanet.com/)-compatible CSV channel list: **[download](chirp.csv)**
+
+References
+----------
+
+[^uic-751-3]: "UIC code 751-3: Technical regulations for international analogue ground-train radio systems", ISBN 2-7461-0441-5

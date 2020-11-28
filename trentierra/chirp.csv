@@ -1,0 +1,12 @@
+---
+---
+{% assign chnum = 1 -%}
+Location,Name,Frequency,Duplex,Mode,Comment
+{% for company in site.data.trentierra -%}
+{% for channel in company[1].channels -%}
+{% for sub in channel.subchannels -%}
+{{ chnum }},{{ company[1].prefix }}{{ channel.number }}{% if channel.mode == 'a' %}-{{ sub[0] | upcase }}{% endif %},{{ sub[1].frequency | precision: 3 }},off,FM,{{ company[0] | capitalize }} {{ channel.number }}{% if channel.mode == 'a' %}-{{ sub[0] | upcase }}{% endif %}
+{% assign chnum = chnum | plus: 1 -%}
+{% endfor -%}
+{% endfor -%}
+{% endfor -%}

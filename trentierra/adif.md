@@ -16,12 +16,16 @@ Channels
 
 This list has been compiled by collating several information sources, such as the CNAF [^cnaf], 
 
-Aside from a number, Adif also assigns a color to each channel, which is used to paint the roof of the repeater stations of each channel [^adifcolor].
+Aside from a number, Adif also assigns a color to each channel in mode A, which is used to paint the roof of the repeater stations of each channel [^adifcolor].
 
 {% for channel in site.data.trentierra.adif.channels %}
 ### Channel {{ channel.number }}
 
+  - Mode: {{ channel.mode | upcase }}
+{% if channel.color -%}
   - Color: <span class="ralcolor" style="background-color: #{{ channel.color.hex }}; color: {{ channel.color.hex | textcolor }};">{{ channel.color.name }}</span>
+{% endif -%}
+{% if channel.mode == 'a' -%}
   - Frequencies:
 
 	<table class="freqtbl">
@@ -34,14 +38,18 @@ Aside from a number, Adif also assigns a color to each channel, which is used to
 			<tr{% if freq[1].shared.size > 0 %} class="shared"{% endif %}>
 				<td>{{ freq[0] | upcase }}</td>
 				<td>{{ freq[1].frequency | precision: 3 }} MHz</td>
-				<td>{{ freq[1].shared | join ', ' }}</td>
+				<td>{{ freq[1].shared | join: ', ' }}</td>
 			</tr>
 		{% endfor %}
 	</table>
+{% elsif channel.mode == 'c' -%}
+  - Frequency: {{ channel.subchannels.s.frequency | precision: 3 }}
+{% endif %}
+
 {% endfor %}
 
-Footnotes
----------
+References
+----------
 
 [^adifcolor]: [ET 03.366.101.8 1st edition](casetas.pdf), page 9
 [^cnaf]: [Notas UN](cnaf-un-2017.pdf), 2017 edition, UN-78
