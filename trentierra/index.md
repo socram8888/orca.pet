@@ -4,9 +4,11 @@
 Tren-Tierra
 ===========
 
-Tren-Tierra (literally, "train-ground" in Spanish) is an implementation of the UIC 751-3 radio communication system[^uic-751-3] employed by several passenger and freight train companies through Spain. Its purpose is to serve as a means of contacting railroad personnel in case of an incidence, such as delays, train malfunction or an accident.
+Tren-Tierra (literally, "train-ground" in Spanish) is an implementation of the UIC 751-3 radio communication system employed by several passenger and freight train companies through Spain. Its purpose is to serve as a means of contacting railroad personnel in case of an incidence, such as delays, train malfunction or an accident.
 
 The system has two different operating modes: A and C. This document will explain thoroughly the mode A, which is used for contacting the CTC (centralized traffic control).
+
+This document has been written using [OSINT](https://en.wikipedia.org/wiki/Open-source_intelligence), with both official [^uic-751-3] and unofficial [^afergodella] sources.
 
 The radio layer
 ---------------
@@ -105,4 +107,5 @@ Downloads
 References
 ----------
 
-[^uic-751-3]: "UIC code 751-3: Technical regulations for international analogue ground-train radio systems", ISBN 2-7461-0441-5
+[^uic-751-3]: UIC code 751-3: Technical regulations for international analogue ground-train radio systems, 4th edition, Union Internationale des Chemins de fer, 2005, ISBN 2-7461-0441-5.
+[^afergodella]: [El sistema Tren-Tierra en España](http://www.afergodella.es/el-sistema-tren-tierra-analogico-en-espana/), Asociación Ferroviaria de Godella, 2013.

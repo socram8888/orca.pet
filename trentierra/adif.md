@@ -14,7 +14,7 @@ Adif uses train-tierra through most of Iberian and mixed gauge network, with tra
 Channels
 --------
 
-This list has been compiled by collating several information sources, such as the CNAF [^cnaf], 
+This list has been compiled by collating several information sources [^cnaf] [^afergodella].
 
 Aside from a number, Adif also assigns a color to each channel in mode A, which is used to paint the roof of the repeater stations of each channel [^adifcolor].
 
@@ -43,7 +43,7 @@ Aside from a number, Adif also assigns a color to each channel in mode A, which 
 		{% endfor %}
 	</table>
 {% elsif channel.mode == 'c' -%}
-  - Frequency: {{ channel.subchannels.s.frequency | precision: 3 }}
+  - Frequency: {{ channel.subchannels.s.frequency | precision: 3 }} MHz
 {% endif %}
 
 {% endfor %}
@@ -51,5 +51,6 @@ Aside from a number, Adif also assigns a color to each channel in mode A, which 
 References
 ----------
 
-[^adifcolor]: [ET 03.366.101.8 1st edition](casetas.pdf), page 9
-[^cnaf]: [Notas UN](cnaf-un-2017.pdf), 2017 edition, UN-78
+[^adifcolor]: [ET 03.366.101.8 1st edition](casetas.pdf), page 9.
+[^cnaf]: [Cuadro Nacional de Atribución de Frecuencias, Notas UN](cnaf-un-2017.pdf), 2017 edition, UN-78.
+[^afergodella]: [El sistema Tren-Tierra en España](http://www.afergodella.es/el-sistema-tren-tierra-analogico-en-espana/), Asociación Ferroviaria de Godella, 2013.
