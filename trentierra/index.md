@@ -23,7 +23,7 @@ Each segment gets assigned one of the X available radio channels (7 for Renfe, 2
 
 The boundaries of each segment are indicated at the edges to the train drivers using trackside signs with the channel number in white over a black background. Once seen, the driver must manually type it in on the radio unit on the cab along with their train number.
 
-Each channel represents a group of four different frequencies on the [UHF band](https://en.wikipedia.org/wiki/Ultra_high_frequency) (between 440MHz and 450MHz), which are used for wideband (25KHz) analog FM voice:
+Each channel represents a group of four different frequencies on the [UHF band](https://en.wikipedia.org/wiki/Ultra_high_frequency) (between 440MHz and 460MHz), which are used for wideband (25KHz) analog FM voice:
 
   - Three frequencies (here referrer to as A, B and C) are used for ground to train communications.
   
@@ -42,7 +42,7 @@ Originally, it used plain FM voice with a signaling system of superimposed sine 
 
 The system has support for two kind of calls:
 
-  - **Standard** which are between a single train and the control center, for minor issues such as train breakage, delays, routing...
+  - **Selective** which are between a single train and the control center, for minor issues such as train breakage, delays, routing...
 
 	Since they are not urgent, they have to be accepted by the personnel at the control center before the call can take place.
 
