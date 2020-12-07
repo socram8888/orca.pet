@@ -12,3 +12,4 @@ group :jekyll_plugins do
 	gem 'jekyll-titles-from-headings'
 end
 gem 'kramdown-parser-gfm'
+gem 'jekyll-responsive-image'

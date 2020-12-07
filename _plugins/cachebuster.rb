@@ -54,7 +54,7 @@ module Jekyll
 		end
 
 		def hash_static(path)
-			file = @context.registers[:site].static_files.detect { |e| e.url == path }
+			file = @context.environments.first['site'].static_files.detect { |e| e.url == path }
 
 			unless file.nil? then
 				Jekyll.logger.info("FPing static:", path)
@@ -63,7 +63,7 @@ module Jekyll
 		end
 
 		def hash_page(path)
-			page = @context.registers[:site].pages.detect { |e| e.url == path }
+			page = @context.environments.first['site'].pages.detect { |e| e.url == path }
 
 			unless page.nil? then
 				Jekyll.logger.info("FPing page:", path)

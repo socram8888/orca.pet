@@ -1,0 +1,7 @@
+{% assign origpath = path | prepend: '/' | cachebuster %}
+{% capture srcset -%}
+{% for i in resized -%}
+{{ i.path | prepend: '/' | cachebuster }} {{ i.width }}w, 
+{% endfor -%}
+{% endcapture -%}
+<a href="{{ origpath }}" target="_blank"><img src="{{ origpath }}" alt="{{ alt }}" srcset="{{ srcset | strip_newlines }}{{ origpath }} {{ original.width }}w"></a>

@@ -18,6 +18,8 @@ FGV has two channels:
  - Lines 1 and 2 use channel 94.
  - Line 7 changes the channel while stopped at the Bailén station.
 
+{% responsive_image path: trentierra/bailen93.jpg %}
+
 {% for channel in site.data.trentierra.fgv.channels %}
 ### Channel {{ channel.number }}
 
