@@ -13,7 +13,13 @@ Good
 
 The ones you'd stock by the thousands in case the factory stops making them.
 
-**TODO**
+### ★★★★☆ Samyang Spicy Chicken
+
+![Packaging](samyang_spicy_chicken.jpg)
+
+Now, these are an odd beast. They're faaar too spicy and my mouth goes numb after ten minutes, so generally that would be a no from me. **However**, I am not sure if this is like the Stockholm syndrome of noodles, but the more I eat them, the more I like them. I haven't been yet able to finish one entire bowl of these, though.
+
+It'd be better if they came with the spicy powder separated from the main flavour so I could tweak its spiciness to my own liking, but still, they're overall pretty nice and I kinda recommend giving them a try if you ~~hate yourself~~ like hot stuff.
 
 Mediocre
 --------
