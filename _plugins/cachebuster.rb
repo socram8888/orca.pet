@@ -8,21 +8,35 @@ module Jekyll
 	#
 	# Place this file into `_plugins`.
 	module CachebusterFilter
-		PATH_FINGERPRINTS = {}
+		# We need a stateful module to cache the fingerprints of already-known files.
+		# Ideally this filter would be a class, but that's not something Liquid supports.
+		#
+		# We also need to have a static reference to the site, as during responsive image
+		# rendering, the calls for the template rendering come with site unset, preventing
+		# the filter from properly calculating the absolute file path.
+		module State
+			attr_accessor :site_instance, :path_fingerprints
+			module_function :site_instance, :site_instance=,
+					:path_fingerprints, :path_fingerprints=
+		end
 
 		# Usage example:
 		#
 		# {{ "/style.css" | cachebuster }}
 		# {{ "/style.css" | cachebuster | absolute_url }}
-		def cachebuster(path)
-			path = root_relative_path(path)
-			fp = path_to_fingerprint(path)
-
-			if fp.nil? then
-				raise "Unable to calculate fingerprint for #{path}"
+		def cachebuster(renderpath, sourcepath='')
+			if sourcepath.empty? then
+				sourcepath = renderpath
 			end
 
-			"#{path}?#{fp}"
+			sourcepath = root_relative_path(sourcepath)
+			fp = path_to_fingerprint(sourcepath)
+
+			if fp.nil? then
+				raise "Unable to calculate fingerprint for #{sourcepath}"
+			end
+
+			"#{renderpath}?#{fp}"
 		end
 
 		private
@@ -39,14 +53,14 @@ module Jekyll
 		end
 
 		def path_to_fingerprint(path)
-			fp = PATH_FINGERPRINTS[path]
+			fp = State.path_fingerprints[path]
 
 			if fp.nil? then
-				hash = hash_static(path) || hash_page(path)
+				hash = hash_page(path) || hash_static(path)
 
 				unless hash.nil?
 					fp = Base64::urlsafe_encode64(hash[0, 6], :padding => false)
-					PATH_FINGERPRINTS[path] = fp
+					State.path_fingerprints[path] = fp
 				end
 			end
 
@@ -54,16 +68,16 @@ module Jekyll
 		end
 
 		def hash_static(path)
-			file = @context.environments.first['site'].static_files.detect { |e| e.url == path }
+			file = File.join(State.site_instance.source, path)
 
-			unless file.nil? then
+			if File.file?(file) then
 				Jekyll.logger.info("FPing static:", path)
-				Digest::MD5.file(file.path).digest()
+				Digest::MD5.file(file).digest()
 			end
 		end
 
 		def hash_page(path)
-			page = @context.environments.first['site'].pages.detect { |e| e.url == path }
+			page = State.site_instance.pages.detect { |e| e.url == path }
 
 			unless page.nil? then
 				Jekyll.logger.info("FPing page:", path)
@@ -74,3 +88,8 @@ module Jekyll
 end
 
 Liquid::Template.register_filter(Jekyll::CachebusterFilter)
+
+Jekyll::Hooks.register :site, :after_reset do |site|
+	Jekyll::CachebusterFilter::State::site_instance = site
+	Jekyll::CachebusterFilter::State::path_fingerprints = {}
+end
