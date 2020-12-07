@@ -82,3 +82,24 @@ adif:
         color:
             name: yellow RAL 1018
             hex: faca30
+
+fgv:
+    prefix: MV
+    channels:
+        # Metrovalencia lines 3/5/9
+      - number: 93
+        mode: a
+        subchannels:
+            a: 448.850
+            b: 449.000
+            c: 449.050
+            t: 458.900
+
+        # Metrovalencia lines 1/2
+      - number: 94
+        mode: a
+        subchannels:
+            a: 449.100
+            b: 449.150
+            c: 449.200
+            t: ???

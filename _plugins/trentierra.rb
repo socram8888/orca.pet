@@ -9,12 +9,16 @@ Jekyll::Hooks.register :site, :post_read do |page|
 			upgraded = {}
 
 			channel['subchannels'].each do |subchanname, mhz|
-				chanlist = freq2chan[mhz]
-				if freq2chan[mhz].nil? then
+				if mhz.is_a? Numeric then
+					chanlist = freq2chan[mhz]
+					if freq2chan[mhz].nil? then
+						chanlist = Array.new
+						freq2chan[mhz] = chanlist
+					end
+					chanlist.append channel['number']
+				else
 					chanlist = Array.new
-					freq2chan[mhz] = chanlist
 				end
-				chanlist.append channel['number']
 
 				upgraded[subchanname] = {
 					'frequency' => mhz,
