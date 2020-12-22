@@ -259,3 +259,18 @@
     sha1: 3fb96e9aa15bf842175b3d2e94e7ee17fc720fd9
     sha256: 15b64ae24d6eee583fec4c759a74376422d718936aee713ff4908d3d68cf321e
     contents: Pokémon Rumble World prototypes
+
+2020-12-22:
+  - file: "Documents.7z"
+    size: 901769023
+    md5: 1ef3f7825bc2230e6df7199edfe5052a
+    sha1: 89b80441cd0620195d63406097deed725110ecd1
+    sha256: be3a0196a36c1449e7918483047efbde04fe02711b3df4130b090449b399e1d6
+    contents: A lot of documentation (datasheets, design issues...) about something called "Project Montblanc" and a console nicknamed "INDY". Very, very interesting.
+
+  - file: "NintendoSDK_fromSSD_IKEDA_20151124.zip"
+    size: 622909728
+    md5: 9cd18f25bc2a28c491c7ff5897d90f46
+    sha1: c323cae56eb00d2dda23548811af8fbc9e9855d4
+    sha256: 1907a6543e63fe52f56afb2f6a71c07107926b0076e22ab4d76db56ff544aa24
+    contents: Old Nintendo Switch SDK
