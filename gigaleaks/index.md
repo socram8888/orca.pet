@@ -40,4 +40,4 @@ If you have any file it's missing, please don't hesitate to [contact me](/#conta
 Useful resources
 ----------------
 
-  * (Nintendo Leaks timeline)[https://protocrystal.neocities.org/timeline.html]
+  * [Nintendo Leaks timeline](https://protocrystal.neocities.org/timeline.html)
