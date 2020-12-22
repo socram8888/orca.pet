@@ -237,28 +237,28 @@
     md5: 1b182a9ba45e2ee902dd85515aa4db53
     sha1: 7046cc039a3760494dd5a3d143a2053d871cc1fc
     sha256: addff630c484060cc1c06d6df23210bf180ca26782e3a72e10c3fab6339c5830
-    contents: Pokémon Rumble World prototypes
+    contents: Pokémon Rumble World prototypes.
 
   - file: "poke2.rar"
     size: 363040934
     md5: 3fc49b363413366e89b95ce867284e3c
     sha1: 7cb4da0679d450e21d57a44b8668208acc2f25ac
     sha256: 9dc0f4c8bb83d82ea9e656a5f4452cfef94bebf229005f2785e88271782f1442
-    contents: Pokémon Rumble World prototypes
+    contents: Pokémon Rumble World prototypes.
 
   - file: "poke3.rar"
     size: 226234314
     md5: a7c3f278126a64fe9a660dcebc018aab
     sha1: 680abed50249dcbeed64d774ba64ab6371a572c9
     sha256: 4226d471f2ac94c83132336d5eab96b603f95f6cdcd1557999363395f430b11c
-    contents: Pokémon Rumble World prototypes
+    contents: Pokémon Rumble World prototypes.
 
   - file: "poke4.rar"
     size: 226241607
     md5: c8912b1fe50ac1b9a06570dd5f316a04
     sha1: 3fb96e9aa15bf842175b3d2e94e7ee17fc720fd9
     sha256: 15b64ae24d6eee583fec4c759a74376422d718936aee713ff4908d3d68cf321e
-    contents: Pokémon Rumble World prototypes
+    contents: Pokémon Rumble World prototypes.
 
 2020-12-21:
   - file: "Documents.7z"
@@ -273,4 +273,12 @@
     md5: 9cd18f25bc2a28c491c7ff5897d90f46
     sha1: c323cae56eb00d2dda23548811af8fbc9e9855d4
     sha256: 1907a6543e63fe52f56afb2f6a71c07107926b0076e22ab4d76db56ff544aa24
-    contents: Old Nintendo Switch SDK
+    contents: Old Nintendo Switch SDK.
+
+2020-12-22:
+  - file: "Secure.7z"
+    size: 570159667
+    md5: 3917f815b0290bfba1914e9e1b09dfaa
+    sha1: 51f14f795780b61fc6cc395609d1b48b8571f435
+    sha256: f59e4f3d0e057dcca22755a2673f01e88af383da157ed977e8b59a88da7e8a25
+    contents: Cryptographic documentation for the Nintendo DS, DSi, 3DS and Switch.
