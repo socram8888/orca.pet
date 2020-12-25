@@ -282,3 +282,25 @@
     sha1: 51f14f795780b61fc6cc395609d1b48b8571f435
     sha256: f59e4f3d0e057dcca22755a2673f01e88af383da157ed977e8b59a88da7e8a25
     contents: Cryptographic documentation for the Nintendo DS, DSi, 3DS and Switch.
+
+2020-12-24:
+  - file: "3DS SoC.7z"
+    size: 533260484
+    md5: 36e3f8cc3bbbeb8b8c4e1aed23d0f18a
+    sha1: ef10988625ea94e1687fd977250bc9f8e30eb825
+    sha256: 7e87b01a9c3ae56970ddedea08a42b22d05331ddcba59c70e98d2e2d4c913b84
+    contents: 3DS decapping pictures.
+
+  - file: "3dsram.7z"
+    size: 1685973795
+    md5: 093313f66e3211c311414f9023d98837
+    sha1: d85b731dae2de3039591d855241c78d1d2174dbe
+    sha256: 05b6190883c5d8a76cdffda53c3a29e124d7b572b4af6799801c1f582ba745dd
+    contents: 3DS RAM analysis tools and traces.
+
+  - file: "Hykem WiiKeyU Summary.docx"
+    size: 20230
+    md5: 2b8eabdc22ed5ca7412e078536feb353
+    sha1: c56d4a44ac469c0d19342c97e675dcb79ab08a73
+    sha256: 48ee1db08ea565edc261ac0a336ed73d6e850056ede49eace3619c967993ebb2
+    contents: Hykem being a piece of trash and leaking other hacker's informations.
