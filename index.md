@@ -26,6 +26,7 @@ Trains
 Random stuff
 ------------
 
+* [M365 firmwares](m365fw/): archive of unmodified Xiaomi M365 firmwares.
 * [Noodles](noodles/): list of instant noodles I've tried.
 * [Nintendo Gigaleaks](gigaleaks/): database of files leaked from Nintendo.
 * [AC:NH patterns](acnh-patterns/): patterns for Animal Crossing: New Horizons.
