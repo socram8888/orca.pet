@@ -4,7 +4,7 @@ M365 Firmwares
 
 Stock, unmodified firmwares from Xiaomi for the M365 scooter.
 
-**[Click here to browse the archive](files/)**
+**[Click here to browse the archive](stock/)**
 
 Official package links
 ----------------------
