@@ -12,6 +12,7 @@ Projects
 These are a few of the projects I've worked on:
 
 * [Not on my shift!](notonmyshift/): phishing/malware hosts block list.
+* [tonyhax](tonyhax/): PlayStation 1 backup loader.
 * [Saph](saph/): a custom password hashing algorithm suitable for human usage.
 * [μMC1](micromc1/): NES and Famicom development cartridge.
 * [ATECC USB dongle](ateccusb/): a simple and inexpensive DIY cryptographic dongle.
