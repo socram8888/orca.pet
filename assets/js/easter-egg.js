@@ -11,7 +11,8 @@
 
 	// Mapping of test key to file
 	const KEYS_TO_FILE = {
-		'yTV/e4gd2meh2RNuSjiKjWrvgGMTgZ/pH6so7PWilSw=': "{{ '/assets/images/msg.jpg.enc' | cachebuster }}"
+		'yTV/e4gd2meh2RNuSjiKjWrvgGMTgZ/pH6so7PWilSw=': "{{ '/assets/images/msg.jpg.enc' | cachebuster }}",
+		'QpwtYUynvygmEvkkGGqr2k8zkTUmyiQR4tvYLEWvVbo=': "{{ '/assets/images/249.jpg.enc' | cachebuster }}",
 	};
 
 	let bellElem = null;
