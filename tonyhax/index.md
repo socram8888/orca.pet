@@ -6,6 +6,8 @@ tonyhax
 
 Software backup loader exploit thing for the Sony PlayStation 1.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TO6msoWZa2I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 100vh; min-height: 15em; max-height: 25em;"></iframe>
+
 Why?
 ----
 
@@ -18,28 +20,67 @@ Also, as an owner of a SCPH-102 console, these are a pain in the ass when it com
 How does this works?
 --------------------
 
-This backup loader uses a save game exploit present in multiple Tony Hawk's games for the PS1.
+In layman terms, this exploit uses an oversight from the programmers: the game does not check that the skater name in the save file hasn't been tampered and fits in the space the program allocated for it. If we externally change the username to something longer, we can overwrite other vital parts of the memory and run our own code.
 
-This exploit consists of a specially crafted save game with:
+In more technical terms, this exploit consists of a specially crafted save game with:
 
  - Highscores replaced with a first-stage payload of 144 bytes.
  - An abnormally long skater name, with the memory address of the first-stage payload inserted.
 
-When entering the skater customization menu, the skater name is copied via a `sprintf` with no bounds check into the stack. This causes a buffer overflow, overwriting the function's return address, and jumping to our payload as soon as it is done.
+![Skater name](stackra.png)
 
-This first stage payload is about 144 bytes, and its sole purpose is to load the secondary program loader (SPL) from an additional save file in the memory card. Once loaded, it jumps straight to it.
+When entering the skater customization menu, the menu is dinamically generated to include the saved skater names in a way like:
 
-The secondary program loader is a much more complex program and it:
+```c
 
- - Resets the stack pointer.
- - Reinitializes the system kernel (RAM, devices...).
- - Reinitializes the GPU, which is used as a debug screen.
- - Unlocks the CD drive to accept discs missing the SCEx signature, leveraging the [CD BIOS unlock commands](https://problemkaputt.de/psx-spx.htm#cdromsecretunlockcommands) found by Martin Korth.
- - Waits for a new drive to be inserted
- - Loads the system configuration to configure once more the kernel.
- - Finally, executes the game.
+void trim_string(char * buffer, int len) {
+	char trimmed[x];
 
-TL;DR: It uses _magic_.
+	// Copy to our local buffer
+	strcpy(trimmed, buffer);
+
+	// Trim it
+	trimmed[len - 4] = '.';
+	trimmed[len - 3] = '.';
+	trimmed[len - 2] = '.';
+	trimmed[len - 1] = 0;
+
+	// Copy back to the original buffer
+	strcpy(buffer, trimmed);
+}
+
+void create_skater_entry(int id) {
+	char menutext[x];
+	int textlen;
+
+	sprintf(menutext, "Skater %c: %s", 'A' + id, custom_skater_data[id].name);
+	while ((textlen = strlen(menutext)) > MAX_LEN) {
+		trim_string(menutext, textlen);
+	}
+
+	// ...
+}
+```
+
+Essentially, if a string that's too long to overflow the buffer is specified, the buffer overflows and overwrites part of the stack as we want to, but then it gets hammered with periods.
+
+**However**, as `trim_string` is a a subcall and has a local buffer, if we specify a character name with the right length (165 characters, exactly), the null terminator in the `trimmed` buffer overlaps the first character of `menutext`, resulting in a menu entry with length of 0, thus sparing the rest of the stack contents.
+
+After some more menu-related stuff, the return address is finally pulled from the stack and the code jumps to it. This return address points to the beginning of the high scores menu, whose contents are also loaded with no checks from the memory card, and where we have the first-stage payload.
+
+![High scores with first-stage payload](highscores.png)
+
+This first stage payload is about 144 bytes, and its sole purpose is to load the secondary program loader (or SPL for short) from an additional save file in the memory card using the PS1 BIOS calls. Once loaded, it jumps straight to it.
+
+As the console is left in an inconsistent state, the SPL first reinitializes the system kernel (RAM, devices...), by using the very same calls the ROM executes during the booting of the console.
+
+After that, the GPU is reset. Once the GPU is ready again, the sets up the video to a resolution of 320x240, unpacks the 1bpp font from the BIOS ROM into VRAM, and draws the basic border and program name to know everything is working fine until this point.
+
+With a fully working screen, it then proceeds to unlocks the CD drive to accept discs missing the SCEx signature, leveraging the [CD BIOS unlock commands](https://problemkaputt.de/PS1-spx.htm#cdromsecretunlockcommands) found by Martin Korth. These unlock commands are a sort of backdoor, and the drive, probably in order to keep them secret, returns an error instead of a success message. The SPL is coded to expect a particular error to be returned, and will actually abort if the drive returns that it succeeded or if it returns another unexpected error code.
+
+After unlocking it, it waits for the lid to be opened and closed, allowing the user to insert a new CD.
+
+After that, the CD filesystem is reinitialized. It proceeds to read the SYSTEM.CNF configuration file, reinitializes the kernel with the parameters the game needs, and finally loads and runs the game's main executable.
 
 Installation
 ------------
@@ -64,6 +105,7 @@ Save games
  * `BESLES-02908TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-E) (SLES-02908)
  * `BASLUS-01419TNHXG01`: Tony Hawk's Pro Skater 3 (NTSC-U) (SLUS-01419)
  * `BESLES-03645TNHXG01`: Tony Hawk's Pro Skater 3 (PAL-E) (SLES-03645)
+ * `TONYHAX`: tonyhax's secondary program loader (SPL)
 
 Compatibility
 -------------
