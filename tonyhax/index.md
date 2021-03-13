@@ -115,6 +115,8 @@ Save games
 Compatibility
 -------------
 
+### Consoles
+
 I've personally only attempted this with a PAL SCPH-102 PSone, but according to Martin Korth's documentation this should work with:
 
  * Every PAL console.
@@ -125,6 +127,23 @@ However, this will **not** work with:
 
  * Japanese NTSC-J consoles (stubbed/bugged CD unlock).
  * NTSC-U SCPH-1000 consoles (BIOS predates the introduction of the CD unlock command).
+
+### Incompatible games
+
+This is a short, non-exhaustive list of games that have been report not to work:
+
+ - Mad Panic Coaster (NTSC-J) (SLPS-00880): the game uses bugged BIOS calls (FlushCache and CdRemove) without disabling interrupts, causing it to crash very early.
+
+Unexploitable games
+-------------------
+
+This is just a short list of games I've glanced over and determined they are unlikely to be exploitable:
+
+ * Breath of Fire III: every text field is fixed length.
+ * International Socer Pro '98: text is packed and the payload would have to use only the lowest 7 bits of a byte. Aside from this, everything seems to be copied using strncpy. Interestingly, using an ASCII control character seems to cause the game to go nuts and it starts self-destructing the RAM endlessly.
+ * Mat Hoffmans Pro BMX: uses the same engine as THPS, but there is no place where user can introduce text.
+ * Micro Machines V3: the game uses the save text as the user's name, extracting it from between the parentheses. Removing these parentheses or spacing them beyond what the game expects causes a good part of RAM to be overwritten with '?', which isn't really useful.
+
 
 Download
 --------
