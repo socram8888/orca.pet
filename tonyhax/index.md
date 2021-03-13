@@ -17,15 +17,41 @@ The answer is simple: I didn't want to mod my mint, boxed PSone, but I didn't wa
 
 Also, as an owner of a SCPH-102 console, these are a pain in the ass when it comes to chipping - in addition to the generic SCEx wobble check performed by the CD controller that is easily patchable, the boot menu on these also checks for the region string, which involve installing even more wires and a full sized Arduino Pro Mini or AtMega328 chip to patch the CPU BIOS to play out of region games. Not cool.
 
+Installation
+------------
+
+To install this exploit, you'd need a means of copying the save file to a PS1 memory card. Personally, I've used a PS2 with [Free McBoot](https://www.ps2-home.com/forum/viewtopic.php?t=1248) and uLaunchELF.
+
+All you have to do is copy the game's crafted save file and the `TONYHAX-SPL` file into the card. That's it.
+
+Once installed, you can freely copy it to other cards using the PS1 and the memory card management menu, and distribute it freely amongst friends.
+
+**Please note the save games expect the `TONYHAX-SPL` file to be in the first memory card slot. It will not work if the memory card is inserted in the second card slot.**
+
+Usage
+-----
+
+### For Tonyhawk's games
+
+Once installed, all you have to do is boot the game like you'd normally do.
+
+Once you get to the main menu, it'll load the save game (it should say "Loading TONYHAX NTSC/PAL", depending on your region). After it's done, go to the "CREATE SKATER" function and press X. After a couple seconds, tonyhax should boot.
+
+### For Brunswick games
+
+Boot the game as you'd normally do. Then, on the main menu, select "LOAD GAME", then "MEMORY CARD 1". After about three seconds tonyhax should be running.
+
 How does this works?
 --------------------
 
-In layman terms, this exploit uses an oversight from the programmers: the game does not check that the skater name in the save file hasn't been tampered and fits in the space the program allocated for it. If we externally change the username to something longer, we can overwrite other vital parts of the memory and run our own code.
+In layman terms, this exploit uses an oversight from the programmers: the game does not check that text in the save file hasn't been tampered and fits in the space the program allocated for it. If we externally change that text to something longer, we can overwrite other vital parts of the system's memory and run our own code.
 
-In more technical terms, this exploit consists of a specially crafted save game with:
+### For Tonyhawk's games
 
- - Highscores replaced with a first-stage payload of 144 bytes.
- - An abnormally long skater name, with the memory address of the first-stage payload inserted.
+THPSx save games have been modified to have the following two separate parts:
+
+ - The highscores have been replaced with a small first-stage payload of a couple hundred bytes.
+ - The first custom character name has an abnormally long name, which contains at an specific position the memory address of the first-stage payload.
 
 ![Skater name](stackra.png)
 
@@ -70,9 +96,19 @@ After some more menu-related stuff, the return address is finally pulled from th
 
 ![High scores with first-stage payload](highscores.png)
 
-This first stage payload is about 144 bytes, and its sole purpose is to load the secondary program loader (or SPL for short) from an additional save file in the memory card using the PS1 BIOS calls. Once loaded, it jumps straight to it.
+### For Brunswick games
 
-As the console is left in an inconsistent state, the SPL first reinitializes the system kernel (RAM, devices...), by using the very same calls the ROM executes during the booting of the console.
+This is a super simple exploit. The program loads the entire save file contents at an static memory location, then blindly `sprintf`s into a stack buffer. Using a string long enough with the address of first stage loader at the correct position gets us executing our own code.
+
+![Brunswick save game modified](brunswick.png)
+
+Above, the <span style="color: red;">long username</span>, with the <span style="color: green;">memory location</span> (`0x80110AA4`) of the <span style="color: blue;">first stage bootloader</span>.
+
+### Common to all
+
+The first stage payload's sole purpose is to load the secondary program loader (or SPL for short) from an additional save file in the memory card using the PS1 BIOS calls. Once loaded, it jumps straight to it. If for some reason it fails to load the SPL, a red screen is displayed, indicating that the exploit was successfully triggered but the it couldn't continue.
+
+As the console is left in an inconsistent state, the SPL then first reinitializes the system kernel (RAM, devices...), by using the very same calls the ROM executes during the booting of the console.
 
 After that, the GPU is reset. Once the GPU is ready again, the sets up the video to a resolution of 320x240, unpacks the 1bpp font from the BIOS ROM into VRAM, and draws the basic border and program name to know everything is working fine until this point.
 
@@ -81,22 +117,6 @@ With a fully working screen, it then proceeds to unlocks the CD drive to accept 
 After unlocking it, it waits for the lid to be opened and closed, allowing the user to insert a new CD.
 
 After that, the CD filesystem is reinitialized. It proceeds to read the SYSTEM.CNF configuration file, reinitializes the kernel with the parameters the game needs, and finally loads and runs the game's main executable.
-
-Installation
-------------
-
-To install this exploit, you'd need a means of copying the save file to a PS1 memory card. Personally, I've used a PS2 with [Free McBoot](https://www.ps2-home.com/forum/viewtopic.php?t=1248) and uLaunchELF.
-
-All you have to do is copy the game's crafted save file and the `TONYHAX-SPL` file into the card. That's it.
-
-Once installed, you can freely copy it to other cards using the PS1 and the memory card management menu, and distribute it freely amongst friends.
-
-Usage
------
-
-Once installed, all you have to do is boot the game like you'd normally do.
-
-Once you get to the main menu, it'll load the save game (it should say "Loading TONYHAX"). After it's done, go to the "CREATE SKATER" function and press X. After a couple seconds, tonyhax should boot.
 
 Save games
 ----------
@@ -109,7 +129,10 @@ Save games
 
 ### In upcoming v1.1:
 
+ * `BASLUS-00571`: Brunswick Circuit Pro Bowling (NTSC-U) (SLUS-00571)
+ * `BASLUS-00856`: Brunswick Circuit Pro Bowling 2 (NTSC-U) (SLUS-00856)
  * `BASLUS-01485TNHXG01`: Tony Hawk's Pro Skater 4 (NTSC-U) (SLUS-01485)
+ * `BESLES-01376`: Brunswick Circuit Pro Bowling (PAL-E) (SLES-01376)
  * `BESLES-03954TNHXG01`: Tony Hawk's Pro Skater 4 (PAL-E) (SLES-03954)
 
 Compatibility
@@ -132,7 +155,7 @@ However, this will **not** work with:
 
 This is a short, non-exhaustive list of games that have been report not to work:
 
- - Mad Panic Coaster (NTSC-J) (SLPS-00880): the game uses bugged BIOS calls (FlushCache and CdRemove) without disabling interrupts, causing it to crash very early.
+ * Mad Panic Coaster (NTSC-J) (SLPS-00880): the game uses bugged BIOS calls (FlushCache and CdRemove) without disabling interrupts, causing it to crash very early.
 
 Unexploitable games
 -------------------
@@ -151,3 +174,10 @@ Download
 Releases are available at the [GitHub releases page](https://github.com/socram8888/tonyhax/releases).
 
 Source code is also fully available under the [WTFPL license](https://github.com/socram8888/tonyhax/blob/master/LICENSE) at [GitHub](https://github.com/socram8888/tonyhax/).
+
+Acknowledgements
+----------------
+
+ * Martin Korth for his [super awesome technical documentation page](https://problemkaputt.de/psx-spx.htm) that was vital for the development of this project, as well as for developing the [no$psx emulator](https://problemkaputt.de/psx.htm) that was also essential for debugging.
+
+ * [ChampionLeake](https://twitter.com/ChampionLeake79) for documenting the Brunswick exploits at [PlayStation dev wiki](https://playstationdev.wiki/ps1devwiki/index.php?title=Vulnerabilities).
