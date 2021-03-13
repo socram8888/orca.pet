@@ -121,19 +121,21 @@ After that, the CD filesystem is reinitialized. It proceeds to read the SYSTEM.C
 Save games
 ----------
 
- * `BASLUS-01066TNHXG01`: Tony Hawk's Pro Skater 2 (NTSC-U) (SLUS-01066)
- * `BASLUS-01419TNHXG01`: Tony Hawk's Pro Skater 3 (NTSC-U) (SLUS-01419)
- * `BESLES-02908TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-E) (SLES-02908)
- * `BESLES-03645TNHXG01`: Tony Hawk's Pro Skater 3 (PAL-E) (SLES-03645)
+ * `BASLUS-01066TNHXG01`: Tony Hawk's Pro Skater 2 (NTSC-US) (SLUS-01066)
+ * `BASLUS-01419TNHXG01`: Tony Hawk's Pro Skater 3 (NTSC-US) (SLUS-01419)
+ * `BESLES-02908TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-EU) (SLES-02908)
+ * `BESLES-03645TNHXG01`: Tony Hawk's Pro Skater 3 (PAL-EU) (SLES-03645)
  * `TONYHAX`: tonyhax's secondary program loader (SPL)
 
-### In upcoming v1.1:
+### In the upcoming v1.1:
 
- * `BASLUS-00571`: Brunswick Circuit Pro Bowling (NTSC-U) (SLUS-00571)
- * `BASLUS-00856`: Brunswick Circuit Pro Bowling 2 (NTSC-U) (SLUS-00856)
- * `BASLUS-01485TNHXG01`: Tony Hawk's Pro Skater 4 (NTSC-U) (SLUS-01485)
+ * `BASLUS-00571`: Brunswick Circuit Pro Bowling (NTSC-US) (SLUS-00571)
+ * `BASLUS-00856`: Brunswick Circuit Pro Bowling 2 (NTSC-US) (SLUS-00856)
+ * `BASLUS-01485TNHXG01`: Tony Hawk's Pro Skater 4 (NTSC-US) (SLUS-01485)
  * `BESLES-01376`: Brunswick Circuit Pro Bowling (PAL-E) (SLES-01376)
- * `BESLES-03954TNHXG01`: Tony Hawk's Pro Skater 4 (PAL-E) (SLES-03954)
+ * `BESLES-02909TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-FR) (SLES-02909)
+ * `BESLES-02910TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-DE) (SLES-02910)
+ * `BESLES-03954TNHXG01`: Tony Hawk's Pro Skater 4 (PAL-EU) (SLES-03954)
 
 Compatibility
 -------------
