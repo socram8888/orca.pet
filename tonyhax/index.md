@@ -17,6 +17,13 @@ The answer is simple: I didn't want to mod my mint, boxed PSone, but I didn't wa
 
 Also, as an owner of a SCPH-102 console, these are a pain in the ass when it comes to chipping - in addition to the generic SCEx wobble check performed by the CD controller that is easily patchable, the boot menu on these also checks for the region string, which involve installing even more wires and a full sized Arduino Pro Mini or AtMega328 chip to patch the CPU BIOS to play out of region games. Not cool.
 
+Download
+--------
+
+Releases are available at the [GitHub releases page](https://github.com/socram8888/tonyhax/releases).
+
+Source code is also fully available under the [WTFPL license](https://github.com/socram8888/tonyhax/blob/master/LICENSE) at [GitHub](https://github.com/socram8888/tonyhax/).
+
 Installation
 ------------
 
@@ -27,6 +34,28 @@ All you have to do is copy the game's crafted save file and the `TONYHAX-SPL` fi
 Once installed, you can freely copy it to other cards using the PS1 and the memory card management menu, and distribute it freely amongst friends.
 
 **Please note the save games expect the `TONYHAX-SPL` file to be in the first memory card slot. It will not work if the memory card is inserted in the second card slot.**
+
+### Save games
+
+ * `BASLUS-01066TNHXG01`: Tony Hawk's Pro Skater 2 (NTSC-US) (SLUS-01066)
+ * `BASLUS-01419TNHXG01`: Tony Hawk's Pro Skater 3 (NTSC-US) (SLUS-01419)
+ * `BESLES-02908TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-EU) (SLES-02908)
+ * `BESLES-03645TNHXG01`: Tony Hawk's Pro Skater 3 (PAL-EU) (SLES-03645)
+ * `TONYHAX-SPL`: tonyhax's secondary program loader (SPL)
+
+#### In the upcoming v1.1:
+
+ * `BASLUS-00571`: Brunswick Circuit Pro Bowling (NTSC-US) (SLUS-00571)
+ * `BASLUS-00856`: Brunswick Circuit Pro Bowling 2 (NTSC-US) (SLUS-00856)
+ * `BASLUS-01485TNHXG01`: Tony Hawk's Pro Skater 4 (NTSC-US) (SLUS-01485)
+ * `BESLES-01376`: Brunswick Circuit Pro Bowling (PAL-E) (SLES-01376)
+ * `BESLES-02909TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-FR) (SLES-02909)
+ * `BESLES-02910TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-DE) (SLES-02910)
+ * `BESLES-03646TNHXG01`: Tony Hawk's Pro Skater 3 (PAL-FR) (SLES-03646)
+ * `BESLES-03647TNHXG01`: Tony Hawk's Pro Skater 3 (PAL-DE) (SLES-03647)
+ * `BESLES-03954TNHXG01`: Tony Hawk's Pro Skater 4 (PAL-EU) (SLES-03954)
+ * `BESLES-03955TNHXG01`: Tony Hawk's Pro Skater 4 (PAL-DE) (SLES-03955)
+ * `BESLES-03956TNHXG01`: Tony Hawk's Pro Skater 4 (PAL-FR) (SLES-03956)
 
 Usage
 -----
@@ -40,6 +69,28 @@ Once you get to the main menu, it'll load the save game (it should say "Loading 
 ### For Brunswick games
 
 Boot the game as you'd normally do. Then, on the main menu, select "LOAD GAME", then "MEMORY CARD 1". After about three seconds tonyhax should be running.
+
+Compatibility
+-------------
+
+### Consoles
+
+I've personally only attempted this with a PAL SCPH-102 PSone, but according to Martin Korth's documentation this should work with:
+
+ * Every PAL console.
+ * Every NTSC-U console **except** the very early SCPH-1000.
+ * NetYaroze consoles.
+
+However, this will **not** work with:
+
+ * Japanese NTSC-J consoles (stubbed/bugged CD unlock).
+ * NTSC-U SCPH-1000 consoles (BIOS predates the introduction of the CD unlock command).
+
+### Incompatible games
+
+This is a short, non-exhaustive list of games that have been report not to work:
+
+ * Mad Panic Coaster (NTSC-J) (SLPS-00880): the game uses bugged BIOS calls (FlushCache and CdRemove) without disabling interrupts, causing it to crash very early.
 
 How does this works?
 --------------------
@@ -118,47 +169,6 @@ After unlocking it, it waits for the lid to be opened and closed, allowing the u
 
 After that, the CD filesystem is reinitialized. It proceeds to read the SYSTEM.CNF configuration file, reinitializes the kernel with the parameters the game needs, and finally loads and runs the game's main executable.
 
-Save games
-----------
-
- * `BASLUS-01066TNHXG01`: Tony Hawk's Pro Skater 2 (NTSC-US) (SLUS-01066)
- * `BASLUS-01419TNHXG01`: Tony Hawk's Pro Skater 3 (NTSC-US) (SLUS-01419)
- * `BESLES-02908TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-EU) (SLES-02908)
- * `BESLES-03645TNHXG01`: Tony Hawk's Pro Skater 3 (PAL-EU) (SLES-03645)
- * `TONYHAX`: tonyhax's secondary program loader (SPL)
-
-### In the upcoming v1.1:
-
- * `BASLUS-00571`: Brunswick Circuit Pro Bowling (NTSC-US) (SLUS-00571)
- * `BASLUS-00856`: Brunswick Circuit Pro Bowling 2 (NTSC-US) (SLUS-00856)
- * `BASLUS-01485TNHXG01`: Tony Hawk's Pro Skater 4 (NTSC-US) (SLUS-01485)
- * `BESLES-01376`: Brunswick Circuit Pro Bowling (PAL-E) (SLES-01376)
- * `BESLES-02909TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-FR) (SLES-02909)
- * `BESLES-02910TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-DE) (SLES-02910)
- * `BESLES-03954TNHXG01`: Tony Hawk's Pro Skater 4 (PAL-EU) (SLES-03954)
-
-Compatibility
--------------
-
-### Consoles
-
-I've personally only attempted this with a PAL SCPH-102 PSone, but according to Martin Korth's documentation this should work with:
-
- * Every PAL console.
- * Every NTSC-U console **except** the very early SCPH-1000.
- * NetYaroze consoles.
-
-However, this will **not** work with:
-
- * Japanese NTSC-J consoles (stubbed/bugged CD unlock).
- * NTSC-U SCPH-1000 consoles (BIOS predates the introduction of the CD unlock command).
-
-### Incompatible games
-
-This is a short, non-exhaustive list of games that have been report not to work:
-
- * Mad Panic Coaster (NTSC-J) (SLPS-00880): the game uses bugged BIOS calls (FlushCache and CdRemove) without disabling interrupts, causing it to crash very early.
-
 Unexploitable games
 -------------------
 
@@ -168,14 +178,6 @@ This is just a short list of games I've glanced over and determined they are unl
  * International Socer Pro '98: text is packed and the payload would have to use only the lowest 7 bits of a byte. Aside from this, everything seems to be copied using strncpy. Interestingly, using an ASCII control character seems to cause the game to go nuts and it starts self-destructing the RAM endlessly.
  * Mat Hoffmans Pro BMX: uses the same engine as THPS, but there is no place where user can introduce text.
  * Micro Machines V3: the game uses the save text as the user's name, extracting it from between the parentheses. Removing these parentheses or spacing them beyond what the game expects causes a good part of RAM to be overwritten with '?', which isn't really useful.
-
-
-Download
---------
-
-Releases are available at the [GitHub releases page](https://github.com/socram8888/tonyhax/releases).
-
-Source code is also fully available under the [WTFPL license](https://github.com/socram8888/tonyhax/blob/master/LICENSE) at [GitHub](https://github.com/socram8888/tonyhax/).
 
 Acknowledgements
 ----------------
