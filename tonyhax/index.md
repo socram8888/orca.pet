@@ -102,10 +102,15 @@ Save games
 ----------
 
  * `BASLUS-01066TNHXG01`: Tony Hawk's Pro Skater 2 (NTSC-U) (SLUS-01066)
- * `BESLES-02908TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-E) (SLES-02908)
  * `BASLUS-01419TNHXG01`: Tony Hawk's Pro Skater 3 (NTSC-U) (SLUS-01419)
+ * `BESLES-02908TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-E) (SLES-02908)
  * `BESLES-03645TNHXG01`: Tony Hawk's Pro Skater 3 (PAL-E) (SLES-03645)
  * `TONYHAX`: tonyhax's secondary program loader (SPL)
+
+### In upcoming v1.1:
+
+ * `BASLUS-01485TNHXG01`: Tony Hawk's Pro Skater 4 (NTSC-U) (SLUS-01485)
+ * `BESLES-03954TNHXG01`: Tony Hawk's Pro Skater 4 (PAL-E) (SLES-03954)
 
 Compatibility
 -------------
