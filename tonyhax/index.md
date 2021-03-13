@@ -49,6 +49,7 @@ Once installed, you can freely copy it to other cards using the PS1 and the memo
  * `BASLUS-00856`: Brunswick Circuit Pro Bowling 2 (NTSC-US) (SLUS-00856)
  * `BASLUS-01485TNHXG01`: Tony Hawk's Pro Skater 4 (NTSC-US) (SLUS-01485)
  * `BESLES-01376`: Brunswick Circuit Pro Bowling (PAL-E) (SLES-01376)
+ * `BESLES-02618`: Brunswick Circuit Pro Bowling 2 (PAL-E) (SLES-02618)
  * `BESLES-02909TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-FR) (SLES-02909)
  * `BESLES-02910TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-DE) (SLES-02910)
  * `BESLES-03646TNHXG01`: Tony Hawk's Pro Skater 3 (PAL-FR) (SLES-03646)
