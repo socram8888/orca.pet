@@ -90,6 +90,7 @@ However, this will **not** work with:
 
  * Japanese NTSC-J consoles (stubbed/bugged CD unlock).
  * NTSC-U SCPH-1000 consoles (BIOS predates the introduction of the CD unlock command).
+ * ~~PlayStation 2 consoles~~ Information at the moment is contradictory. no$psx documentation states it is not compatible, and [one Redditor tried it and it failed](https://www.reddit.com/r/psx/comments/m33b00/tonyhax_softmod_backup_loader_thing_using_thps23/gqoo4jk). However there's [another video on Twitter](https://twitter.com/xecut1onr/status/1370984402809946114) that tested it on video and it worked. Further research is needed.
 
 ### Incompatible games
 
