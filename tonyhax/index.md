@@ -6,7 +6,7 @@ tonyhax
 
 Software backup loader exploit thing for the Sony PlayStation 1.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TO6msoWZa2I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 100vh; min-height: 15em; max-height: 25em;"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TO6msoWZa2I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="yt-video"></iframe>
 
 Why?
 ----
@@ -34,6 +34,10 @@ All you have to do is copy the game's crafted save file and the `TONYHAX-SPL` fi
 Once installed, you can freely copy it to other cards using the PS1 and the memory card management menu, and distribute it freely amongst friends.
 
 **Please note the save games expect the `TONYHAX-SPL` file to be in the first memory card slot. It will not work if the memory card is inserted in the second card slot.**
+
+Video from [MrMario2011](https://www.youtube.com/channel/UC-YlkP3c1zKUPfyMMurARAQ) installing it using uLaunchELF on a memory card:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/caBo0YARS0c?start=1083" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="yt-video"></iframe>
 
 ### Save games
 
@@ -184,5 +188,4 @@ Acknowledgements
 ----------------
 
  * Martin Korth for his [super awesome technical documentation page](https://problemkaputt.de/psx-spx.htm) that was vital for the development of this project, as well as for developing the [no$psx emulator](https://problemkaputt.de/psx.htm) that was also essential for debugging.
-
  * [ChampionLeake](https://twitter.com/ChampionLeake79) for documenting the Brunswick exploits at [PlayStation dev wiki](https://playstationdev.wiki/ps1devwiki/index.php?title=Vulnerabilities).
