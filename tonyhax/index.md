@@ -91,7 +91,8 @@ However, this will **not** work with:
 
 This is a short, non-exhaustive list of games that have been report not to work:
 
- * Mad Panic Coaster (NTSC-J) (SLPS-00880): the game uses bugged BIOS calls (FlushCache and CdRemove) without disabling interrupts, causing it to crash very early.
+ * ~~Mad Panic Coaster (NTSC-J) (SLPS-00880): the game uses bugged BIOS calls (FlushCache and CdRemove) without disabling interrupts, causing it to crash very early.~~ Fixed in the upcoming v1.1.
+ * ~~Formula 1 Championship Edition (NTSC-U) (SLUS-00546)~~ Fixed in the upcoming v1.1.
 
 How does this works?
 --------------------
@@ -110,7 +111,6 @@ THPSx save games have been modified to have the following two separate parts:
 When entering the skater customization menu, the menu is dinamically generated to include the saved skater names in a way like:
 
 ```c
-
 void trim_string(char * buffer, int len) {
 	char trimmed[x];
 
