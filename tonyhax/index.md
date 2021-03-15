@@ -29,9 +29,17 @@ Source code is also fully available under the [WTFPL license](https://github.com
 Installation
 ------------
 
-To install this exploit, you'd need a means of copying the save file to a PS1 memory card. Personally, I've used a PS2 with [Free McBoot](https://www.ps2-home.com/forum/viewtopic.php?t=1248) and uLaunchELF.
+To install this exploit, you'd need a means of copying the required save files to a PS1 memory card. For this at the moment you have essentially two options:
 
-All you have to do is copy the game's crafted save file and the `BESLEM-99999TONYHAX` file into the card. That's it.
+  * Used another modded console, such as a PS2 with [Free McBoot](https://www.ps2-home.com/forum/viewtopic.php?t=1248) and uLaunchELF, to copy the save files to the memory card. For this, you'd need to **use the raw save files**, making sure **you do not rename them**.
+
+  * Use a PC-based memory card editor, such as:
+      * The official Memory Card Adapter for PS3 (product code CECHZM1J) and [OrionSoft's PS1 Memory Card Manager](http://onorisoft.free.fr/retro.htm?psx/psx.htm).
+	  * A [DexDrive](https://en.wikipedia.org/wiki/DexDrive).
+
+    For this purpose, I recommend using the MCS files, since those are easier to import and won't require manual configuration of the filename, region, etc...
+
+All you have to do is copy the game's crafted save file and the tonyhax SPL file into the card. That's it.
 
 Once installed, you can freely copy it to other cards using the PS1 and the memory card management menu, and distribute it freely amongst friends.
 
@@ -70,7 +78,7 @@ Usage
 
 Once installed, all you have to do is boot the game like you'd normally do.
 
-Once you get to the main menu, it'll load the save game (it should say "Loading TONYHAX NTSC/PAL", depending on your region). After it's done, go to the "CREATE SKATER" function and press X. After a couple seconds, tonyhax should boot.
+Once you get to the main menu, it'll load the save game (it should say "Loading TONYHAX EU/US/DE/FR", depending on the game's region). After it's done, choose the "CREATE SKATER" menu and press X. After a couple seconds, tonyhax should boot.
 
 ### For Brunswick games
 
