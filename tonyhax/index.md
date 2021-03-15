@@ -29,11 +29,11 @@ Installation
 
 To install this exploit, you'd need a means of copying the save file to a PS1 memory card. Personally, I've used a PS2 with [Free McBoot](https://www.ps2-home.com/forum/viewtopic.php?t=1248) and uLaunchELF.
 
-All you have to do is copy the game's crafted save file and the `BESLES-99999TONYHAX` file into the card. That's it.
+All you have to do is copy the game's crafted save file and the `BESLEM-99999TONYHAX` file into the card. That's it.
 
 Once installed, you can freely copy it to other cards using the PS1 and the memory card management menu, and distribute it freely amongst friends.
 
-**Please note the save games expect the `BESLES-99999TONYHAX` file to be in the first memory card slot. It will not work if the memory card is inserted in the second card slot.**
+**Please note the save games expect the `BESLEM-99999TONYHAX` file to be in the first memory card slot. It will not work if the memory card is inserted in the second card slot.**
 
 Video from [MrMario2011](https://www.youtube.com/channel/UC-YlkP3c1zKUPfyMMurARAQ) installing it using uLaunchELF on a memory card:
 
@@ -43,7 +43,7 @@ Video from [MrMario2011](https://www.youtube.com/channel/UC-YlkP3c1zKUPfyMMurARA
 
 | Game                            | Region | Code       | MCS file          | Raw file            |
 |---------------------------------|--------|------------|-------------------|---------------------|
-| tonyhax SPL **required**        | -      | -          | tonyhax.mcs       | BESLES-99999TONYHAX |
+| tonyhax SPL **required**        | -      | -          | tonyhax.mcs       | BESLEM-99999TONYHAX |
 | Brunswick Circuit Pro Bowling   | NTSC-U | SLUS-00571 | brunswick1-us.mcs | BASLUS-00571        |
 | Brunswick Circuit Pro Bowling   | PAL-E  | SLES-01376 | brunswick1-eu.mcs | BESLES-01376        |
 | Brunswick Circuit Pro Bowling 2 | NTSC-U | SLUS-00856 | brunswick2-us.mcs | BASLUS-00856        |
