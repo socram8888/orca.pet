@@ -29,11 +29,11 @@ Installation
 
 To install this exploit, you'd need a means of copying the save file to a PS1 memory card. Personally, I've used a PS2 with [Free McBoot](https://www.ps2-home.com/forum/viewtopic.php?t=1248) and uLaunchELF.
 
-All you have to do is copy the game's crafted save file and the `TONYHAX-SPL` file into the card. That's it.
+All you have to do is copy the game's crafted save file and the `BESLES-99999TONYHAX` file into the card. That's it.
 
 Once installed, you can freely copy it to other cards using the PS1 and the memory card management menu, and distribute it freely amongst friends.
 
-**Please note the save games expect the `TONYHAX-SPL` file to be in the first memory card slot. It will not work if the memory card is inserted in the second card slot.**
+**Please note the save games expect the `BESLES-99999TONYHAX` file to be in the first memory card slot. It will not work if the memory card is inserted in the second card slot.**
 
 Video from [MrMario2011](https://www.youtube.com/channel/UC-YlkP3c1zKUPfyMMurARAQ) installing it using uLaunchELF on a memory card:
 
@@ -41,23 +41,25 @@ Video from [MrMario2011](https://www.youtube.com/channel/UC-YlkP3c1zKUPfyMMurARA
 
 ### Save games
 
- * `BASLUS-00571`: Brunswick Circuit Pro Bowling (NTSC-US) (SLUS-00571)
- * `BASLUS-00856`: Brunswick Circuit Pro Bowling 2 (NTSC-US) (SLUS-00856)
- * `BASLUS-01066TNHXG01`: Tony Hawk's Pro Skater 2 (NTSC-US) (SLUS-01066)
- * `BASLUS-01419TNHXG01`: Tony Hawk's Pro Skater 3 (NTSC-US) (SLUS-01419)
- * `BASLUS-01485TNHXG01`: Tony Hawk's Pro Skater 4 (NTSC-US) (SLUS-01485)
- * `BESLES-01376`: Brunswick Circuit Pro Bowling (PAL-E) (SLES-01376)
- * `BESLES-02618`: Brunswick Circuit Pro Bowling 2 (PAL-E) (SLES-02618)
- * `BESLES-02908TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-EU) (SLES-02908)
- * `BESLES-02909TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-FR) (SLES-02909)
- * `BESLES-02910TNHXG01`: Tony Hawk's Pro Skater 2 (PAL-DE) (SLES-02910)
- * `BESLES-03645TNHXG01`: Tony Hawk's Pro Skater 3 (PAL-EU) (SLES-03645)
- * `BESLES-03646TNHXG01`: Tony Hawk's Pro Skater 3 (PAL-FR) (SLES-03646)
- * `BESLES-03647TNHXG01`: Tony Hawk's Pro Skater 3 (PAL-DE) (SLES-03647)
- * `BESLES-03954TNHXG01`: Tony Hawk's Pro Skater 4 (PAL-EU) (SLES-03954)
- * `BESLES-03955TNHXG01`: Tony Hawk's Pro Skater 4 (PAL-DE) (SLES-03955)
- * `BESLES-03956TNHXG01`: Tony Hawk's Pro Skater 4 (PAL-FR) (SLES-03956)
- * `TONYHAX-SPL`: tonyhax's secondary program loader (SPL)
+| Game                            | Region | Code       | MCS file          | Raw file            |
+|---------------------------------|--------|------------|-------------------|---------------------|
+| tonyhax SPL **required**        | -      | -          | tonyhax.mcs       | BESLES-99999TONYHAX |
+| Brunswick Circuit Pro Bowling   | NTSC-U | SLUS-00571 | brunswick1-us.mcs | BASLUS-00571        |
+| Brunswick Circuit Pro Bowling   | PAL-E  | SLES-01376 | brunswick1-eu.mcs | BESLES-01376        |
+| Brunswick Circuit Pro Bowling 2 | NTSC-U | SLUS-00856 | brunswick2-us.mcs | BASLUS-00856        |
+| Brunswick Circuit Pro Bowling 2 | PAL-E  | SLES-02618 | brunswick2-eu.mcs | BESLES-02618        |
+| Tony Hawk's Pro Skater 2        | NTSC-U | SLUS-01066 | thps2-us.mcs      | BASLUS-01066TNHXG01 |
+| Tony Hawk's Pro Skater 2        | PAL-E  | SLES-02908 | thps2-eu.mcs      | BESLES-02908TNHXG01 |
+| Tony Hawk's Pro Skater 2        | PAL-DE | SLES-02910 | thps2-de.mcs      | BESLES-02910TNHXG01 |
+| Tony Hawk's Pro Skater 2        | PAL-FR | SLES-02909 | thps2-fr.mcs      | BESLES-02909TNHXG01 |
+| Tony Hawk's Pro Skater 3        | NTSC-U | SLUS-01419 | thps3-us.mcs      | BASLUS-01419TNHXG01 |
+| Tony Hawk's Pro Skater 3        | PAL-E  | SLES-03645 | thps3-eu.mcs      | BESLES-03645TNHXG01 |
+| Tony Hawk's Pro Skater 3        | PAL-DE | SLES-03647 | thps3-de.mcs      | BESLES-03647TNHXG01 |
+| Tony Hawk's Pro Skater 3        | PAL-FR | SLES-03646 | thps3-fr.mcs      | BESLES-03646TNHXG01 |
+| Tony Hawk's Pro Skater 4        | NTSC-U | SLUS-01485 | thps4-us.mcs      | BASLUS-01485TNHXG01 |
+| Tony Hawk's Pro Skater 4        | PAL-E  | SLES-03954 | thps4-eu.mcs      | BESLES-03954TNHXG01 |
+| Tony Hawk's Pro Skater 4        | PAL-DE | SLES-03955 | thps4-de.mcs      | BESLES-03955TNHXG01 |
+| Tony Hawk's Pro Skater 4        | PAL-FR | SLES-03956 | thps4-fr.mcs      | BESLES-03956TNHXG01 |
 
 Usage
 -----
