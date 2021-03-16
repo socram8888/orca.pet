@@ -190,7 +190,7 @@ This is just a list of games that have been suggested to be checked but I've sti
 
  * Cool Boarders 4: has entry text. Suggested by [Gerardo Rodriguez](https://www.youtube.com/channel/UCxus_GF6-Lu9qD62nhLYxtA) on a YouTube comment.
  * Cart World Series: has character naming. Suggested by [Filiberto](https://www.youtube.com/channel/UCdg5yHFdCLMCunRHMVAJ1aA) on a YouTube comment.
- * Sports Superbike 2, Tekken 2 and XS Moto: were once used to exploit the PS Vita, so they certainly have vulnerabilities in them. Suggested by [Patrick Vogt](https://www.reddit.com/r/psx/comments/m33b00/tonyhax_softmod_backup_loader_thing_using_thps23/gqu08is?context=3) and [FR0ZN](https://gbatemp.net/goto/post?id=9399204#post-9399204).
+ * Sports Superbike 2, Tekken 2 and XS Moto: were once used to exploit the PS Vita, so they certainly have vulnerabilities in them. Suggested by [Patrick Vogt](https://www.reddit.com/r/psx/comments/m33b00/tonyhax_softmod_backup_loader_thing_using_thps23/gqu08is?context=3) and [FR0ZN](https://gbatemp.net/goto/post?id=9399331#post-9399331).
 
 Unexploitable games
 -------------------
