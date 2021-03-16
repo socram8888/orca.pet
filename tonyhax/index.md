@@ -107,7 +107,7 @@ This is a short, non-exhaustive list of games that have been report not to work:
 
  * No games have been reported to fail on v1.1.
 
-How does this works?
+How does this work?
 --------------------
 
 In layman terms, this exploit uses an oversight from the programmers: the game does not check that text in the save file hasn't been tampered and fits in the space the program allocated for it. If we externally change that text to something longer, we can overwrite other vital parts of the system's memory and run our own code.
