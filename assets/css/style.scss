@@ -414,7 +414,9 @@ a {
 }
 
 .color-block {
-  width: 5em;
+  width: 3em;
   height: 1em;
   border: solid 2px black;
+  margin-bottom: -2px;
+  display: inline-block;
 }

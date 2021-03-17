@@ -90,10 +90,10 @@ Boot the game as you'd normally do. Then, on the main menu, select "LOAD GAME", 
 
 During the exploit launch, since v1.1.2 the screen will flash with different colors depending on which phase it is:
 
- * Purple: the memory cards are being reinitialized. This only happens on Brunswick games, since THPS don't require it.
- * Blue: the SPL is being loaded from the memory card into main memory.
- * Green: the SPL is done loading and will execute immediately. The SPL immediately reinitializes the screen so this color should be barely visible.
- * Red: indicates that a fatal error occured loading the SPL. For example: the file isn't on the first memory card, the filename isn't correct or some other reason.
+ * <span class="color-block" style="background-color: #f0f;"></span> **Purple**: the memory cards are being reinitialized. This only happens on Brunswick games, since THPS don't require it.
+ * <span class="color-block" style="background-color: #00f;"></span> **Blue**: the SPL is being loaded from the memory card into main memory.
+ * <span class="color-block" style="background-color: #0f0;"></span> **Green**: the SPL is done loading and will execute immediately. The SPL immediately reinitializes the screen so this color should be barely visible.
+ * <span class="color-block" style="background-color: #f00;"></span> **Red**: indicates that a fatal error occured loading the SPL. For example: the file isn't on the first memory card, the filename isn't correct or some other reason.
 
 The console should spend no more than a couple seconds with each color. If it spends more time (specially with the green screen), it's probably crashed. Please report it.
 
