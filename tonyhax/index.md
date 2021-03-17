@@ -82,7 +82,20 @@ Once you get to the main menu, it'll load the save game (it should say "Loading 
 
 ### For Brunswick games
 
+Supported since v1.1.
+
 Boot the game as you'd normally do. Then, on the main menu, select "LOAD GAME", then "MEMORY CARD 1". After about three seconds tonyhax should be running.
+
+### For all
+
+During the exploit launch, since v1.1.2 the screen will flash with different colors depending on which phase it is:
+
+ * Purple: the memory cards are being reinitialized. This only happens on Brunswick games, since THPS don't require it.
+ * Blue: the SPL is being loaded from the memory card into main memory.
+ * Green: the SPL is done loading and will execute immediately. The SPL immediately reinitializes the screen so this color should be barely visible.
+ * Red: indicates that a fatal error occured loading the SPL. For example: the file isn't on the first memory card, the filename isn't correct or some other reason.
+
+The console should spend no more than a couple seconds with each color. If it spends more time (specially with the green screen), it's probably crashed. Please report it.
 
 Compatibility
 -------------
@@ -207,3 +220,14 @@ Acknowledgements
 
  * Martin Korth for his [super awesome technical documentation page](https://problemkaputt.de/psx-spx.htm) that was vital for the development of this project, as well as for developing the [no$psx emulator](https://problemkaputt.de/psx.htm) that was also essential for debugging.
  * [ChampionLeake](https://twitter.com/ChampionLeake79) for documenting the Brunswick exploits at [PlayStation dev wiki](https://playstationdev.wiki/ps1devwiki/index.php?title=Vulnerabilities).
+
+On the media
+------------
+
+Sorted from older to newer.
+
+ * [GBAtemp - Tonyhax is a new softmod backup loader for the PlayStation 1](https://gbatemp.net/threads/tonyhax-is-a-new-softmod-backup-loader-for-the-playstation-1.584717/)
+ * [psx-place - PS1 tonyhax - A Software backup loader exploit for the PS1 (leverages save game exploit)](https://www.psx-place.com/threads/tonyhax-a-software-backup-loader-exploit-for-the-ps1-leverages-save-game-exploit.33236/)
+ * [MrMario2011 - PS4 7.50 Jailbreak Released & tonyhax PS1 Softmod Backup Loader - ModChat 075](https://www.youtube.com/watch?v=caBo0YARS0c)
+ * [ModzvilleUSA - TONYHAX Setup Guide! - New Softmod for every Ps1 console!](https://www.youtube.com/watch?v=gtba3GtmC1I)
+ * [Hackaday - PlayStation Unlocked With New Software Hack](https://hackaday.com/2021/03/15/playstation-unlocked-with-new-software-hack/)
