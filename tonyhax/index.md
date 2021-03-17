@@ -71,20 +71,51 @@ Video from [MrMario2011](https://www.youtube.com/channel/UC-YlkP3c1zKUPfyMMurARA
 | Tony Hawk's Pro Skater 4        | PAL-DE | SLES-03955 | thps4-de.mcs      | BESLES-03955TNHXG01 |
 | Tony Hawk's Pro Skater 4        | PAL-FR | SLES-03956 | thps4-fr.mcs      | BESLES-03956TNHXG01 |
 
+### In upcoming v1.2
+
+| Game                            | Region | Code       | MCS file          | Raw file            |
+|---------------------------------|--------|------------|-------------------|---------------------|
+| Sports Superbike                | PAL-E  | SLES-03057 | superbike1-eu.mcs | BESLES-03057SSBv1   |
+| Sports Superbike 2              | PAL-E  | SLES-03827 | superbike2-eu.mcs | BESLES-03827SSII    |
+
 Usage
 -----
 
 ### For Tonyhawk's games
 
-Once installed, all you have to do is boot the game like you'd normally do.
+1. Boot the game as you'd normally do.
+2. On the main menu, wait until the save file is automatically loaded (it should say "Loading TONYHAX EU/US/DE/FR", depending on the game's region).
+3. After it's done, choose the "CREATE SKATER" menu and press X.
 
-Once you get to the main menu, it'll load the save game (it should say "Loading TONYHAX EU/US/DE/FR", depending on the game's region). After it's done, choose the "CREATE SKATER" menu and press X. After a couple seconds, tonyhax should boot.
+After a couple seconds, tonyhax should boot.
 
 ### For Brunswick games
 
 Supported since v1.1.
 
-Boot the game as you'd normally do. Then, on the main menu, select "LOAD GAME", then "MEMORY CARD 1". After about three seconds tonyhax should be running.
+1. Boot the game as you'd normally do.
+2. On the main menu, select "LOAD GAME".
+3. Select "MEMORY CARD 1".
+
+After about three seconds tonyhax should be running.
+
+### For Sports Superbike 1
+
+1. On the language selection screen, if prompted to, select the English language.
+2. Enter the Memory Card menu.
+3. Load game from the Memory Card. Click accept after it's done loading.
+4. On the main menu, select "Race".
+5. Click on "Single race".
+
+The exploit should then launch.
+
+### For Sports Superbike 2
+
+1. On the main menu, choose Options.
+2. Select Load game and choose the memory card where the save is stored.
+3. Back on the main menu, click on either "Single Race" or "Championship"
+
+The exploit should then run.
 
 ### For all
 
@@ -219,6 +250,7 @@ Acknowledgements
 ----------------
 
  * Martin Korth for his [super awesome technical documentation page](https://problemkaputt.de/psx-spx.htm) that was vital for the development of this project, as well as for developing the [no$psx emulator](https://problemkaputt.de/psx.htm) that was also essential for debugging.
+ * [Jose Silva](https://github.com/krystalgamer) for adding support for Sports Superbike II.
  * [ChampionLeake](https://twitter.com/ChampionLeake79) for documenting the Brunswick exploits at [PlayStation dev wiki](https://playstationdev.wiki/ps1devwiki/index.php?title=Vulnerabilities).
 
 On the media
