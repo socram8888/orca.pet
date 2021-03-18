@@ -75,6 +75,7 @@ Video from [MrMario2011](https://www.youtube.com/channel/UC-YlkP3c1zKUPfyMMurARA
 
 | Game                            | Region | Code       | MCS file          | Raw file            |
 |---------------------------------|--------|------------|-------------------|---------------------|
+| Cool Boarders 4                 | NTSC-U | SCUS-94559 | coolbrd4-us.mcs   | BASCUS-9455916      |
 | Sports Superbike                | PAL-E  | SLES-03057 | superbike1-eu.mcs | BESLES-03057SSBv1   |
 | Sports Superbike 2              | PAL-E  | SLES-03827 | superbike2-eu.mcs | BESLES-03827SSII    |
 
@@ -232,9 +233,8 @@ Pending games
 
 This is just a list of games that have been suggested to be checked but I've still not had time to look at them.
 
- * Cool Boarders 4: has entry text. Suggested by [Gerardo Rodriguez](https://www.youtube.com/channel/UCxus_GF6-Lu9qD62nhLYxtA) on a YouTube comment.
  * Cart World Series: has character naming. Suggested by [Filiberto](https://www.youtube.com/channel/UCdg5yHFdCLMCunRHMVAJ1aA) on a YouTube comment.
- * Sports Superbike 2, Tekken 2 and XS Moto: were once used to exploit the PS Vita, so they certainly have vulnerabilities in them. Suggested by [Patrick Vogt](https://www.reddit.com/r/psx/comments/m33b00/tonyhax_softmod_backup_loader_thing_using_thps23/gqu08is?context=3) and [FR0ZN](https://gbatemp.net/goto/post?id=9399331#post-9399331).
+ * ~~Sports Superbike 2~~, Tekken 2 and XS Moto: were once used to exploit the PS Vita, so they certainly have vulnerabilities in them. Suggested by [Patrick Vogt](https://www.reddit.com/r/psx/comments/m33b00/tonyhax_softmod_backup_loader_thing_using_thps23/gqu08is?context=3) and [FR0ZN](https://gbatemp.net/goto/post?id=9399331#post-9399331).
 
 Unexploitable games
 -------------------
@@ -252,6 +252,7 @@ Acknowledgements
  * Martin Korth for his [super awesome technical documentation page](https://problemkaputt.de/psx-spx.htm) that was vital for the development of this project, as well as for developing the [no$psx emulator](https://problemkaputt.de/psx.htm) that was also essential for debugging.
  * [Jose Silva](https://github.com/krystalgamer) for adding support for Sports Superbike II.
  * [ChampionLeake](https://twitter.com/ChampionLeake79) for documenting the Brunswick exploits at [PlayStation dev wiki](https://playstationdev.wiki/ps1devwiki/index.php?title=Vulnerabilities).
+ * [Gerardo Rodriguez](https://www.youtube.com/channel/UCxus_GF6-Lu9qD62nhLYxtA) for suggesting Cool Boarders 4 on a YouTube comment.
 
 On the media
 ------------
