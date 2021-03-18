@@ -76,19 +76,21 @@ Video from [MrMario2011](https://www.youtube.com/channel/UC-YlkP3c1zKUPfyMMurARA
 | Game                            | Region | Code       | MCS file          | Raw file            |
 |---------------------------------|--------|------------|-------------------|---------------------|
 | Cool Boarders 4                 | NTSC-U | SCUS-94559 | coolbrd4-us.mcs   | BASCUS-9455916      |
+| Cool Boarders 4                 | PAL-E  | SCES-02283 | coolbrd4-eu.mcs   | BESCES-0228316      |
 | Sports Superbike                | PAL-E  | SLES-03057 | superbike1-eu.mcs | BESLES-03057SSBv1   |
 | Sports Superbike 2              | PAL-E  | SLES-03827 | superbike2-eu.mcs | BESLES-03827SSII    |
 
 Usage
 -----
 
-### For Tonyhawk's games
+### For Cool Boarders 4
 
-1. Boot the game as you'd normally do.
-2. On the main menu, wait until the save file is automatically loaded (it should say "Loading TONYHAX EU/US/DE/FR", depending on the game's region).
-3. After it's done, choose the "CREATE SKATER" menu and press X.
+Will be supported in v1.2.
 
-After a couple seconds, tonyhax should boot.
+1. Boot the game. It should say the records and settings have been automatically loaded.
+2. Click on "ONE PLAYER".
+
+The exploit should then launch.
 
 ### For Brunswick games
 
@@ -117,6 +119,14 @@ The exploit should then launch.
 3. Back on the main menu, click on either "Single Race" or "Championship"
 
 The exploit should then run.
+
+### For Tonyhawk's games
+
+1. Boot the game as you'd normally do.
+2. On the main menu, wait until the save file is automatically loaded (it should say "Loading TONYHAX EU/US/DE/FR", depending on the game's region).
+3. After it's done, choose the "CREATE SKATER" menu and press X.
+
+After a couple seconds, tonyhax should boot.
 
 ### For all
 
