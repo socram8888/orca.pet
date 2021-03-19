@@ -77,6 +77,7 @@ Video from [MrMario2011](https://www.youtube.com/channel/UC-YlkP3c1zKUPfyMMurARA
 |---------------------------------|--------|------------|-------------------|----------------------|
 | Cool Boarders 4                 | NTSC-U | SCUS-94559 | coolbrd4-us.mcs   | BASCUS-9455916       |
 | Cool Boarders 4                 | PAL-E  | SCES-02283 | coolbrd4-eu.mcs   | BESCES-0228316       |
+| Crash Bandicoot 2               | NTSC-U | SCUS-94154 | crash2-us.mcs     | BASCUS-9415400047975 |
 | Crash Bandicoot 2               | PAL-E  | SCES-00967 | crash2-eu.mcs     | BESCES-0096700765150 |
 | Sports Superbike                | PAL-E  | SLES-03057 | superbike1-eu.mcs | BESLES-03057SSBv1    |
 | Sports Superbike 2              | PAL-E  | SLES-03827 | superbike2-eu.mcs | BESLES-03827SSII     |
@@ -125,11 +126,12 @@ After about three seconds tonyhax should be running.
 
 The exploit should then launch.
 
-### For Sports Superbike 2
+### For Sports Superbike 2 and XS Moto
 
-1. On the main menu, choose Options.
-2. Select Load game and choose the memory card where the save is stored.
-3. Back on the main menu, click on either "Single Race" or "Championship"
+1. If you are using the European version, on the language selection screen select the English language.
+2. On the main menu, choose Options.
+3. Select Load game and choose the memory card where the save is stored.
+4. Back on the main menu, click on either "Single Race" or "Championship".
 
 The exploit should then run.
 
