@@ -77,6 +77,7 @@ Video from [MrMario2011](https://www.youtube.com/channel/UC-YlkP3c1zKUPfyMMurARA
 |---------------------------------|--------|------------|-------------------|----------------------|
 | Cool Boarders 4                 | NTSC-U | SCUS-94559 | coolbrd4-us.mcs   | BASCUS-9455916       |
 | Cool Boarders 4                 | PAL-E  | SCES-02283 | coolbrd4-eu.mcs   | BESCES-0228316       |
+| Crash Bandicoot 2               | PAL-E  | SCES-00967 | crash2-eu.mcs     | BESCES-0096700765150 |
 | Sports Superbike                | PAL-E  | SLES-03057 | superbike1-eu.mcs | BESLES-03057SSBv1    |
 | Sports Superbike 2              | PAL-E  | SLES-03827 | superbike2-eu.mcs | BESLES-03827SSII     |
 | XS Moto                         | NTSC-U | SLUS-01506 | xsmoto-us.mcs     | BASLUS-01506XSMOTOv1 |
@@ -90,6 +91,16 @@ Will be supported in v1.2.
 
 1. Boot the game. It should say the records and settings have been automatically loaded.
 2. Click on "ONE PLAYER".
+
+The exploit should then launch.
+
+### For Crash Bandicoot 2
+
+Will be supported in v1.2.
+
+1. Boot the game.
+2. On the title menu, choose LOAD GAME.
+3. On the save game list, select "TONYHAX" and press X.
 
 The exploit should then launch.
 
@@ -244,8 +255,10 @@ Pending games
 
 This is just a list of games that have been suggested to be checked but I've still not had time to look at them.
 
+ * Crash Bandicoot 1 and 3: the second game turned out to be vulnerable, check if the first and third are too.
  * Cart World Series: has character naming. Suggested by [Filiberto](https://www.youtube.com/channel/UCdg5yHFdCLMCunRHMVAJ1aA) on a YouTube comment.
  * ~~Sports Superbike 2~~, Tekken 2 and ~~XS Moto~~: were once used to exploit the PS Vita, so they certainly have vulnerabilities in them. Suggested by [Patrick Vogt](https://www.reddit.com/r/psx/comments/m33b00/tonyhax_softmod_backup_loader_thing_using_thps23/gqu08is?context=3) and [FR0ZN](https://gbatemp.net/goto/post?id=9399331#post-9399331).
+ * Castrol Honda VTR: the original branded version of XS Moto. Should have the same exploit. Suggested by [@FMecha](https://twitter.com/FMecha_EXE/status/1372921230676783107) on Twitter.
 
 Unexploitable games
 -------------------
@@ -253,9 +266,12 @@ Unexploitable games
 This is just a short list of games I've glanced over and determined they are unlikely to be exploitable:
 
  * Breath of Fire III: every text field is fixed length.
+ * Driver 2: tested by Patrick Vogt. Causes the same graphical issues than on Hogs of War, but nothing exploitable.
+ * Hogs of War: has names that when overwritten just cause graphical issues in the team edition menu, but that's about it.
  * International Socer Pro '98: text is packed and the payload would have to use only the lowest 7 bits of a byte. Aside from this, everything seems to be copied using strncpy. Interestingly, using an ASCII control character seems to cause the game to go nuts and it starts self-destructing the RAM endlessly.
  * Mat Hoffmans Pro BMX: uses the same engine as THPS, but there is no place where user can introduce text.
  * Micro Machines V3: the game uses the save text as the user's name, extracting it from between the parentheses. Removing these parentheses or spacing them beyond what the game expects causes a good part of RAM to be overwritten with '?', which isn't really useful.
+ * Spiderman: has text but increasing their length just causes graphical issues. Savefiles have checksums too.
 
 Acknowledgements
 ----------------
