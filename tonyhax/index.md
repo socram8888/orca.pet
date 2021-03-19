@@ -81,6 +81,7 @@ Video from [MrMario2011](https://www.youtube.com/channel/UC-YlkP3c1zKUPfyMMurARA
 | Sports Superbike                | PAL-E  | SLES-03057 | superbike1-eu.mcs | BESLES-03057SSBv1    |
 | Sports Superbike 2              | PAL-E  | SLES-03827 | superbike2-eu.mcs | BESLES-03827SSII     |
 | XS Moto                         | NTSC-U | SLUS-01506 | xsmoto-us.mcs     | BASLUS-01506XSMOTOv1 |
+| XS Moto                         | PAL-E  | SLES-04095 | xsmoto-eu.mcs     | BESLES-04095XSMOTO   |
 
 Usage
 -----
