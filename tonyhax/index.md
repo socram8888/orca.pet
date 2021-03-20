@@ -79,6 +79,8 @@ Video from [MrMario2011](https://www.youtube.com/channel/UC-YlkP3c1zKUPfyMMurARA
 | Cool Boarders 4                 | PAL-E  | SCES-02283 | coolbrd4-eu.mcs   | BESCES-0228316       |
 | Crash Bandicoot 2               | NTSC-U | SCUS-94154 | crash2-us.mcs     | BASCUS-9415400047975 |
 | Crash Bandicoot 2               | PAL-E  | SCES-00967 | crash2-eu.mcs     | BESCES-0096700765150 |
+| Crash Bandicoot 3               | NTSC-U | SCUS-94244 | crash3-us.mcs     | BASCUS-9424400000000 |
+| Crash Bandicoot 3               | PAL-E  | SCES-01420 | crash3-eu.mcs     | BESCES-0142000000000 |
 | Sports Superbike                | PAL-E  | SLES-03057 | superbike1-eu.mcs | BESLES-03057SSBv1    |
 | Sports Superbike 2              | PAL-E  | SLES-03827 | superbike2-eu.mcs | BESLES-03827SSII     |
 | XS Moto                         | NTSC-U | SLUS-01506 | xsmoto-us.mcs     | BASLUS-01506XSMOTOv1 |
@@ -96,7 +98,7 @@ Will be supported in v1.2.
 
 The exploit should then launch.
 
-### For Crash Bandicoot 2
+### For Crash Bandicoots
 
 Will be supported in v1.2.
 
@@ -261,9 +263,7 @@ Pending games
 
 This is just a list of games that have been suggested to be checked but I've still not had time to look at them.
 
- * Crash Bandicoot 1 and 3: the second game turned out to be vulnerable, check if the first and third are too.
  * Cart World Series: has character naming. Suggested by [Filiberto](https://www.youtube.com/channel/UCdg5yHFdCLMCunRHMVAJ1aA) on a YouTube comment.
- * ~~Sports Superbike 2~~, Tekken 2 and ~~XS Moto~~: were once used to exploit the PS Vita, so they certainly have vulnerabilities in them. Suggested by [Patrick Vogt](https://www.reddit.com/r/psx/comments/m33b00/tonyhax_softmod_backup_loader_thing_using_thps23/gqu08is?context=3) and [FR0ZN](https://gbatemp.net/goto/post?id=9399331#post-9399331).
  * Castrol Honda VTR: the original branded version of XS Moto. Should have the same exploit. Suggested by [@FMecha](https://twitter.com/FMecha_EXE/status/1372921230676783107) on Twitter.
 
 Unexploitable games
