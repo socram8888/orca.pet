@@ -51,47 +51,45 @@ Video from [MrMario2011](https://www.youtube.com/channel/UC-YlkP3c1zKUPfyMMurARA
 
 ### Save games
 
-| Game                            | Region | Code       | MCS file          | Raw file             |
-|---------------------------------|--------|------------|-------------------|----------------------|
-| tonyhax SPL **required**        | -      | -          | tonyhax.mcs       | BESLEM-99999TONYHAX  |
-| Brunswick Circuit Pro Bowling   | NTSC-U | SLUS-00571 | brunswick1-us.mcs | BASLUS-00571         |
-| Brunswick Circuit Pro Bowling   | PAL-E  | SLES-01376 | brunswick1-eu.mcs | BESLES-01376         |
-| Brunswick Circuit Pro Bowling 2 | NTSC-U | SLUS-00856 | brunswick2-us.mcs | BASLUS-00856         |
-| Brunswick Circuit Pro Bowling 2 | PAL-E  | SLES-02618 | brunswick2-eu.mcs | BESLES-02618         |
-| Tony Hawk's Pro Skater 2        | NTSC-U | SLUS-01066 | thps2-us.mcs      | BASLUS-01066TNHXG01  |
-| Tony Hawk's Pro Skater 2        | PAL-E  | SLES-02908 | thps2-eu.mcs      | BESLES-02908TNHXG01  |
-| Tony Hawk's Pro Skater 2        | PAL-DE | SLES-02910 | thps2-de.mcs      | BESLES-02910TNHXG01  |
-| Tony Hawk's Pro Skater 2        | PAL-FR | SLES-02909 | thps2-fr.mcs      | BESLES-02909TNHXG01  |
-| Tony Hawk's Pro Skater 3        | NTSC-U | SLUS-01419 | thps3-us.mcs      | BASLUS-01419TNHXG01  |
-| Tony Hawk's Pro Skater 3        | PAL-E  | SLES-03645 | thps3-eu.mcs      | BESLES-03645TNHXG01  |
-| Tony Hawk's Pro Skater 3        | PAL-DE | SLES-03647 | thps3-de.mcs      | BESLES-03647TNHXG01  |
-| Tony Hawk's Pro Skater 3        | PAL-FR | SLES-03646 | thps3-fr.mcs      | BESLES-03646TNHXG01  |
-| Tony Hawk's Pro Skater 4        | NTSC-U | SLUS-01485 | thps4-us.mcs      | BASLUS-01485TNHXG01  |
-| Tony Hawk's Pro Skater 4        | PAL-E  | SLES-03954 | thps4-eu.mcs      | BESLES-03954TNHXG01  |
-| Tony Hawk's Pro Skater 4        | PAL-DE | SLES-03955 | thps4-de.mcs      | BESLES-03955TNHXG01  |
-| Tony Hawk's Pro Skater 4        | PAL-FR | SLES-03956 | thps4-fr.mcs      | BESLES-03956TNHXG01  |
-
-### In upcoming v1.2
-
-| Game                            | Region | Code       | MCS file          | Raw file             |
-|---------------------------------|--------|------------|-------------------|----------------------|
-| Cool Boarders 4                 | NTSC-U | SCUS-94559 | coolbrd4-us.mcs   | BASCUS-9455916       |
-| Cool Boarders 4                 | PAL-E  | SCES-02283 | coolbrd4-eu.mcs   | BESCES-0228316       |
-| Crash Bandicoot 2               | NTSC-U | SCUS-94154 | crash2-us.mcs     | BASCUS-9415400047975 |
-| Crash Bandicoot 2               | PAL-E  | SCES-00967 | crash2-eu.mcs     | BESCES-0096700765150 |
-| Crash Bandicoot 3               | NTSC-U | SCUS-94244 | crash3-us.mcs     | BASCUS-9424400000000 |
-| Crash Bandicoot 3               | PAL-E  | SCES-01420 | crash3-eu.mcs     | BESCES-0142000000000 |
-| Sports Superbike                | PAL-E  | SLES-03057 | superbike1-eu.mcs | BESLES-03057SSBv1    |
-| Sports Superbike 2              | PAL-E  | SLES-03827 | superbike2-eu.mcs | BESLES-03827SSII     |
-| XS Moto                         | NTSC-U | SLUS-01506 | xsmoto-us.mcs     | BASLUS-01506XSMOTOv1 |
-| XS Moto                         | PAL-E  | SLES-04095 | xsmoto-eu.mcs     | BESLES-04095XSMOTO   |
+| Game                                   | Region | Code       | MCS file          | Raw file             |
+|----------------------------------------|--------|------------|-------------------|----------------------|
+| tonyhax SPL **required**               | -      | -          | tonyhax.mcs       | BESLEM-99999TONYHAX  |
+| Brunswick Circuit Pro Bowling          | NTSC-U | SLUS-00571 | brunswick1-us.mcs | BASLUS-00571         |
+| Brunswick Circuit Pro Bowling          | PAL-E  | SLES-01376 | brunswick1-eu.mcs | BESLES-01376         |
+| Brunswick Circuit Pro Bowling 2        | NTSC-U | SLUS-00856 | brunswick2-us.mcs | BASLUS-00856         |
+| Brunswick Circuit Pro Bowling 2        | PAL-E  | SLES-02618 | brunswick2-eu.mcs | BESLES-02618         |
+| Castrol Honda Superbike Racing         | NTSC-U | SLUS-00882 | castrolsb-us.mcs  | BASLUS-00882CHSv1    |
+| Castrol Honda Superbike Racing         | PAL-E  | SLES-01182 | castrolsb-eu.mcs  | BESLES_01182CHSv1    |
+| Castrol Honda VTR                      | PAL-E  | SLES-02942 | castrolvtr-eu.mcs | BESLES-02942CHSVTRv1 |
+| Cool Boarders 4                        | NTSC-U | SCUS-94559 | coolbrd4-us.mcs   | BASCUS-9455916       |
+| Cool Boarders 4                        | PAL-E  | SCES-02283 | coolbrd4-eu.mcs   | BESCES-0228316       |
+| Crash Bandicoot 2: Cortex Strikes Back | NTSC-U | SCUS-94154 | crash2-us.mcs     | BASCUS-9415400047975 |
+| Crash Bandicoot 2: Cortex Strikes Back | PAL-E  | SCES-00967 | crash2-eu.mcs     | BESCES-0096700765150 |
+| Crash Bandicoot 3: Warped              | NTSC-U | SCUS-94244 | crash3-us.mcs     | BASCUS-9424400000000 |
+| Crash Bandicoot 3: Warped              | PAL-E  | SCES-01420 | crash3-eu.mcs     | BESCES-0142000000000 |
+| Sports Superbike                       | PAL-E  | SLES-03057 | superbike1-eu.mcs | BESLES-03057SSBv1    |
+| Sports Superbike 2                     | PAL-E  | SLES-03827 | superbike2-eu.mcs | BESLES-03827SSII     |
+| Tony Hawk's Pro Skater 2               | NTSC-U | SLUS-01066 | thps2-us.mcs      | BASLUS-01066TNHXG01  |
+| Tony Hawk's Pro Skater 2               | PAL-E  | SLES-02908 | thps2-eu.mcs      | BESLES-02908TNHXG01  |
+| Tony Hawk's Pro Skater 2               | PAL-DE | SLES-02910 | thps2-de.mcs      | BESLES-02910TNHXG01  |
+| Tony Hawk's Pro Skater 2               | PAL-FR | SLES-02909 | thps2-fr.mcs      | BESLES-02909TNHXG01  |
+| Tony Hawk's Pro Skater 3               | NTSC-U | SLUS-01419 | thps3-us.mcs      | BASLUS-01419TNHXG01  |
+| Tony Hawk's Pro Skater 3               | PAL-E  | SLES-03645 | thps3-eu.mcs      | BESLES-03645TNHXG01  |
+| Tony Hawk's Pro Skater 3               | PAL-DE | SLES-03647 | thps3-de.mcs      | BESLES-03647TNHXG01  |
+| Tony Hawk's Pro Skater 3               | PAL-FR | SLES-03646 | thps3-fr.mcs      | BESLES-03646TNHXG01  |
+| Tony Hawk's Pro Skater 4               | NTSC-U | SLUS-01485 | thps4-us.mcs      | BASLUS-01485TNHXG01  |
+| Tony Hawk's Pro Skater 4               | PAL-E  | SLES-03954 | thps4-eu.mcs      | BESLES-03954TNHXG01  |
+| Tony Hawk's Pro Skater 4               | PAL-DE | SLES-03955 | thps4-de.mcs      | BESLES-03955TNHXG01  |
+| Tony Hawk's Pro Skater 4               | PAL-FR | SLES-03956 | thps4-fr.mcs      | BESLES-03956TNHXG01  |
+| XS Moto                                | NTSC-U | SLUS-01506 | xsmoto-us.mcs     | BASLUS-01506XSMOTOv1 |
+| XS Moto                                | PAL-E  | SLES-04095 | xsmoto-eu.mcs     | BESLES-04095XSMOTO   |
 
 Usage
 -----
 
 ### For Cool Boarders 4
 
-Will be supported in v1.2.
+Supported since v1.2.
 
 1. Boot the game. It should say the records and settings have been automatically loaded.
 2. Click on "ONE PLAYER".
@@ -100,7 +98,7 @@ The exploit should then launch.
 
 ### For Crash Bandicoots
 
-Will be supported in v1.2.
+Supported since v1.2.
 
 1. Boot the game.
 2. On the title menu, choose LOAD GAME.
@@ -118,7 +116,9 @@ Supported since v1.1.
 
 After about three seconds tonyhax should be running.
 
-### For Sports Superbike 1
+### For Castrol Honda Superbike Racing and Sports Superbike 1
+
+Supported since v1.2.
 
 1. On the language selection screen, if prompted to, select the English language.
 2. Enter the Memory Card menu.
@@ -128,7 +128,9 @@ After about three seconds tonyhax should be running.
 
 The exploit should then launch.
 
-### For Sports Superbike 2 and XS Moto
+### For Castrol Honda VTR, Sports Superbike 2 and XS Moto
+
+Supported since v1.2.
 
 1. If you are using the European version, on the language selection screen select the English language.
 2. On the main menu, choose Options.
@@ -264,7 +266,6 @@ Pending games
 This is just a list of games that have been suggested to be checked but I've still not had time to look at them.
 
  * Cart World Series: has character naming. Suggested by [Filiberto](https://www.youtube.com/channel/UCdg5yHFdCLMCunRHMVAJ1aA) on a YouTube comment.
- * Castrol Honda VTR: the original branded version of XS Moto. Should have the same exploit. Suggested by [@FMecha](https://twitter.com/FMecha_EXE/status/1372921230676783107) on Twitter.
 
 Unexploitable games
 -------------------
@@ -286,6 +287,7 @@ In alphabetical order:
 
  * [ChampionLeake](https://twitter.com/ChampionLeake79) for documenting the Brunswick exploits at [PlayStation dev wiki](https://playstationdev.wiki/ps1devwiki/index.php?title=Vulnerabilities).
  * [Gerardo Rodriguez](https://www.youtube.com/channel/UCxus_GF6-Lu9qD62nhLYxtA) for suggesting Cool Boarders 4 on a YouTube comment.
+ * [@FMecha](https://twitter.com/FMecha_EXE/status/1372921230676783107) for suggesting Castrol Honda VTR on Twitter.
  * [Jose Silva](https://github.com/krystalgamer) for adding support for Sports Superbike II and XS Moto.
  * Martin Korth for his [super awesome technical documentation page](https://problemkaputt.de/psx-spx.htm) that was vital for the development of this project, as well as for developing the [no$psx emulator](https://problemkaputt.de/psx.htm) that was also essential for debugging.
  * [Patrick Vogt](https://patrickvogt.net/) for testing on multiple development PS1 consoles.
