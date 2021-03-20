@@ -159,17 +159,20 @@ Compatibility
 
 ### Consoles
 
-I've personally only attempted this with a PAL SCPH-102 PSone, but according to Martin Korth's documentation this should work with:
+After receiving multiple reports testing on different consoles, it seems that tonyhax works with:
 
- * Every PAL console.
- * Every NTSC-U console **except** the very early SCPH-1000.
+ * Every PAL PlayStation 1 console.
+ * Every NTSC-U PlayStation 1 console **except** the very early SCPH-1000.
+ * Every PAL and NTSC-U PlayStation 2 with model number SCPH-39xxx or lower.
  * NetYaroze consoles.
 
 However, this will **not** work with:
 
  * Japanese NTSC-J consoles (stubbed/bugged CD unlock).
- * NTSC-U SCPH-1000 consoles (BIOS predates the introduction of the CD unlock command).
- * ~~PlayStation 2 consoles~~ Information at the moment is contradictory. no$psx documentation states it is not compatible, and [one Redditor tried it and it failed](https://www.reddit.com/r/psx/comments/m33b00/tonyhax_softmod_backup_loader_thing_using_thps23/gqoo4jk). However there's [another video on Twitter](https://twitter.com/xecut1onr/status/1370984402809946114) that tested it on video and it worked. Further research is needed.
+ * NTSC-U PlayStation 1 SCPH-1000 consoles (BIOS predates the introduction of the CD unlock command).
+ * PlayStation 2 consoles with model number SCPH-50000 or newer (this revision replaced the disc controller and got the backdoor removed).
+
+These consoles might be able to boot the exploit, but the CD patch that allows booting from burned media will not work.
 
 ### Incompatible games
 
@@ -279,10 +282,13 @@ This is just a short list of games I've glanced over and determined they are unl
 Acknowledgements
 ----------------
 
- * Martin Korth for his [super awesome technical documentation page](https://problemkaputt.de/psx-spx.htm) that was vital for the development of this project, as well as for developing the [no$psx emulator](https://problemkaputt.de/psx.htm) that was also essential for debugging.
- * [Jose Silva](https://github.com/krystalgamer) for adding support for Sports Superbike II and XS Moto.
+In alphabetical order:
+
  * [ChampionLeake](https://twitter.com/ChampionLeake79) for documenting the Brunswick exploits at [PlayStation dev wiki](https://playstationdev.wiki/ps1devwiki/index.php?title=Vulnerabilities).
  * [Gerardo Rodriguez](https://www.youtube.com/channel/UCxus_GF6-Lu9qD62nhLYxtA) for suggesting Cool Boarders 4 on a YouTube comment.
+ * [Jose Silva](https://github.com/krystalgamer) for adding support for Sports Superbike II and XS Moto.
+ * Martin Korth for his [super awesome technical documentation page](https://problemkaputt.de/psx-spx.htm) that was vital for the development of this project, as well as for developing the [no$psx emulator](https://problemkaputt.de/psx.htm) that was also essential for debugging.
+ * [Patrick Vogt](https://patrickvogt.net/) for testing on multiple development PS1 consoles.
 
 On the media
 ------------
