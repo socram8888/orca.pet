@@ -1,6 +1,5 @@
 ---
 extra_css: playground.css
-requires_saph: true
 ---
 
 Saph
@@ -41,6 +40,7 @@ Playground
 	<li>Base64: <tt id="b64output"></tt></li>
 </ul>
 
+<script src="{{ '/assets/js/saph-v1.1.0.js' | cachebuster }}"></script>
 <script src="{{ 'playground.js' | cachebuster }}"></script>
 
 Why?

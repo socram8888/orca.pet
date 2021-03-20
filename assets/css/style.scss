@@ -11,7 +11,6 @@
 	   url({{ '/assets/fonts/lora/Lora-VF.ttf' | cachebuster }}) format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -20,7 +19,14 @@
 	   url({{ '/assets/fonts/lora/Lora-Italic-VF.ttf' | cachebuster }}) format('truetype');
   font-weight: normal;
   font-style: italic;
-  font-display: swap;
+}
+
+@font-face {
+  font-family: "VCR OSD Mono";
+  src: url({{ '/assets/fonts/vcr/VCR_OSD_MONO_1.001.woff2' | cachebuster }}) format('woff2'),
+	   url({{ '/assets/fonts/vcr/VCR_OSD_MONO_1.001.ttf' | cachebuster }}) format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @mixin large {

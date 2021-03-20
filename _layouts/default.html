@@ -18,8 +18,6 @@
 		<link rel="stylesheet" href="{{ '/assets/css/style.css' | cachebuster }}">
 {% if page.extra_css %}
 		<link rel="stylesheet" href="{{ page.extra_css | cachebuster }}">
-{% endif %}{% if page.requires_saph %}
-		<script src="{{ '/assets/js/saph-v1.1.0.js' | cachebuster }}"></script>
 {% endif %}
 	</head>
 	<body>
@@ -38,10 +36,6 @@
 			</footer>
 		</section>
 
-{% if page.requires_saph %}
-{% else %}
-		<script src="{{ '/assets/js/saph-v1.1.0.js' | cachebuster }}"></script>
-{% endif %}
-		<script src="{{ '/assets/js/easter-egg.js' | cachebuster }}"></script>
+		<script defer src="{{ '/assets/js/easter-egg.js' | cachebuster }}"></script>
 	</body>
 </html>
