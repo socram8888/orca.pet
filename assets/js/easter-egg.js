@@ -127,8 +127,23 @@
 		decrypted = window.URL.createObjectURL(decrypted);
 
 		let header = document.querySelector('.page-header');
-		header.style.backgroundImage = 'url("' + decrypted + '")';
 		header.style.height = '100vh';
+
+		for (let bg of header.querySelectorAll('.bg-img')) {
+			bg.parentNode.removeChild(bg);
+		}
+
+		let clearBg = document.createElement("div");
+		clearBg.className = "bg-img";
+		clearBg.style.backgroundImage = 'url("' + decrypted + '")';
+		clearBg.style.backgroundSize = 'contain';
+		header.insertBefore(clearBg, header.childNodes[0]);
+
+		let blurBg = document.createElement("div");
+		blurBg.className = "bg-img";
+		blurBg.style.backgroundImage = clearBg.style.backgroundImage;
+		blurBg.style.filter = "blur(1em)";
+		header.insertBefore(blurBg, header.childNodes[0]);
 
 		try {
 			bellElem.play();

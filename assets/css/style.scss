@@ -8,7 +8,7 @@
 @font-face {
   font-family: "Lora";
   src: url({{ '/assets/fonts/lora/Lora-VF.woff2' | cachebuster }}) format('woff2'),
-	   url({{ '/assets/fonts/lora/Lora-VF.ttf' | cachebuster }}) format('truetype');
+       url({{ '/assets/fonts/lora/Lora-VF.ttf' | cachebuster }}) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@
 @font-face {
   font-family: "Lora";
   src: url({{ '/assets/fonts/lora/Lora-Italic-VF.woff2' | cachebuster }}) format('woff2'),
-	   url({{ '/assets/fonts/lora/Lora-Italic-VF.ttf' | cachebuster }}) format('truetype');
+       url({{ '/assets/fonts/lora/Lora-Italic-VF.ttf' | cachebuster }}) format('truetype');
   font-weight: normal;
   font-style: italic;
 }
@@ -24,7 +24,7 @@
 @font-face {
   font-family: "VCR OSD Mono";
   src: url({{ '/assets/fonts/vcr/VCR_OSD_MONO_1.001.woff2' | cachebuster }}) format('woff2'),
-	   url({{ '/assets/fonts/vcr/VCR_OSD_MONO_1.001.ttf' | cachebuster }}) format('truetype');
+       url({{ '/assets/fonts/vcr/VCR_OSD_MONO_1.001.ttf' | cachebuster }}) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -140,14 +140,14 @@ strong {
 }
 
 .page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: #fff;
   text-align: center;
-  background-color: #08f;
-  background-image: url("{{ '/assets/images/banner.jpg' | cachebuster }}");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   text-shadow: 0px 0px 20px #000, 0px 0px 20px #000;
+  position: relative;
+  background-color: #08f;
 
   @include large {
     padding: 5rem 6rem;
@@ -160,11 +160,24 @@ strong {
   @include small {
     padding: 2rem 1rem;
   }
+
+  .bg-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("{{ '/assets/images/banner.jpg' | cachebuster }}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 .project-name {
   margin-top: 0;
   margin-bottom: 0.1rem;
+  position: relative;
 
   @include large {
     font-size: 3.25rem;
@@ -354,7 +367,7 @@ strong {
 
     th {
       font-weight: bold;
-	  background-color: #ddd;
+      background-color: #ddd;
     }
 
     th,
