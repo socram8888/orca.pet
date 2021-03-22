@@ -265,7 +265,9 @@ Pending games
 
 This is just a list of games that have been suggested to be checked but I've still not had time to look at them.
 
+ * Crash Team Racing: suggested by Patrick Vogt and [Bowser Zeki](https://www.youtube.com/channel/UCbell17edXlYAat4PVCGjyw).
  * Cart World Series: has character naming. Suggested by [Filiberto](https://www.youtube.com/channel/UCdg5yHFdCLMCunRHMVAJ1aA) on a YouTube comment.
+ * Jade Cocoon: has character naming. Suggested by [Shin m0h](https://www.youtube.com/channel/UCkzWmOUhd3V76hN-Ay2nPBA) on a YouTube comment.
 
 Unexploitable games
 -------------------
