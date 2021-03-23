@@ -182,7 +182,7 @@ These consoles might be able to boot the exploit, but the CD patch that allows b
 
 This is a short, non-exhaustive list of games that have been report not to work:
 
- * Pepsiman (J) (SLPS-01762) crashes due to a bug: the function at 0x80014098 forgets to clear the "super" variable on a GsRVIEW2 structure before calling GsSetRefView2. This function checks "super" and if not null deferences it to extract information about the parent. The value of this uninitialized "super" member gets its value from that of the s5 register during the DoExecute call, which for THPS4 is an odd number and results in an illegal memory access when deferenced. v1.2.1 will clear s1 to s6, so they'll be zero like when starting a game from a cold boot.
+ * Tomba! 2 - The Evil Swine Return (NTSC-U) (SCUS-94454) triggers antipiracy. Will be solved in v1.2.2, which will patch it on-the-fly.
 
 How does this work?
 --------------------
@@ -268,6 +268,7 @@ This is just a list of games that have been suggested to be checked but I've sti
  * Crash Team Racing: suggested by Patrick Vogt and [Bowser Zeki](https://www.youtube.com/channel/UCbell17edXlYAat4PVCGjyw).
  * Cart World Series: has character naming. Suggested by [Filiberto](https://www.youtube.com/channel/UCdg5yHFdCLMCunRHMVAJ1aA) on a YouTube comment.
  * Jade Cocoon: has character naming. Suggested by [Shin m0h](https://www.youtube.com/channel/UCkzWmOUhd3V76hN-Ay2nPBA) on a YouTube comment.
+ * Spec Ops: Stealth Patrol (SLES-00844) & Spec Ops: Ranger Elite (SLES-03157). Suggested via e-mail by Mew Mew.
 
 Unexploitable games
 -------------------
