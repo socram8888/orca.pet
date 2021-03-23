@@ -152,7 +152,7 @@
 		disableButton.innerHTML = "Disable";
 		disableButton.addEventListener("click", function(e) {
 			e.preventDefault();
-			Cookies.remove("secretCode");
+			Cookies.remove("secretCode", { sameSite: 'lax' });
 			disableContainer.parentNode.removeChild(disableContainer);
 			header.style.height = null;
 			header.style.maxHeight = null;
@@ -220,7 +220,7 @@
 						bellElem.play();
 					} catch {};
 
-					Cookies.set("secretCode", password);
+					Cookies.set("secretCode", password, { sameSite: 'lax', expires: 7 });
 				}
 			}
 		});
