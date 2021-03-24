@@ -269,6 +269,7 @@ This is just a list of games that have been suggested to be checked but I've sti
  * Cart World Series: has character naming. Suggested by [Filiberto](https://www.youtube.com/channel/UCdg5yHFdCLMCunRHMVAJ1aA) on a YouTube comment.
  * Jade Cocoon: has character naming. Suggested by [Shin m0h](https://www.youtube.com/channel/UCkzWmOUhd3V76hN-Ay2nPBA) on a YouTube comment.
  * Spec Ops: Stealth Patrol (SLES-00844) & Spec Ops: Ranger Elite (SLES-03157). Suggested via e-mail by Mew Mew.
+ * Rally Championship (also known as Mobil 1 Rally Championship and Rally Championship 2000 Edition): has text input in multiple places for user names. Suggested by gamer4maker via e-mail.
 
 Unexploitable games
 -------------------
