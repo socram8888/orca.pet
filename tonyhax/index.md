@@ -182,7 +182,17 @@ These consoles might be able to boot the exploit, but the CD patch that allows b
 
 This is a short, non-exhaustive list of games that have been report not to work:
 
- * Tomba! 2 - The Evil Swine Return (NTSC-U) (SCUS-94454) triggers antipiracy. Will be solved in v1.2.2, which will patch it on-the-fly.
+ * Tetris with Card Captor Sakura: Eternal Heart (NTSC-J) (SLPS 02886): anti-modchip protection gets triggered.
+
+Please note that, despite the ability of tonyhax to patch games with antipiracy, only a very small subset of games are currently supported, since it's a pretty manual and laborious task. As a general rule, if the game can be copied in a manner that doesn't trigger antipiracy (for instance, by properly copying the subchannel data for games that are EDC- or libcrypt-protected), I will not look into patching them. If you want to do it yourself and make a PR, that's fine though.
+
+![Screen displaying the "SOFTWARE TERMINATED" message](terminated.jpg)
+
+If the game displays a message like the one above, this means the game has an explicit modchip check, and the only way to fix this would be to patch the game. In that case, [please file a report on GitHub](https://github.com/socram8888/tonyhax/issues/new?assignees=&labels=antipiracy&template=antipiracy-issue.md&title=).
+
+### Other
+
+Please note the console **can only read CD-R media, not CD-RW discs**.
 
 How does this work?
 --------------------
