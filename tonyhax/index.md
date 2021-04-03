@@ -47,7 +47,7 @@ Once installed, you can freely copy it to other cards using the PS1 and the memo
 
 Video from [MrMario2011](https://www.youtube.com/channel/UC-YlkP3c1zKUPfyMMurARAQ) installing it using uLaunchELF on a memory card:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/caBo0YARS0c?start=1083" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="yt-video"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/01gVgTQLP9U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="yt-video"></iframe>
 
 ### Save games
 
@@ -323,3 +323,4 @@ Sorted from older to newer.
  * [MrMario2011 - PS4 7.50 Jailbreak Released & tonyhax PS1 Softmod Backup Loader - ModChat 075](https://www.youtube.com/watch?v=caBo0YARS0c)
  * [ModzvilleUSA - TONYHAX Setup Guide! - New Softmod for every Ps1 console!](https://www.youtube.com/watch?v=gtba3GtmC1I)
  * [Hackaday - PlayStation Unlocked With New Software Hack](https://hackaday.com/2021/03/15/playstation-unlocked-with-new-software-hack/)
+ * [MrMario2011 - How to Softmod Your PS1 | tonyhax Install Tutorial](https://www.youtube.com/watch?v=01gVgTQLP9U)
