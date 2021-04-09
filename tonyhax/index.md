@@ -170,7 +170,7 @@ After receiving multiple reports testing on different consoles, it seems that to
  * Every PAL PlayStation 1 console.
  * Every NTSC-U PlayStation 1 console **except** the very early SCPH-1000.
  * Every PAL and NTSC-U PlayStation 2 with model number SCPH-39xxx or lower.
- * NetYaroze consoles.
+ * PAL and NTSC-U NetYaroze consoles.
 
 However, this will **not** work with:
 
