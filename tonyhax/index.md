@@ -318,4 +318,4 @@ Sorted from older to newer.
  * [MrMario2011 - PS4 7.50 Jailbreak Released & tonyhax PS1 Softmod Backup Loader - ModChat 075](https://www.youtube.com/watch?v=caBo0YARS0c)
  * [ModzvilleUSA - TONYHAX Setup Guide! - New Softmod for every Ps1 console!](https://www.youtube.com/watch?v=gtba3GtmC1I)
  * [Hackaday - PlayStation Unlocked With New Software Hack](https://hackaday.com/2021/03/15/playstation-unlocked-with-new-software-hack/)
- * [MrMario2011 - How to Softmod Your PS1 | tonyhax Install Tutorial](https://www.youtube.com/watch?v=01gVgTQLP9U)
+ * [MrMario2011 - How to Softmod Your PS1 - tonyhax Install Tutorial](https://www.youtube.com/watch?v=01gVgTQLP9U)
