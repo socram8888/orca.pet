@@ -34,6 +34,11 @@ If you want to go this route, you'll need to flash the memory card using one of 
 | SCPH-101  | v4.4 or v4.5       |
 | SCPH-102  | v4.4 or v4.5       |
 
+Installation
+------------
+
+To be written.
+
 Usage
 -----
 
