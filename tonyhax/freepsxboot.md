@@ -6,8 +6,11 @@ tonyhax using FreePSXBoot
 
 tonyhax supports being launched on compatible consoles using the [FreePSXBoot](https://github.com/brad-lin/FreePSXBoot) exploit developed by brad-lin.
 
+Installation
+------------
+
 This method requires an entire memory card for itself, and thus:
- * The memory card *must be removed after launching the exploit, or games will crash*.
+ * The memory card **must be removed after launching the exploit, or games will crash**.
  * The memory card cannot be used to save any game's progress.
  * The memory card depends on a specific version of the BIOS. If plugged on another console, chances are the exploit will get nuked and you'll have to reprogram the memory card.
  * The exploit cannot be copied to another memory card using the console - you'll need a PC with DexDrive or a PS2.
@@ -34,15 +37,11 @@ If you want to go this route, you'll need to flash the memory card using one of 
 | SCPH-101  | v4.4 or v4.5       |
 | SCPH-102  | v4.4 or v4.5       |
 
-Installation
-------------
-
-To be written.
 
 Usage
 -----
 
-1. Turn on the console with the **memory card** with FreePSXBoot installed on the **first slot** and the **disc tray open**.ç
-2. Once you reach the console's BIOS, select the memory card manager.
+1. Turn on the console with the **memory card** with FreePSXBoot installed on the **first slot** and the **disc tray open**.
+2. Once you reach the console's BIOS, select the memory card manager and click on it.
 
 The screen should turn orange, and after a while tonyhax should boot.
