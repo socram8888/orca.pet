@@ -38,7 +38,7 @@ jobs:
           - name: Compressing
             run: find _site -type f \( -name "*.css" -o -name "*.ico" -o -name "*.html" -o -name "*.js" -o -name "*.json" -o -name "*.svg" -o -name "*.txt" -o -name "*.xml" \) -exec brotli -Z {} \;
 
-          - name: Publish
+          - name: Publish to OVH
             uses: socram8888/ftp-hash-sync@master
             with:
                 protocol: sftp 
@@ -48,3 +48,13 @@ jobs:
                 destination: orcapet
                 clientkey: "${{ secrets.SSH_KEY }}"
                 hostkey: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK+v6Lr/30gISPJk8ViZ/esm/PYi97Bqxhr5Fn9Yt1kI"
+
+          - name: Publish to Google Firebase
+            uses: FirebaseExtended/action-hosting-deploy@v0
+            with:
+                repoToken: '${{ secrets.GITHUB_TOKEN }}'
+                firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ORCA_PET }}'
+                channelId: live
+                projectId: orca-pet
+            env:
+                FIREBASE_CLI_PREVIEWS: hostingchannels
