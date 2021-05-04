@@ -1,5 +1,12 @@
 {
-  "hosting": {
-    "public": "_site"
-  }
+	"hosting": {
+		"public": "_site",
+		"target": "orca-pet",
+		"trailingSlash": true,
+		"redirects": [{
+			"source": "/notonmyshift/(?P<file>\w+\.txt)",
+			"destination": "https://noms.orca.pet/:file",
+			"type": "302"
+		}]
+	}
 }

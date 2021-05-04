@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "orca-pet"
+  },
+  "targets": {
+    "orca-pet": {
+      "hosting": {
+        "orca-pet": [
+          "orca-pet"
+        ]
+      }
+    }
   }
 }
