@@ -11,7 +11,7 @@ jobs:
             # Workaround from xrdp PR 1821 to have the OS version in the cache name
           - name: Get OS version
             run: |
-            echo "OS_VERSION=`lsb_release -cis | tr '\n' -`" >> $GITHUB_ENV
+                echo "OS_VERSION=`lsb_release -cis | tr '\n' -`" >> $GITHUB_ENV
 
           - name: Checkout
             uses: actions/checkout@v2
