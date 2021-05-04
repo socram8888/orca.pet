@@ -8,6 +8,11 @@ jobs:
     build:
         runs-on: ubuntu-20.04
         steps:
+            # Workaround from xrdp PR 1821 to have the OS version in the cache name
+          - name: Get OS version
+            run: |
+            echo "OS_VERSION=`lsb_release -cis | tr '\n' -`" >> $GITHUB_ENV
+
           - name: Checkout
             uses: actions/checkout@v2
             with:
@@ -18,9 +23,9 @@ jobs:
             uses: actions/cache@v2
             with:
                 path: vendor/bundle
-                key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+                key: ${{ env.OS_VERSION }}-gems-${{ hashFiles('**/Gemfile.lock') }}
                 restore-keys: |
-                    ${{ runner.os }}-gems-
+                    ${{ env.OS_VERSION }}-gems-
 
           - name: Set up Ruby
             uses: ruby/setup-ruby@v1.52.0
