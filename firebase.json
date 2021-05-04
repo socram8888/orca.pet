@@ -4,7 +4,7 @@
 		"target": "orca-pet",
 		"trailingSlash": true,
 		"redirects": [{
-			"source": "/notonmyshift/(?P<file>\w+\.txt)",
+			"regex": "/notonmyshift/(?P<file>\w+\.txt)",
 			"destination": "https://noms.orca.pet/:file",
 			"type": "302"
 		}]
