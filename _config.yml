@@ -27,6 +27,7 @@ keep_files:
   - shared/
 
 exclude:
+  - /assets/images/secretbg.7z
   - /commit.bat
   - /commit.sh
   - /devserver.bat
@@ -35,11 +36,8 @@ exclude:
   - /Gemfile
   - /Gemfile.lock
   - /node_modules/
-  - /package.json
-  - /package-lock.json
   - /README.md
   - /vendor/
-  - /webpack.config.js
 
 responsive_image:
     template: _includes/responsive-image.html

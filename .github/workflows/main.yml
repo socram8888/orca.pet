@@ -37,6 +37,14 @@ jobs:
                 bundle config path vendor/bundle
                 bundle install
 
+          - name: Extract easter egg
+            env:
+                EASTER_EGG_KEY: '${{ secrets.EASTER_EGG_KEY }}'
+            run:
+                pushd assets/images
+                openssl enc -d -aes-128-cbc -k ${EASTER_EGG_KEY} -iter 10000 -in secretbg.tar.enc | tar -x
+                popd
+
           - name: Build Jekyll
             run: JEKYLL_ENV=production bundle exec jekyll build
 
