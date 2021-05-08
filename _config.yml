@@ -32,7 +32,6 @@ exclude:
   - /commit.sh
   - /devserver.bat
   - /devserver.sh
-  - /firebase.json
   - /Gemfile
   - /Gemfile.lock
   - /node_modules/
