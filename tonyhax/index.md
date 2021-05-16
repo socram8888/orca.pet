@@ -64,6 +64,38 @@ Despite the ability of tonyhax to patch games with antipiracy, only a very small
 
 If the game displays a message like the one above, this means the game has an explicit modchip check, and the only way to fix this would be to patch the game. In that case, [please file a report on GitHub](https://github.com/socram8888/tonyhax/issues/new?assignees=&labels=antipiracy&template=antipiracy-issue.md&title=).
 
+### Games already supported
+
+This is the list of all games for which tonyhax has an antipiracy/antimodchip patch, so they can be launched without having to patch them first:
+
+| Game                                   | Region | Code       | Version | Notes                                    |
+|----------------------------------------|--------|------------|---------|------------------------------------------|
+| Aconcagua                              | NTSC-J | SCPS-10131 |         | Untested on real hardware                |
+| Biohazard 3: Last Escape               | NTSC-J | SLPS-02300 | v1.0    |                                          |
+| Biohazard 3: Last Escape               | NTSC-J | SLPS-02300 | v1.1    |                                          |
+| Biohazard: Gun Survivor                | NTSC-J | SLPS-02553 |         |                                          |
+| Dino Crisis                            | NTSC-J | SLPS-02180 |         |                                          |
+| Dino Crisis                            | NTSC-U | SLUS-00922 | v1.1    |                                          |
+| Legend of Dragoon                      | PAL-EN | SCES-03043 |         | Disc 1 only. Untested on real HW.        |
+| Legend of Dragoon                      | PAL-FR | SCES-03044 |         | Disc 1 only. Untested on real HW.        |
+| Legend of Dragoon                      | PAL-DE | SCES-03045 |         | Disc 1 only. Untested on real HW.        |
+| Legend of Dragoon                      | PAL-IT | SCES-03046 |         | Disc 1 only. Untested on real HW.        |
+| Legend of Dragoon                      | PAL-ES | SCES-03047 |         | Disc 1 only. Untested on real HW.        |
+| Ore No Ryouri                          | NTSC-J | SCPS-10099 |         |                                          |
+| pop'n music 2                          | NTSC-J | SLPM-86294 |         |                                          |
+| pop'n music 6                          | NTSC-J | SLPM-87089 |         |                                          |
+| Resident Evil Survivor                 | NTSC-U | SLUS-01087 |         |                                          |
+| Rockman 2 - Dr Wily No Kazo            | NTSC-J | SLPS-02255 |         |                                          |
+| Rockman 3 - Dr Wily No Saigo           | NTSC-J | SLPS-02262 |         |                                          |
+| Rockman X5                             | NTSC-J | SLPM-86666 |         |                                          |
+| Seiken Densetsu                        | NTSC-J | SLPS-02170 |         |                                          |
+| Tetris with Card Captor Sakura         | NTSC-J | SLPS-02886 |         |                                          |
+| Tokimeki Memorial 2                    | NTSC-J | SLPM-86355 |         | Disc 1 only. Original edition.           |
+| Tokimeki Memorial 2                    | NTSC-J | SLPM-86723 |         | Disc 1 only. KONAMI THE BEST edition.    |
+| Tomba! 2 - The Evil Swine Return       | NTSC-U | SCUS-94454 |         |                                          |
+| YuGiOh Forbidden Memories              | NTSC-U | SLUS-01411 |         |                                          |
+| YuGiOh Forbidden Memories              | PAL-ES | SLES-03951 |         |                                          |
+
 Acknowledgements
 ----------------
 
