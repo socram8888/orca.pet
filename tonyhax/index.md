@@ -70,17 +70,37 @@ This is the list of all games for which tonyhax has an antipiracy/antimodchip pa
 
 | Game                                   | Region | Code       | Version | Notes                                    |
 |----------------------------------------|--------|------------|---------|------------------------------------------|
-| Aconcagua                              | NTSC-J | SCPS-10131 |         | Untested on real hardware                |
+| Aconcagua                              | NTSC-J | SCPS-10131 |         | Probably broken                          |
+| Beatmania 6thMix + Core Remix          | NTSC-J | SLPM-87012 |         |                                          |
 | Biohazard 3: Last Escape               | NTSC-J | SLPS-02300 | v1.0    |                                          |
 | Biohazard 3: Last Escape               | NTSC-J | SLPS-02300 | v1.1    |                                          |
 | Biohazard: Gun Survivor                | NTSC-J | SLPS-02553 |         |                                          |
 | Dino Crisis                            | NTSC-J | SLPS-02180 |         |                                          |
 | Dino Crisis                            | NTSC-U | SLUS-00922 | v1.1    |                                          |
-| Legend of Dragoon                      | PAL-EN | SCES-03043 |         | Disc 1 only. Untested on real HW.        |
-| Legend of Dragoon                      | PAL-FR | SCES-03044 |         | Disc 1 only. Untested on real HW.        |
-| Legend of Dragoon                      | PAL-DE | SCES-03045 |         | Disc 1 only. Untested on real HW.        |
-| Legend of Dragoon                      | PAL-IT | SCES-03046 |         | Disc 1 only. Untested on real HW.        |
-| Legend of Dragoon                      | PAL-ES | SCES-03047 |         | Disc 1 only. Untested on real HW.        |
+| Legend of Dragoon (Disc 1)             | NTSC-U | SCUS-94491 |         |                                          |
+| Legend of Dragoon (Disc 2)             | NTSC-U | SCUS-94584 |         |                                          |
+| Legend of Dragoon (Disc 3)             | NTSC-U | SCUS-94585 |         |                                          |
+| Legend of Dragoon (Disc 4)             | NTSC-U | SCUS-94586 |         |                                          |
+| Legend of Dragoon (Disc 1)             | PAL-EN | SCES-03043 |         |                                          |
+| Legend of Dragoon (Disc 2)             | PAL-EN | SCES-13043 |         |                                          |
+| Legend of Dragoon (Disc 3)             | PAL-EN | SCES-23043 |         |                                          |
+| Legend of Dragoon (Disc 4)             | PAL-EN | SCES-33043 |         |                                          |
+| Legend of Dragoon (Disc 1)             | PAL-FR | SCES-03044 |         |                                          |
+| Legend of Dragoon (Disc 2)             | PAL-FR | SCES-13044 |         |                                          |
+| Legend of Dragoon (Disc 3)             | PAL-FR | SCES-23044 |         |                                          |
+| Legend of Dragoon (Disc 4)             | PAL-FR | SCES-33044 |         |                                          |
+| Legend of Dragoon (Disc 1)             | PAL-DE | SCES-03045 |         |                                          |
+| Legend of Dragoon (Disc 2)             | PAL-DE | SCES-13045 |         |                                          |
+| Legend of Dragoon (Disc 3)             | PAL-DE | SCES-23045 |         |                                          |
+| Legend of Dragoon (Disc 4)             | PAL-DE | SCES-33045 |         |                                          |
+| Legend of Dragoon (Disc 1)             | PAL-IT | SCES-03046 |         |                                          |
+| Legend of Dragoon (Disc 2)             | PAL-IT | SCES-13046 |         |                                          |
+| Legend of Dragoon (Disc 3)             | PAL-IT | SCES-23046 |         |                                          |
+| Legend of Dragoon (Disc 4)             | PAL-IT | SCES-33046 |         |                                          |
+| Legend of Dragoon (Disc 1)             | PAL-ES | SCES-03047 |         |                                          |
+| Legend of Dragoon (Disc 2)             | PAL-ES | SCES-13047 |         |                                          |
+| Legend of Dragoon (Disc 3)             | PAL-ES | SCES-23047 |         |                                          |
+| Legend of Dragoon (Disc 4)             | PAL-ES | SCES-33047 |         |                                          |
 | Ore No Ryouri                          | NTSC-J | SCPS-10099 |         |                                          |
 | pop'n music 2                          | NTSC-J | SLPM-86294 |         |                                          |
 | pop'n music 6                          | NTSC-J | SLPM-87089 |         |                                          |
