@@ -29,27 +29,29 @@ Source code is also fully available under the [WTFPL license](https://github.com
 Installation
 ------------
 
-As of tonyhax v1.3, you have two options:
+As of tonyhax v1.4, you have two options:
  * [Launch using a game exploit](game-exploit.html)
  * [Launch using FreePSXBoot](freepsxboot.html)
+ * [Launch using the boot CD](boot-cd.html)
 
-| Method                                 | Game exploit          | FreePSXBoot           |
-|----------------------------------------|-----------------------|-----------------------|
-| Needs an original game?                | Yes                   | No                    |
-| Needs a memory card?                   | Yes                   | Yes                   |
-| Can the memory card store other saves? | Yes                   | No                    |
-| Time from off to playing a backup      | ~1m30s                | ~1m                   |
+| Method                                 | Game exploit          | FreePSXBoot           | Boot CD               |
+|----------------------------------------|-----------------------|-----------------------|-----------------------|
+| Needs an original game?                | Yes                   | No                    | No                    |
+| Needs an chipped console?              | No                    | No                    | Yes                   |
+| Needs a memory card?                   | Yes                   | Yes                   | No                    |
+| Can the memory card store other saves? | Yes                   | No                    | N/A                   |
+| Time from off to playing a backup      | ~1m30s                | ~1m                   | ~1m                   |
 
 Regarding compatibility:
 
-| Method                                 | Game exploit          | FreePSXBoot           |
-|----------------------------------------|-----------------------|-----------------------|
-| Compatible with European PS1?          | Yes                   | Yes                   |
-| Compatible with American PS1?          | Yes                   | Yes                   |
-| Compatible with Japanese PS1?          | No                    | No                    |
-| Compatible with European PS2?          | ≤ SCPH-39000 only     | No                    |
-| Compatible with American PS2?          | ≤ SCPH-39000 only     | No                    |
-| Compatible with Japanese PS2?          | No                    | No                    |
+| Method                                 | Game exploit          | FreePSXBoot           | Boot CD               |
+|----------------------------------------|-----------------------|-----------------------|-----------------------|
+| Compatible with European PS1?          | Yes                   | Yes                   | Yes                   |
+| Compatible with American PS1?          | Yes                   | Yes                   | Yes                   |
+| Compatible with Japanese PS1?          | No                    | No                    | No                    |
+| Compatible with European PS2?          | ≤ SCPH-39000 only     | No                    | ≤ SCPH-39000 only     |
+| Compatible with American PS2?          | ≤ SCPH-39000 only     | No                    | ≤ SCPH-39000 only     |
+| Compatible with Japanese PS2?          | No                    | No                    | No                    |
 
 Both behave identically the same feature-wise, so use whichever suits you more.
 
@@ -121,12 +123,15 @@ Acknowledgements
 
 In alphabetical order:
 
+ * [Alex Free](https://github.com/alex-free) for adding the boot CD image.
  * [ChampionLeake](https://twitter.com/ChampionLeake79) for documenting the Brunswick exploits at [PlayStation dev wiki](https://playstationdev.wiki/ps1devwiki/index.php?title=Vulnerabilities).
  * [Gerardo Rodriguez](https://www.youtube.com/channel/UCxus_GF6-Lu9qD62nhLYxtA) for suggesting Cool Boarders 4 on a YouTube comment.
  * [@FMecha](https://twitter.com/FMecha_EXE/status/1372921230676783107) for suggesting Castrol Honda VTR on Twitter.
  * [Jose Silva](https://github.com/krystalgamer) for adding support for Sports Superbike II and XS Moto.
  * Martin Korth for his [super awesome technical documentation page](https://problemkaputt.de/psx-spx.htm) that was vital for the development of this project, as well as for developing the [no$psx emulator](https://problemkaputt.de/psx.htm) that was also essential for debugging.
  * [Patrick Vogt](https://patrickvogt.net/) for testing on multiple development PS1 consoles.
+
+Also thanks to everyone that's reported the issues on GitHub and helped me make it better!
 
 On the media
 ------------
