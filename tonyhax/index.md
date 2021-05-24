@@ -29,7 +29,7 @@ Source code is also fully available under the [WTFPL license](https://github.com
 Installation
 ------------
 
-As of tonyhax v1.4, you have two options:
+As of tonyhax v1.4 (still in beta), you have three options:
  * [Launch using a game exploit](game-exploit.html)
  * [Launch using FreePSXBoot](freepsxboot.html)
  * [Launch using the boot CD](boot-cd.html)
