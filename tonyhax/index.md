@@ -60,63 +60,21 @@ Game compatibility
 
 First and foremost, the console **can only read CD-R media, not CD-RW discs**.
 
-Despite the ability of tonyhax to patch games with antipiracy, only a very small subset of games are currently supported, since it's a pretty manual and laborious task. As a general rule, if the game can be copied in a manner that doesn't trigger antipiracy (for instance, by properly copying the subchannel data for games that are EDC- or libcrypt-protected), I will not look into patching them. If you want to do it yourself and make a PR, that's fine though.
+Regarding disc protection, a game may use a mix of the following three mechanisms:
+ * Using EDC, which hides some data in the CD-ROM subchannel.
+ * Using libcrypt, which also relies on subchannel data.
+ * Using an anti-modchip module, which detects abnormalities in the CD's wobble.
 
+The first two ones just rely on the disc being properly copied. Hence, if the game is protected by either of the two protections (which can be checked in [redump.org](http://redump.org/discs/system/psx/)), make sure you use an image that contains the subchannel data (generally on a separate `.sub` file). If you don't, the game might behave funny or lock up entirely.
+
+The later is a smarter check and it:
+ * Checks for the presence of the [SCEx wobble](https://www.youtube.com/watch?v=XUwSOfQ1D3c) in the disc's TOC, which for a burned copy it will not be present.
+ * Checks for the absence of the wobble in the outer part of the disc, which is not present on a retail disc and a non-stealth modchip will produce.
+
+If the module kicks in, you'd get the classic screen of death:
 ![Screen displaying the "SOFTWARE TERMINATED" message](terminated.jpg)
 
-If the game displays a message like the one above, this means the game has an explicit modchip check, and the only way to fix this would be to patch the game. In that case, [please file a report on GitHub](https://github.com/socram8888/tonyhax/issues/new?assignees=&labels=antipiracy&template=antipiracy-issue.md&title=).
-
-### Games already supported
-
-This is the list of all games for which tonyhax has an antipiracy/antimodchip patch, so they can be launched without having to patch them first:
-
-| Game                                   | Region | Code       | Version | Notes                                    |
-|----------------------------------------|--------|------------|---------|------------------------------------------|
-| Aconcagua                              | NTSC-J | SCPS-10131 |         | Probably broken                          |
-| Beatmania 6thMix + Core Remix          | NTSC-J | SLPM-87012 |         |                                          |
-| Biohazard 3: Last Escape               | NTSC-J | SLPS-02300 | v1.0    |                                          |
-| Biohazard 3: Last Escape               | NTSC-J | SLPS-02300 | v1.1    |                                          |
-| Biohazard: Gun Survivor                | NTSC-J | SLPS-02553 |         |                                          |
-| Dino Crisis                            | NTSC-J | SLPS-02180 |         |                                          |
-| Dino Crisis                            | NTSC-U | SLUS-00922 | v1.1    |                                          |
-| Legend of Dragoon (Disc 1)             | NTSC-U | SCUS-94491 |         |                                          |
-| Legend of Dragoon (Disc 2)             | NTSC-U | SCUS-94584 |         |                                          |
-| Legend of Dragoon (Disc 3)             | NTSC-U | SCUS-94585 |         |                                          |
-| Legend of Dragoon (Disc 4)             | NTSC-U | SCUS-94586 |         |                                          |
-| Legend of Dragoon (Disc 1)             | PAL-EN | SCES-03043 |         |                                          |
-| Legend of Dragoon (Disc 2)             | PAL-EN | SCES-13043 |         |                                          |
-| Legend of Dragoon (Disc 3)             | PAL-EN | SCES-23043 |         |                                          |
-| Legend of Dragoon (Disc 4)             | PAL-EN | SCES-33043 |         |                                          |
-| Legend of Dragoon (Disc 1)             | PAL-FR | SCES-03044 |         |                                          |
-| Legend of Dragoon (Disc 2)             | PAL-FR | SCES-13044 |         |                                          |
-| Legend of Dragoon (Disc 3)             | PAL-FR | SCES-23044 |         |                                          |
-| Legend of Dragoon (Disc 4)             | PAL-FR | SCES-33044 |         |                                          |
-| Legend of Dragoon (Disc 1)             | PAL-DE | SCES-03045 |         |                                          |
-| Legend of Dragoon (Disc 2)             | PAL-DE | SCES-13045 |         |                                          |
-| Legend of Dragoon (Disc 3)             | PAL-DE | SCES-23045 |         |                                          |
-| Legend of Dragoon (Disc 4)             | PAL-DE | SCES-33045 |         |                                          |
-| Legend of Dragoon (Disc 1)             | PAL-IT | SCES-03046 |         |                                          |
-| Legend of Dragoon (Disc 2)             | PAL-IT | SCES-13046 |         |                                          |
-| Legend of Dragoon (Disc 3)             | PAL-IT | SCES-23046 |         |                                          |
-| Legend of Dragoon (Disc 4)             | PAL-IT | SCES-33046 |         |                                          |
-| Legend of Dragoon (Disc 1)             | PAL-ES | SCES-03047 |         |                                          |
-| Legend of Dragoon (Disc 2)             | PAL-ES | SCES-13047 |         |                                          |
-| Legend of Dragoon (Disc 3)             | PAL-ES | SCES-23047 |         |                                          |
-| Legend of Dragoon (Disc 4)             | PAL-ES | SCES-33047 |         |                                          |
-| Ore No Ryouri                          | NTSC-J | SCPS-10099 |         |                                          |
-| pop'n music 2                          | NTSC-J | SLPM-86294 |         |                                          |
-| pop'n music 6                          | NTSC-J | SLPM-87089 |         |                                          |
-| Resident Evil Survivor                 | NTSC-U | SLUS-01087 |         |                                          |
-| Rockman 2 - Dr Wily No Kazo            | NTSC-J | SLPS-02255 |         |                                          |
-| Rockman 3 - Dr Wily No Saigo           | NTSC-J | SLPS-02262 |         |                                          |
-| Rockman X5                             | NTSC-J | SLPM-86666 |         |                                          |
-| Seiken Densetsu                        | NTSC-J | SLPS-02170 |         |                                          |
-| Tetris with Card Captor Sakura         | NTSC-J | SLPS-02886 |         |                                          |
-| Tokimeki Memorial 2                    | NTSC-J | SLPM-86355 |         | Disc 1 only. Original edition.           |
-| Tokimeki Memorial 2                    | NTSC-J | SLPM-86723 |         | Disc 1 only. KONAMI THE BEST edition.    |
-| Tomba! 2 - The Evil Swine Return       | NTSC-U | SCUS-94454 |         |                                          |
-| YuGiOh Forbidden Memories              | NTSC-U | SLUS-01411 |         |                                          |
-| YuGiOh Forbidden Memories              | PAL-ES | SLES-03951 |         |                                          |
+As of v1.4, tonyhax can automagically patch these games, and _should_ work with every game that has such a protection in place. If such a game freezes or you get that screen, [please file a report on GitHub](https://github.com/socram8888/tonyhax/issues/new?assignees=&labels=antipiracy&template=antipiracy-issue.md&title=).
 
 Acknowledgements
 ----------------
