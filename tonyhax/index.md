@@ -29,7 +29,7 @@ Source code is also fully available under the [WTFPL license](https://github.com
 Installation
 ------------
 
-As of tonyhax v1.4 (still in beta), you have three options:
+Since tonyhax v1.4, you have three options:
  * [Launch using a game exploit](game-exploit.html)
  * [Launch using FreePSXBoot](freepsxboot.html)
  * [Launch using the boot CD](boot-cd.html)
@@ -74,7 +74,39 @@ The later is a smarter check and it:
 If the module kicks in, you'd get the classic screen of death:
 ![Screen displaying the "SOFTWARE TERMINATED" message](terminated.jpg)
 
-As of v1.4, tonyhax can automagically patch these games, and _should_ work with every game that has such a protection in place. If such a game freezes or you get that screen, [please file a report on GitHub](https://github.com/socram8888/tonyhax/issues/new?assignees=&labels=antipiracy&template=antipiracy-issue.md&title=).
+Since v1.4, tonyhax can automagically patch these games, and _should_ work with every game that has such a protection in place. If such a game freezes or you get that screen, [please file a report on GitHub](https://github.com/socram8888/tonyhax/issues/new?assignees=&labels=antipiracy&template=antipiracy-issue.md&title=).
+
+Development
+-----------
+
+First we'll have to install the build dependencies for [mkpsxiso](https://github.com/Lameguy64/mkpsxiso) and tonyhax itself. For Debian/Ubuntu (which also works under Windows' WSL, which I use for development), this would be:
+
+```sh
+sudo apt install build-essential gcc-10-mips-linux-gnu cmake libtinyxml2-dev git
+```
+
+Now download, compile and install mkpsxiso:
+
+```sh
+git clone https://github.com/Lameguy64/mkpsxiso/
+cd mkpsxiso
+mkdir build
+cd build
+cmake ..
+cmake --build .
+sudo cp bin_nix/mkpsxiso /usr/bin/local
+```
+
+Now you'll need to clone the repository and initialize all the Git submodules:
+
+```sh
+git clone https://github.com/socram8888/tonyhax/
+cd tonyhax
+git submodule init
+git submodule update --recursive
+```
+
+Finally, to compile, all you need to execute is a single `make` command, which (hopefully) will result in a .zip file with all the required files created at the root.
 
 Acknowledgements
 ----------------
@@ -85,6 +117,7 @@ In alphabetical order:
  * [ChampionLeake](https://twitter.com/ChampionLeake79) for documenting the Brunswick exploits at [PlayStation dev wiki](https://playstationdev.wiki/ps1devwiki/index.php?title=Vulnerabilities).
  * [Gerardo Rodriguez](https://www.youtube.com/channel/UCxus_GF6-Lu9qD62nhLYxtA) for suggesting Cool Boarders 4 on a YouTube comment.
  * [@FMecha](https://twitter.com/FMecha_EXE/status/1372921230676783107) for suggesting Castrol Honda VTR on Twitter.
+ * [John Wilbert Villamor (aka Lameguy64)](https://github.com/Lameguy64) for creating mkpsxiso.
  * [Jose Silva](https://github.com/krystalgamer) for adding support for Sports Superbike II and XS Moto.
  * Martin Korth for his [super awesome technical documentation page](https://problemkaputt.de/psx-spx.htm) that was vital for the development of this project, as well as for developing the [no$psx emulator](https://problemkaputt.de/psx.htm) that was also essential for debugging.
  * [Patrick Vogt](https://patrickvogt.net/) for testing on multiple development PS1 consoles.
