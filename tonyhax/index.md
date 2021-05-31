@@ -135,3 +135,5 @@ Sorted from older to newer.
  * [ModzvilleUSA - TONYHAX Setup Guide! - New Softmod for every Ps1 console!](https://www.youtube.com/watch?v=gtba3GtmC1I)
  * [Hackaday - PlayStation Unlocked With New Software Hack](https://hackaday.com/2021/03/15/playstation-unlocked-with-new-software-hack/)
  * [MrMario2011 - How to Softmod Your PS1 - tonyhax Install Tutorial](https://www.youtube.com/watch?v=01gVgTQLP9U)
+ * [MrMario2011 - How to Softmod Your PS1 with FreePSXBoot & tonyhax](https://www.youtube.com/watch?v=ggpm-thuaTY)
+ * [MrMario2011 - Do Multi-Disc Games Work on FreePSXBoot & tonyhax?](https://www.youtube.com/watch?v=zcede5CI-os)
