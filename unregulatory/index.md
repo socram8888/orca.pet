@@ -4,7 +4,7 @@
 Unregulatory
 ============
 
-This is a OpenWRT repository which, **for experienced users and for testing purposes** (such as debugging DFT issues), lifts the software limitations implemented by the kernel and drivers, and allows using a router in every existing band with virtually no power limit.
+This is a OpenWRT repository which, **for experienced users and for testing purposes** (such as debugging DFS issues), lifts the software limitations implemented by the kernel and drivers, and allows using a router in every existing band with virtually no power limit.
 
 Please note using this file allows transmitting in bands and with power levels that may not be legal where you live. As per [the license](/#license), I take no responsability.
 
