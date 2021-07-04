@@ -11,13 +11,15 @@ Installation
 
 This method requires an entire memory card for itself, and thus:
  * The memory card cannot be used to save any game's progress.
- * The memory card depends on a specific version of the BIOS. If plugged on another console, chances are the exploit will get nuked and you'll have to reprogram the memory card.
+ * The memory card depends on a specific version of the BIOS and a specific slot. If plugged on another console or another slot, chances are the exploit will get nuked and you'll have to reprogram the memory card.
  * The exploit cannot be copied to another memory card using the console - you'll need a PC with DexDrive or a PS2.
  * The exploit cannot be uninstalled using the console alone either.
 
-Since v1.3.3, a memory card left connected will not crash the console or cause any significant issues. However, as it needs to be plugged in on the first slot, you'll probably still need to remove it before launching the game so it loads and saves properly.
+Since v1.3.3, tonyhax installs a BIOS patch to prevent games from reading from a memory card with a FreePSXBoot-based tonyhax installation, so you aren't required to remove it after starting any game.
 
-If you want to go this route, you'll need to flash the memory card using one of the images available at `freepsxboot/`, depending on your console's BIOS version:
+Also, since v1.4.2, booting from the second slot is fully supported, so you can opt for flashing this new version and, thanks to the aforementioned BIOS patch, keep it plugged while you have the slot 1 available for saving, making it a pretty convenient alternative.
+
+If you want to go this route, you'll need to flash the memory card using one of the images available at `freepsxboot/`, depending on your console's BIOS version and slot:
 
 | Model     | BIOS version       |
 |-----------|--------------------|
@@ -45,7 +47,16 @@ This video from [MrMario2011](https://www.youtube.com/channel/UC-YlkP3c1zKUPfyMM
 Usage
 -----
 
-1. Turn on the console with the **memory card** with FreePSXBoot installed on the **first slot** and the **disc tray open**.
+1. Turn on the console with the **memory card** with FreePSXBoot plugged in on the **correct slot** and the **disc tray open**.
 2. Once you reach the console's BIOS, select the memory card manager and click on it.
 
 After about five seconds, tonyhax should boot.
+
+Uninstalling
+------------
+
+The anti-FreePSXBoot BIOS patch tonyhax installs mangles data reads from memory cards in a way that makes games thinks it is unformatted.
+
+Thus, plugging in a memory card containing a FreePSXBoot-based tonyhax installation on slot 1 and attempting to save in any game that supports it should result in the game asking to format the memory card. If you accept, it will return it to factory status, uninstalling tonyhax from it and making it usable again for saving or for installing a newer version of tonyhax.
+
+Please note tonyhax **cannot** uninstall UniROM-based FreePSXBoot installations from memory cards, and plugging in a memory card containing it while running a game **will** cause issues.
